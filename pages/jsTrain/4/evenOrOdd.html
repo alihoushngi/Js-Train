@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Vanilla JavaScript</title>
+</head>
+
+<body class="cl-body">
+    <h1 class="title">Vanilla JavaScript</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">4</span>
+                    <h2 class="train-question">Checking whether the number is even or odd.</h2>
+                </div>
+            </div>
+            <div class="numberForm-wrapper">
+                <div class="numberForm-title">Enter numbers to check</div>
+                <form action="#" id="oddNumberCheckerForm" class="numberForm">
+                    <div class="numberForm-input_wrapper">
+                        <label for="oddNum1" class="numberForm-label">oddNumber one :</label>
+                        <input type="number" name="oddNum1" id="oddNum1" class="numberForm-input">
+                    </div>
+                </form>
+                <button class="numberForm-button" id="oddNumber-button">Check</button>
+                <div class="numberForm-result" id="oddNumber-result"></div>
+            </div>
+            <div class="code-wrapper">
+                <span>//! Checking whether the number is even or odd.</span>
+                <span>// get number , button and result section from document</span>
+                <span>const oddNumber = document.querySelector("#oddNum1");</span>
+                <span>oddSubmitNumberButton = document.querySelector("#oddNumber-button");</span>
+                <span>oddNumberResult = document.querySelector("#oddNumber-result");</span>
+                <br>
+                <span>// Checking whether the number is even or odd function</span>
+                <span>const oddNumbers = (e) => {</span>
+                <span>e.preventDefault();</span>
+                <span>const oddRes = parseInt(oddNumber.value) % 2;</span>
+                <span>if (oddRes === 0) {</span>
+                <span>oddNumberResult.innerHTML = `Your number is Even`;</span>
+                <span>} else {</span>
+                <span>oddNumberResult.innerHTML = ` Your number is Odd `; </span>
+                <span> }</span>
+                <span>};</span>
+                <br>
+                <span>// add event for my button</span>
+                <span>oddSubmitNumberButton.addEventListener("click", oddNumbers);</span>
+                <span>//! end</span>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="evenOrOdd.js"></script>
+</body>
+
+</html>

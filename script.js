@@ -18,14 +18,13 @@ pages()
       html += `
       <div class="project-card">
             <div class="project-card-image-wrapper">
-                <img src="./assets/images/tumbnail.jpg" width="200" alt="${element.title}" class="project-card-image">
+                <img src=${element.imageUrl} width="200" alt="${element.title}" class="project-card-image">
             </div>
             <div class="project-card-content">
-                <span>${element.category}</span>
+                <span class="project-card-category">${element.category}</span>
                 <h3 class="project-card-title">${element.title}</h3>
-                <p class="project-card-desc">${element.description}</p>
                 <div class="project-card-button-wrapper">
-                    <a href="${element.link}" class="project-card-button-link">
+                    <a href="${element.link}" class="project-card-button-link" target="_blank">
                         <button class="project-card-button">see project</button>
                     </a>
                 </div>

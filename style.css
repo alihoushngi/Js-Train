@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "firaCode";
+  src: url(assets/fonts/FiraCode-Light.woff2) format("woff2");
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+html body {
+  margin: 0;
+  padding: 0;
+  background-color: #343434;
+  color: #f0f0f0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+html body nav {
+  width: 100%;
+  background-color: #474747;
+  margin: 0;
+  padding: 0.3rem 0;
+}
+html body nav .navbar-category-wrapper {
+  width: 100%;
+}
+html body nav .navbar-category-wrapper .navbar-category-list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-item {
+  text-transform: uppercase;
+  color: rgb(161, 161, 161);
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-item:hover {
+  color: #ffffff;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.main-desc {
+  text-align: center;
+  display: block;
+  margin: 0.6rem 0;
+  color: rgb(192, 192, 192);
+  text-transform: uppercase;
+}
+
+.project-cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.project-cards-wrapper .project-card {
+  background-color: #f0f0f0;
+  color: #343434;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.project-cards-wrapper .project-card .project-card-title {
+  font-size: 12px;
+}
+.project-cards-wrapper .project-card .project-card-image-wrapper .project-card-image {
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+}
+.project-cards-wrapper .project-card .project-card-category {
+  font-size: 12px;
+  font-weight: 100;
+  font-family: "Courier New", Courier, monospace;
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  color: rgb(119, 119, 119);
+  transition: all 300ms ease-in-out;
+  text-align: center;
+  cursor: pointer;
+}
+.project-cards-wrapper .project-card .project-card-category:hover {
+  color: #1e1e1e;
+}
+.project-cards-wrapper .project-card .project-card-content .project-card-title {
+  margin: 0.5rem 0;
+}
+.project-cards-wrapper .project-card .project-card-content .project-card-desc {
+  text-align: center;
+}
+.project-cards-wrapper .project-card .project-card-content .project-card-button-wrapper {
+  width: 100%;
+}
+.project-cards-wrapper .project-card .project-card-content .project-card-button-wrapper .project-card-button-link {
+  width: 100%;
+}
+.project-cards-wrapper .project-card .project-card-content .project-card-button-wrapper .project-card-button-link .project-card-button {
+  width: 100%;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(11, 11, 80);
+  color: #f0f0f0;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.project-cards-wrapper .project-card .project-card-content .project-card-button-wrapper .project-card-button-link .project-card-button:hover {
+  background-color: rgb(23, 23, 135);
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+}
+
+.cl-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.cl-wrapper {
+  width: 100%;
+  max-width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
+}
+.cl-wrapper .codes {
+  background-color: #f0f0f0;
+  color: #343434;
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 100%;
+  align-items: center;
+}
+.cl-wrapper .codes .numberForm {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  align-items: flex-end;
+}
+.cl-wrapper .codes .numberForm-wrapper {
+  display: flex;
+  gap: 10px;
+  max-width: 100%;
+  flex-direction: column;
+}
+.cl-wrapper .codes .numberForm-title {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+.cl-wrapper .codes .numberForm-input_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cl-wrapper .codes .numberForm-label {
+  text-transform: capitalize;
+}
+.cl-wrapper .codes .numberForm-button {
+  background-color: rgb(11, 11, 80);
+  color: #d4d4d4;
+  border-radius: 5px;
+  border: 0;
+  padding: 5px;
+  transition: all 300ms ease-in-out;
+  min-width: 60%;
+  cursor: pointer;
+}
+.cl-wrapper .codes .numberForm-button:hover {
+  background-color: rgb(23, 23, 135);
+}
+.cl-wrapper .codes .numberForm-result {
+  width: 100%;
+  text-align: center;
+}
+.cl-wrapper .train-details {
+  display: flex;
+  align-items: center;
+  gap: inherit;
+}
+.cl-wrapper .train-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: inherit;
+}
+.cl-wrapper .train-number {
+  background-color: #343434;
+  color: #f0f0f0;
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+}
+.cl-wrapper .train-question {
+  color: #474747;
+  font-size: 1rem;
+}
+.cl-wrapper .code {
+  min-width: 100%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 300;
+}
+.cl-wrapper .code-wrapper {
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 1rem;
+  min-height: 40px;
+  color: #d4d4d4;
+  width: 95%;
+}
+.cl-wrapper .code-comment {
+  color: #6b9955;
+}
+.cl-wrapper .code-variable {
+  color: #3598da;
+}
+.cl-wrapper .code-arrayBracket, .cl-wrapper .code-parentheses {
+  color: #ffd629;
+}
+.cl-wrapper .code-bracket {
+  color: #da70d7;
+}
+.cl-wrapper .code-number {
+  color: #b5cca7;
+}
+.cl-wrapper .code-text {
+  color: #d4d4d4;
+}
+.cl-wrapper .code-answer {
+  color: #ffffff;
+  font-size: 20px;
+}
+.cl-wrapper .code-strings {
+  color: #ce9277 !important;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Vanilla JavaScript</title>
+</head>
+
+<body class="cl-body">
+    <h1 class="title">Vanilla JavaScript</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">2</span>
+                    <h2 class="train-question">Checking whether the image is vertical or horizontal</h2>
+                </div>
+                <img id="test_image" src="../../../assets/images/test.jpg"
+                    alt="test for Checking whether the image is vertical or horizontal" width="100">
+            </div>
+            <div class="code-wrapper">
+                <span>// Checking whether the image is vertical or horizontal</span>
+                <span>// get image from document</span>
+                <span>const image = document.querySelector("#test_image");</span>
+                <br>
+                <span>// image width and height</span>
+                <span>const imageWidth = image.clientWidth;</span>
+                <span>const imageHeight = image.clientHeight;</span>
+                <br>
+                <span>// check width and height</span>
+                <span>if (imageWidth > imageHeight) { </span>
+                <span>console.log( "2 : " , "vertical" ) </span>
+                <span>} else { </span>
+                <span>console.log( "2 : " , "horizontal")</span>
+                <span>}</span>
+                <br>
+                <span>// end</span>
+                <span>answer _____ vertical</span>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="verticalOrHorizontal.js"></script>
+</body>
+
+</html>

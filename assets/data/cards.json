@@ -1,8 +1,26 @@
 [
   {
-    "title": "Condition and Loop",
-    "description": "this is a page for training Condition and Loop in js with simple project",
-    "link": "./pages/jsTrain/CL/index.html",
-    "category": "js"
+    "title": "Find the largest number and the smallest number",
+    "link": "./pages/jsTrain/1/minAndMaxNumber.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "./assets/images/js.png"
+  },
+  {
+    "title": "Checking whether the image is vertical or horizontal",
+    "link": "./pages/jsTrain/2/verticalOrHorizontal.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "./assets/images/js.png"
+  },
+  {
+    "title": "Printing words relative to the divisibility of numbers",
+    "link": "./pages/jsTrain/3/divisibility.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "./assets/images/js.png"
+  },
+  {
+    "title": "Checking whether the number is even or odd",
+    "link": "./pages/jsTrain/4/evenOrOdd.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "./assets/images/js.png"
   }
 ]
