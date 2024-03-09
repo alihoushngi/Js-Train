@@ -1,0 +1,278 @@
+@font-face {
+  font-family: "firaCode";
+  src: url(assets/fonts/FiraCode-Light.woff2) format("woff2");
+}
+
+//! main page-----------------------
+//? my variables
+$primaryColor: #f0f0f0;
+$secondaryColor: #343434;
+$softBlack: #474747;
+$buttonColor: rgb(11, 11, 80);
+$buttonHoverColor: rgb(23, 23, 135);
+$GillFont: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+$customBoxShadow: 0px 1px 1px 0px #34343438;
+$borderRadius: 5px;
+//* code style
+$codeBack: #1e1e1e;
+$codeComment: #6b9955;
+$codeFontFamily: "Courier New", Courier, monospace;
+$codeFontSize: 12px;
+$codeVariable: #3598da;
+$codeArrayBracket: #ffd629;
+$codeManualBracket: #da70d7;
+$codeNumber: #b5cca7;
+$codeString: #ce9277;
+$codeManualText: #d4d4d4;
+$codeAnswer: #ffffff;
+
+// styles
+html {
+  margin: 0;
+  padding: 0;
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    font: {
+      family: $GillFont;
+    }
+    aside {
+      width: 15%;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      background-color: $softBlack;
+      box-shadow: 2px 0px 1px 0px #8a8a8a45;
+      .sidebar-title {
+        font-size: 14px;
+        text-align: center;
+      }
+      .sidebar-category-wrapper {
+        .sidebar-category-list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .sidebar-category-item {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font : {
+    size: 50px;
+    weight: 900;
+  }
+}
+
+.project-cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  .project-card {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: $borderRadius;
+    .project-card-image-wrapper {
+      .project-card-image {
+        border-radius: $borderRadius;
+        box-shadow: $customBoxShadow;
+      }
+    }
+    .project-card-content {
+      .project-card-desc {
+        text-align: center;
+      }
+      .project-card-button-wrapper {
+        width: 100%;
+        .project-card-button-link {
+          width: 100%;
+          .project-card-button {
+            width: 100%;
+            text-transform: capitalize;
+            border-radius: $borderRadius;
+            border: 0;
+            background-color: $buttonColor;
+            color: $primaryColor;
+            padding: 10px 0;
+            cursor: pointer;
+            transition: all 300ms ease-in-out;
+
+            &:hover {
+              background-color: $buttonHoverColor;
+              box-shadow: $customBoxShadow;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//! main page-----------------------
+
+//! Condition and Loop train page---
+.cl {
+  &-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-wrapper {
+    width: 100%;
+    max-width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
+    .codes {
+      background-color: $primaryColor;
+      color: $secondaryColor;
+      box-shadow: $customBoxShadow;
+      border-radius: $borderRadius;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 100%;
+      align-items: center;
+      .numberForm {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        align-items: flex-end;
+        &-wrapper {
+          display: flex;
+          gap: 10px;
+          max-width: 100%;
+          flex-direction: column;
+        }
+        &-title {
+          text-align: center;
+          font: {
+            size: 15px;
+            weight: 600;
+          }
+        }
+        &-input {
+          &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+          }
+        }
+        &-label {
+          text-transform: capitalize;
+        }
+        &-button {
+          background-color: $buttonColor;
+          color: $codeManualText;
+          border-radius: $borderRadius;
+          border: 0;
+          padding: 5px;
+          transition: all 300ms ease-in-out;
+          min-width: 60%;
+          cursor: pointer;
+          &:hover {
+            background-color: $buttonHoverColor;
+          }
+        }
+        &-result {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .train {
+      &-details {
+        display: flex;
+        align-items: center;
+        gap: inherit;
+      }
+      &-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: inherit;
+      }
+      &-number {
+        background-color: $secondaryColor;
+        color: $primaryColor;
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+        border-radius: 100%;
+        text-align: center;
+        box-shadow: $customBoxShadow;
+      }
+      &-question {
+        color: $softBlack;
+        font-size: 1rem;
+      }
+    }
+    .code {
+      min-width: 100%;
+      font: {
+        family: $codeFontFamily;
+        size: $codeFontSize;
+        weight: 300;
+      }
+      &-wrapper {
+        background-color: $codeBack;
+        border-radius: $borderRadius;
+        box-shadow: $customBoxShadow;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding: 1rem;
+        min-height: 40px;
+        color: $codeManualText;
+        width: 95%;
+      }
+      &-comment {
+        color: $codeComment;
+      }
+      &-variable {
+        color: $codeVariable;
+      }
+      &-arrayBracket,
+      &-parentheses {
+        color: $codeArrayBracket;
+      }
+      &-bracket {
+        color: $codeManualBracket;
+      }
+      &-number {
+        color: $codeNumber;
+      }
+      &-text {
+        color: $codeManualText;
+      }
+      &-answer {
+        color: $codeAnswer;
+        font-size: 20px;
+      }
+      &-strings {
+        color: $codeString !important;
+      }
+    }
+  }
+}

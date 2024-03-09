@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "firaCode";
+  src: url(assets/fonts/FiraCode-Light.woff2) format("woff2"); }
+
+html {
+  margin: 0;
+  padding: 0; }
+  html body {
+    margin: 0;
+    padding: 0;
+    background-color: #343434;
+    color: #f0f0f0;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
+    html body aside {
+      width: 15%;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      background-color: #474747;
+      box-shadow: 2px 0px 1px 0px #8a8a8a45; }
+      html body aside .sidebar-title {
+        font-size: 14px;
+        text-align: center; }
+      html body aside .sidebar-category-wrapper .sidebar-category-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; }
+        html body aside .sidebar-category-wrapper .sidebar-category-list .sidebar-category-item {
+          text-transform: uppercase; }
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 900; }
+
+.project-cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px; }
+  .project-cards-wrapper .project-card {
+    background-color: #f0f0f0;
+    color: #343434;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px; }
+    .project-cards-wrapper .project-card .project-card-image-wrapper .project-card-image {
+      border-radius: 5px;
+      box-shadow: 0px 1px 1px 0px #34343438; }
+    .project-cards-wrapper .project-card .project-card-content .project-card-desc {
+      text-align: center; }
+    .project-cards-wrapper .project-card .project-card-content .project-card-button-wrapper {
+      width: 100%; }
+      .project-cards-wrapper .project-card .project-card-content .project-card-button-wrapper .project-card-button-link {
+        width: 100%; }
+        .project-cards-wrapper .project-card .project-card-content .project-card-button-wrapper .project-card-button-link .project-card-button {
+          width: 100%;
+          text-transform: capitalize;
+          border-radius: 5px;
+          border: 0;
+          background-color: #0b0b50;
+          color: #f0f0f0;
+          padding: 10px 0;
+          cursor: pointer;
+          transition: all 300ms ease-in-out; }
+          .project-cards-wrapper .project-card .project-card-content .project-card-button-wrapper .project-card-button-link .project-card-button:hover {
+            background-color: #171787;
+            box-shadow: 0px 1px 1px 0px #34343438; }
+
+.cl-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
+.cl-wrapper {
+  width: 100%;
+  max-width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px; }
+  .cl-wrapper .codes {
+    background-color: #f0f0f0;
+    color: #343434;
+    box-shadow: 0px 1px 1px 0px #34343438;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 100%;
+    align-items: center; }
+    .cl-wrapper .codes .numberForm {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      gap: 10px;
+      align-items: flex-end; }
+      .cl-wrapper .codes .numberForm-wrapper {
+        display: flex;
+        gap: 10px;
+        max-width: 100%;
+        flex-direction: column; }
+      .cl-wrapper .codes .numberForm-title {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600; }
+      .cl-wrapper .codes .numberForm-input_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5px; }
+      .cl-wrapper .codes .numberForm-label {
+        text-transform: capitalize; }
+      .cl-wrapper .codes .numberForm-button {
+        background-color: #0b0b50;
+        color: #d4d4d4;
+        border-radius: 5px;
+        border: 0;
+        padding: 5px;
+        transition: all 300ms ease-in-out;
+        min-width: 60%;
+        cursor: pointer; }
+        .cl-wrapper .codes .numberForm-button:hover {
+          background-color: #171787; }
+      .cl-wrapper .codes .numberForm-result {
+        width: 100%;
+        text-align: center; }
+  .cl-wrapper .train-details {
+    display: flex;
+    align-items: center;
+    gap: inherit; }
+  .cl-wrapper .train-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: inherit; }
+  .cl-wrapper .train-number {
+    background-color: #343434;
+    color: #f0f0f0;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 100%;
+    text-align: center;
+    box-shadow: 0px 1px 1px 0px #34343438; }
+  .cl-wrapper .train-question {
+    color: #474747;
+    font-size: 1rem; }
+  .cl-wrapper .code {
+    min-width: 100%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+    font-weight: 300; }
+    .cl-wrapper .code-wrapper {
+      background-color: #1e1e1e;
+      border-radius: 5px;
+      box-shadow: 0px 1px 1px 0px #34343438;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 1rem;
+      min-height: 40px;
+      color: #d4d4d4;
+      width: 95%; }
+    .cl-wrapper .code-comment {
+      color: #6b9955; }
+    .cl-wrapper .code-variable {
+      color: #3598da; }
+    .cl-wrapper .code-arrayBracket, .cl-wrapper .code-parentheses {
+      color: #ffd629; }
+    .cl-wrapper .code-bracket {
+      color: #da70d7; }
+    .cl-wrapper .code-number {
+      color: #b5cca7; }
+    .cl-wrapper .code-text {
+      color: #d4d4d4; }
+    .cl-wrapper .code-answer {
+      color: #ffffff;
+      font-size: 20px; }
+    .cl-wrapper .code-strings {
+      color: #ce9277 !important; }
