@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Vanilla JavaScript</title>
+</head>
+
+<body class="cl-body">
+    <h1 class="title">Vanilla JavaScript</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">5</span>
+                    <h2 class="train-question">Todo List</h2>
+                </div>
+            </div>
+            <div class="todo">
+                <h3 class="todo_title">My Todo List</h3>
+                <div class="todo_wrapper">
+                    <form action="#" id="todoForm" class="todo_form">
+                        <label for="todoTask" class="todo_form-label">Enter Your Task: </label>
+                        <textarea name="todoTask" id="todoTask" cols="30" rows="10" placeholder="do something ..."
+                            class="todo_form-textarea"></textarea>
+                        <button id="submit-task" class="todo_form-button" type="submit">submit</button>
+                    </form>
+                    <div class="todo_form-result">
+                        <h4 class="todo_form-result--title">Tasks</h4>
+                        <div class="todo_form-result--data">
+                            <ul id="todoResult" class="todo_form-result--list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="code-wrapper">
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="todoList.js"></script>
+</body>
+
+</html>

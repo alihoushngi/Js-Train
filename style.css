@@ -67,15 +67,17 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   background-color: #f0f0f0;
   color: #343434;
   max-width: 200px;
+  min-height: 300px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
   border-radius: 5px;
 }
 .project-cards-wrapper .project-card .project-card-title {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
 }
 .project-cards-wrapper .project-card .project-card-image-wrapper .project-card-image {
   border-radius: 5px;
@@ -95,6 +97,9 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 }
 .project-cards-wrapper .project-card .project-card-category:hover {
   color: #1e1e1e;
+}
+.project-cards-wrapper .project-card .project-card-content {
+  width: 100%;
 }
 .project-cards-wrapper .project-card .project-card-content .project-card-title {
   margin: 0.5rem 0;
@@ -262,4 +267,84 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 }
 .cl-wrapper .code-strings {
   color: #ce9277 !important;
+}
+
+.todo {
+  min-width: 100%;
+  margin: 2rem 0;
+}
+.todo_title {
+  margin: 0.5rem 0;
+}
+.todo_wrapper {
+  display: flex;
+  min-width: 100%;
+  gap: 10px;
+}
+.todo_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.todo_form-label {
+  font-size: 15px;
+  margin: 0;
+}
+.todo_form-textarea {
+  resize: none !important;
+  font-size: 12px;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+}
+.todo_form-textarea:focus, .todo_form-textarea:focus-visible, .todo_form-textarea:focus-within {
+  border: 0;
+  outline: 0;
+}
+.todo_form-button {
+  background-color: rgb(11, 11, 80);
+  border-radius: 5px;
+  border: 0;
+  color: #f0f0f0;
+  transition: all 300ms ease-in-out;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.todo_form-button:hover {
+  background-color: rgb(23, 23, 135);
+}
+.todo_form-result {
+  width: 100%;
+  padding: 1rem;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+}
+.todo_form-result--title {
+  margin: 0;
+}
+.todo_form-result--data {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.todo_form-result--list {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+.todo_form-result--item {
+  display: flex;
+  justify-content: space-between;
+}
+.todo_form-result--rmvButton {
+  background-image: url("/assets/images/trash.svg");
+  background-size: contain;
+  width: 15px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.todo_form-result--rmvButton:hover {
+  width: 20px;
 }/*# sourceMappingURL=style.css.map */

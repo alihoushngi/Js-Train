@@ -1,10 +1,11 @@
+//! fonts
 @font-face {
   font-family: "firaCode";
   src: url(assets/fonts/FiraCode-Light.woff2) format("woff2");
 }
+//! fonts
 
-//! main page-----------------------
-//? my variables
+//! my variables
 $primaryColor: #f0f0f0;
 $secondaryColor: #343434;
 $softBlack: #474747;
@@ -26,6 +27,7 @@ $codeString: #ce9277;
 $codeManualText: #d4d4d4;
 $codeAnswer: #ffffff;
 
+//! main page-----------------------
 // styles
 html {
   margin: 0;
@@ -84,7 +86,9 @@ html {
   color: rgb(192, 192, 192);
   text-transform: uppercase;
 }
+//! main page-----------------------
 
+//! Cards ---
 .project-cards-wrapper {
   display: flex;
   justify-content: center;
@@ -95,14 +99,18 @@ html {
     background-color: $primaryColor;
     color: $secondaryColor;
     max-width: 200px;
+    min-height: 300px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     border-radius: $borderRadius;
     .project-card-title {
-      font-size: 12px;
+      font: {
+        size: 14px;
+        weight: 500;
+      }
     }
     .project-card-image-wrapper {
       .project-card-image {
@@ -128,6 +136,7 @@ html {
       }
     }
     .project-card-content {
+      width: 100%;
       .project-card-title {
         margin: 0.5rem 0;
       }
@@ -159,7 +168,7 @@ html {
     }
   }
 }
-//! main page-----------------------
+//! Cards ---
 
 //! Condition and Loop train page---
 .cl {
@@ -312,3 +321,90 @@ html {
     }
   }
 }
+//! Condition and Loop train page---
+
+//todo------------------------------
+
+.todo {
+  min-width: 100%;
+  margin: 2rem 0;
+  &_title {
+    margin: 0.5rem 0;
+  }
+  &_wrapper {
+    display: flex;
+    min-width: 100%;
+    gap: 10px;
+  }
+  &_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &-label {
+      font-size: 15px;
+      margin: 0;
+    }
+    &-textarea {
+      resize: none !important;
+      font-size: 12px;
+      padding: 0.5rem;
+      border: 0;
+      border-radius: $borderRadius;
+      box-shadow: $customBoxShadow;
+      &:focus,
+      &:focus-visible,
+      &:focus-within {
+        border: 0;
+        outline: 0;
+      }
+    }
+    &-button {
+      background-color: $buttonColor;
+      border-radius: $borderRadius;
+      border: 0;
+      color: $primaryColor;
+      transition: all 300ms ease-in-out;
+      padding: 0.5rem;
+      cursor: pointer;
+      &:hover {
+        background-color: $buttonHoverColor;
+      }
+    }
+    &-result {
+      width: 100%;
+      padding: 1rem;
+      background-color: #e2e2e2;
+      border-radius: $borderRadius;
+      box-shadow: $customBoxShadow;
+      &--title {
+        margin: 0;
+      }
+      &--data {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      &--list {
+        margin: 0.5rem 0;
+        padding: 0;
+      }
+      &--item {
+        display: flex;
+        justify-content: space-between;
+      }
+      &--rmvButton {
+        background-image: url("/assets/images/trash.svg");
+        background-size: contain;
+        width: 15px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+        &:hover {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+//todo------------------------------
