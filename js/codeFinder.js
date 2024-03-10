@@ -1,7 +1,7 @@
 // * find the code wrappers
 const codeWrappers = document.querySelectorAll(".code-wrapper");
 const data = Array.from(codeWrappers);
-const variableRegex = /\b(const|var|let|if|else)\b/g;
+const variableRegex = /\b(const|var|let|if|else|null|=>)\b/g;
 const bracketRegex = /(\[\]|\(\))/g;
 const numberRegex = /\d+/g;
 
@@ -19,7 +19,9 @@ data.forEach((data) => {
       tags.innerHTML.includes("var") ||
       tags.innerHTML.includes("let") ||
       tags.innerHTML.includes("if") ||
-      tags.innerHTML.includes("else")
+      tags.innerHTML.includes("else") ||
+      tags.innerHTML.includes("null") ||
+      tags.innerHTML.includes("=>")
     ) {
       const variables = tags.innerHTML.replace(
         variableRegex,

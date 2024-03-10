@@ -36,7 +36,102 @@
                 </div>
             </div>
             <div class="code-wrapper">
-
+                <span>// get elements from dom</span>
+                <span>const submitButton = document.querySelector(<span
+                        class="code-strings">"#submit-task"</span>);</span>
+                <span>const note = document.querySelector(<span class="code-strings">"#todoForm"</span>);</span>
+                <span>const inputValue = document.querySelector(<span class="code-strings">"#todoTask"</span>);</span>
+                <span>const result = document.querySelector(<span class="code-strings">"#todoResult"</span>);</span>
+                <br>
+                <span>// add data to local storage</span>
+                <span>const addToLocalStorage = (item) => {</span>
+                <span>const notes = getNotesFromLocalStorage();</span>
+                <span>notes.push(item);</span>
+                <span>// data must be added to local storage as string</span>
+                <span>localStorage.setItem(<span class="code-strings">"notes"</span>, JSON.stringify(notes));</span>
+                <span>};</span>
+                <br>
+                <span>// handel data in form and append to result</span>
+                <span>const formHandler = (e) => {</span>
+                <span>e.preventDefault();</span>
+                <span>const data = inputValue.value;</span>
+                <span>const item = document.createElement(<span class="code-strings">"li"</span>);</span>
+                <span>item.classList.add(<span class="code-strings">"todo_form-result--item"</span>);</span>
+                <span>const removeButton = document.createElement(<span class="code-strings">"a"</span>);</span>
+                <span>removeButton.classList.add(<span
+                        class="code-strings">"todo_form-result--rmvButton"</span>);</span>
+                <span>removeButton.setAttribute(<span class="code-strings">"id", "removeButton"</span>);</span>
+                <span>// append data get from user to my item</span>
+                <span>item.appendChild(document.createTextNode(data));</span>
+                <span>item.appendChild(removeButton);</span>
+                <span>result.appendChild(item);</span>
+                <br>
+                <span>// call add to local storage function to save data</span>
+                <span>addToLocalStorage(data);</span>
+                <span>inputValue.value = null;</span>
+                <span>};</span>
+                <br>
+                <span>//function for remove from local storage</span>
+                <span>const removeFromLocalStorage = (nodeContent) => {</span>
+                <span>// delete from local storage</span>
+                <span>const noteFromLocalStorage = getNotesFromLocalStorage();</span>
+                <span>noteFromLocalStorage.forEach((note, index) => {</span>
+                <span>if (note === nodeContent) {</span>
+                <span>console.log(index);</span>
+                <span>noteFromLocalStorage.splice(index, 1);</span>
+                <span>}</span>
+                <span>});</span>
+                <span>localStorage.setItem(<span class="code-strings">"notes"</span>,
+                    JSON.stringify(noteFromLocalStorage));</span>
+                <span>};</span>
+                <br>
+                <span>// remove button handler function for delete items</span>
+                <span>const removeButtonHandler = (e) => {</span>
+                <span>if (e.target.id === <span>"removeButton"</span>) {</span>
+                <span>e.target.parentElement.remove();</span>
+                <span>}</span>
+                <span>removeFromLocalStorage(e.target.parentElement.textContent);</span>
+                <span>};</span>
+                <br>
+                <span>// function for fetch data from local storage onload page</span>
+                <span>const getNotesFromLocalStorage = () => {</span>
+                <span>let notes;</span>
+                <span>const localStorageData = localStorage.getItem(<span class="code-strings">"notes"</span>);</span>
+                <span>if (localStorageData === null) {</span>
+                <span>notes = [];</span>
+                <span>} else {</span>
+                <span>// data must be came back to us as array to we can map on</span>
+                <span>notes = JSON.parse(localStorageData);</span>
+                <span>}</span>
+                <span>return notes;</span>
+                <span>};</span>
+                <br>
+                <span>// get data from local storage and print</span>
+                <span>const localStorageDataLoaded = () => {</span>
+                <br>
+                <span>notes.forEach((element) => {</span>
+                <span>const item = document.createElement(<span class="code-strings">"li"</span>);</span>
+                <span>item.classList.add(<span class="code-strings">"todo_form-result--item"</span>);</span>
+                <span>const removeButton = document.createElement(<span class="code-strings">"a"</span>);</span>
+                <span>removeButton.classList.add(<span
+                        class="code-strings">"todo_form-result--rmvButton"</span>);</span>
+                <span>removeButton.setAttribute(<span class="code-strings">"id", "removeButton"</span>);</span>
+                <span>// append data get from user to my item</span>
+                <span>item.appendChild(document.createTextNode(data));</span>
+                <span>item.appendChild(removeButton);</span>
+                <span>result.appendChild(item);</span>
+                <span>});</span>
+                <span>};</span>
+                <span>// event listeners</span>
+                <span>const eventListeners = () => {</span>
+                <span>// handel form submit event</span>
+                <span>note.addEventListener("submit", formHandler);</span>
+                <span>// handel remove button event</span>
+                <span>result.addEventListener("click", removeButtonHandler);</span>
+                <span>// get data from local storage when page onload</span>
+                <span>document.addEventListener("DOMContentLoaded", localStorageDataLoaded);</span>
+                <span>};</span>
+                <span>eventListeners();</span>
             </div>
         </div>
     </section>

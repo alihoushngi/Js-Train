@@ -24,7 +24,7 @@
     "imageUrl": "./assets/images/js.png"
   },
   {
-    "title": "Todo List",
+    "title": "Todo List ***",
     "link": "./pages/jsTrain/todoList/todoList.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "./assets/images/js.png"
