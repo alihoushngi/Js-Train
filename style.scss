@@ -40,6 +40,13 @@ html {
     font: {
       family: $GillFont;
     }
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: calc(100vh - 60px);
+    }
     nav {
       width: 100%;
       background-color: $softBlack;
@@ -56,11 +63,22 @@ html {
           padding: 0;
           .navbar-category-item {
             text-transform: uppercase;
-            color: rgb(161, 161, 161);
-            transition: all 300ms ease-in-out;
             cursor: pointer;
-            &:hover {
-              color: $codeAnswer;
+            a {
+              text-decoration: none;
+              transition: all 300ms ease-in-out;
+              color: rgb(161, 161, 161);
+              &:hover {
+                color: $codeAnswer;
+              }
+            }
+            a.activeRoute {
+              text-decoration: none;
+              transition: all 300ms ease-in-out;
+              color: $codeArrayBracket;
+              &:hover {
+                color: $codeAnswer;
+              }
             }
           }
         }
