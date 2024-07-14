@@ -264,14 +264,35 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 .cl-wrapper .code-comment {
   color: #6b9955;
 }
+.cl-wrapper .code-comment-star {
+  color: #97c479;
+}
+.cl-wrapper .code-comment-blue {
+  color: #3598db;
+}
+.cl-wrapper .code-comment-red {
+  color: #ff2c06;
+}
+.cl-wrapper .code-comment-yellow {
+  color: #ff8c18;
+}
 .cl-wrapper .code-variable {
   color: #3598da;
+}
+.cl-wrapper .code-array {
+  color: #4ec8b0;
+}
+.cl-wrapper .code-arrayAttribute {
+  color: #dddcaa;
+}
+.cl-wrapper .code-jsAttribute {
+  color: #9ddcfe;
 }
 .cl-wrapper .code-arrayBracket, .cl-wrapper .code-parentheses {
   color: #ffd629;
 }
 .cl-wrapper .code-bracket {
-  color: #da70d7;
+  color: #70cfda;
 }
 .cl-wrapper .code-number {
   color: #b5cca7;

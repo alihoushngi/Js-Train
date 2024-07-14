@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Code Finder with JS</title>
+</head>
+
+
+<body class="cl-body">
+    <h1 class="title">Code Finder with JS</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">7</span>
+                    <h2 class="train-question">Code Finder</h2>
+                </div>
+            </div>
+            <div class="code-wrapper">
+                <span>// * find the code wrappers</span>
+                <span>// ! get code wrapper section from any component or html file</span>
+                <span>const codeWrappers = document.querySelectorAll(".code-wrapper");</span>
+                <br />
+                <span>// ? create array of codes for analyze</span>
+                <span>const data = Array.from(codeWrappers);</span>
+                <br />
+                <span>// todo regex's for search and find some words</span>
+                <span>const variableRegex = /\b(const|var|let|if|else|null|=>)\b/g;</span>
+                <span>const bracketRegex = /(\[\]|\(\))/g;</span>
+                <span>const numberRegex = /\d+/g;</span>
+                <br />
+                <span>// ! map on data</span>
+                <span>data.forEach((data) => {</span>
+                <span style="padding-left: 10px;">const items = Array.from(data.children);</span>
+                <span style="padding-left: 10px;">// conditional for any attribute to set up color</span>
+                <span style="padding-left: 20px;">items.forEach((tags) => {</span>
+                <span style="padding-left: 30px;">if (tags.innerHTML.includes("//")) {</span>
+                <span style="padding-left: 40px;">tags.classList.add("code-comment");</span>
+                <span style="padding-left: 30px;">}</span>
+                <span style="padding-left: 30px;">if (tags.innerHTML.includes("// *")) {</span>
+                <span style="padding-left: 40px;">tags.classList.add("code-comment-star");</span>
+                <span style="padding-left: 30px;">}</span>
+                <span style="padding-left: 30px;">if (tags.innerHTML.includes("// !")) {</span>
+                <span style="padding-left: 40px;">tags.classList.add("code-comment-red");</span>
+                <span style="padding-left: 30px;">}</span>
+                <span style="padding-left: 30px;">if (tags.innerHTML.includes("// ?")) {</span>
+                <span style="padding-left: 40px;">tags.classList.add("code-comment-blue");</span>
+                <span style="padding-left: 30px;">}</span>
+                <span style="padding-left: 30px;">if (tags.innerHTML.includes("// todo")) {</span>
+                <span style="padding-left: 40px;">tags.classList.add("code-comment-yellow");</span>
+                <span style="padding-left: 30px;">}</span>
+                <span style="padding-left: 30px;">if (</span>
+                <span style="padding-left: 40px;">tags.innerHTML.includes("const") ||</span>
+                <span style="padding-left: 40px;">tags.innerHTML.includes("var") ||</span>
+                <span style="padding-left: 40px;">tags.innerHTML.includes("let") ||</span>
+                <span style="padding-left: 40px;">tags.innerHTML.includes("if") ||</span>
+                <span style="padding-left: 40px;">tags.innerHTML.includes("else") ||</span>
+                <span style="padding-left: 40px;">tags.innerHTML.includes("null") ||</span>
+                <span style="padding-left: 40px;">tags.innerHTML.includes("=>")</span>
+                <span style="padding-left: 30px;">) {</span>
+                <span style="padding-left: 40px;">const variables = tags.innerHTML.replace(</span>
+                <span style="padding-left: 50px;">variableRegex,</span>
+                <span style="padding-left: 50px;">"< span class='code-variable'>$&< /span>"</span>
+                <span style="padding-left: 40px;">);</span>
+                <span style="padding-left: 50px;">tags.innerHTML = variables;</span>
+                <span style="padding-left: 40px;">}</span>
+                <span style="padding-left: 40px;">if (</span>
+                <span style="padding-left: 50px;">tags.innerHTML.includes("[") ||</span>
+                <span style="padding-left: 50px;">tags.innerHTML.includes("]") ||</span>
+                <span style="padding-left: 50px;">tags.innerHTML.includes("(") ||</span>
+                <span style="padding-left: 50px;">tags.innerHTML.includes(")")</span>
+                <span style="padding-left: 40px;">) {</span>
+                <span style="padding-left: 40px;">if (tags.innerHTML.includes("[")) {</span>
+                <span style="padding-left: 50px;">const leftBrackets = tags.innerHTML.replace(</span>
+                <span style="padding-left: 60px;">/\[/g,</span>
+                <span style="padding-left: 60px;">"< span class='code-arrayBracket'>[< /span>"</span>
+                <span style="padding-left: 50px;">);</span>
+                <span style="padding-left: 50px;">tags.innerHTML = leftBrackets;</span>
+                <span style="padding-left: 40px;">}</span>
+                <span style="padding-left: 40px;">if (tags.innerHTML.includes("]")) {</span>
+                <span style="padding-left: 50px;">const rightBrackets = tags.innerHTML.replace(</span>
+                <span style="padding-left: 60px;">/\]/g,</span>
+                <span style="padding-left: 60px;">"< span class='code-arrayBracket'>]< /span>"</span>
+                <span style="padding-left: 50px;">);</span>
+                <span style="padding-left: 50px;">tags.innerHTML = rightBrackets;</span>
+                <span style="padding-left: 40px;">}</span>
+                <span style="padding-left: 40px;">if (tags.innerHTML.includes("(")) {</span>
+                <span style="padding-left: 50px;"> const leftParentheses = tags.innerHTML.replace(</span>
+                <span style="padding-left: 60px;">/\(/g,</span>
+                <span style="padding-left: 60px;">"< span class='code-parentheses'>(< /span>"</span>
+                <span style="padding-left: 50px;">);</span>
+                <span style="padding-left: 50px;">tags.innerHTML = leftParentheses;</span>
+                <span style="padding-left: 40px;">}</span>
+                <span style="padding-left: 40px;">if (tags.innerHTML.includes(")")) {</span>
+                <span style="padding-left: 50px;">const rightParentheses = tags.innerHTML.replace(</span>
+                <span style="padding-left: 60px;">/\)/g,</span>
+                <span style="padding-left: 60px;">"< span class='code-parentheses'>)< /span>"</span>
+                <span style="padding-left: 50px;">);</span>
+                <span style="padding-left: 50px;">tags.innerHTML = rightParentheses;</span>
+                <span style="padding-left: 50px;">}</span>
+                <span style="padding-left: 40px;">}</span>
+                <span style="padding-left: 40px;">if (numberRegex.test(tags.innerHTML)) {</span>
+                <span style="padding-left: 50px;">const numbers = tags.innerHTML.replace(</span>
+                <span style="padding-left: 60px;">numberRegex,</span>
+                <span style="padding-left: 60px;">" < span class='code-number'>$&< /span> "</span>
+                <span style="padding-left: 50px;">);</span>
+                <span style="padding-left: 50px;">tags.innerHTML = numbers;</span>
+                <span style="padding-left: 40px;">}</span>
+                <span style="padding-left: 10px;">});</span>
+                <span>});</span>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../../../js/codeFinder.js"></script>
+</body>
+
+</html>

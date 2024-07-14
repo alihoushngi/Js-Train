@@ -34,5 +34,11 @@
     "link": "6/bobEye.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "title": "Code Finder with JS ***",
+    "link": "7/codeFinder.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]

@@ -17,11 +17,18 @@ $borderRadius: 5px;
 //* code style
 $codeBack: #1e1e1e;
 $codeComment: #6b9955;
+$codeCommentStar: #97c479;
+$codeCommentRed: #ff2c06;
+$codeCommentBlue: #3598db;
+$codeCommentYellow: #ff8c18;
 $codeFontFamily: "Courier New", Courier, monospace;
 $codeFontSize: 12px;
 $codeVariable: #3598da;
+$codeArray: #4ec8b0;
+$codeArrayAttr: #dddcaa;
+$jsArrayAttr: #9ddcfe;
 $codeArrayBracket: #ffd629;
-$codeManualBracket: #da70d7;
+$codeManualBracket: #70cfda;
 $codeNumber: #b5cca7;
 $codeString: #ce9277;
 $codeManualText: #d4d4d4;
@@ -312,9 +319,30 @@ html {
       }
       &-comment {
         color: $codeComment;
+        &-star {
+          color: $codeCommentStar;
+        }
+        &-blue {
+          color: $codeCommentBlue;
+        }
+        &-red {
+          color: $codeCommentRed;
+        }
+        &-yellow {
+          color: $codeCommentYellow;
+        }
       }
       &-variable {
         color: $codeVariable;
+      }
+      &-array {
+        color: $codeArray;
+      }
+      &-arrayAttribute {
+        color: $codeArrayAttr;
+      }
+      &-jsAttribute {
+        color: $jsArrayAttr;
       }
       &-arrayBracket,
       &-parentheses {
