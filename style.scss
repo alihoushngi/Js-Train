@@ -426,3 +426,69 @@ html {
 }
 
 //todo------------------------------
+
+// ! bob project
+.bob {
+  background-color: #fef66a;
+  border-radius: 20px;
+  &-face {
+    padding: 2rem;
+    position: relative;
+    &-image {
+      width: 220px;
+    }
+    &-eye {
+      position: absolute;
+      top: 95px;
+      z-index: 1;
+      width: 40px;
+      transition: all 300ms ease-in;
+      &-first {
+        left: 75px;
+      }
+      &-second {
+        left: 170px;
+      }
+    }
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 1rem;
+    &-label {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 12px;
+      margin-top: 0.7rem;
+    }
+    &-input {
+      background-color: #ffffff;
+      border: 1px solid #e2a036;
+      border-radius: 5px;
+      padding: 0.5rem;
+      transition: 300ms all ease-in;
+      &:focus {
+        outline: 2px solid #e2a036;
+      }
+    }
+    &-button {
+      background-color: #ffffff;
+      color: #000000;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 0.7rem;
+      border: none;
+      padding: 0.7rem;
+      box-shadow: 0px 1px 2px 0px #00000042;
+      transition: 300ms all ease-in;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0px 1px 3px 0px #00000079;
+      }
+    }
+  }
+}
+
+// ! bob project

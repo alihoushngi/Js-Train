@@ -25,7 +25,13 @@
   },
   {
     "title": "Todo List ***",
-    "link": "todoList/todoList.html",
+    "link": "5/todoList.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "title": "Bob Eye ( Input Tracking In JS )",
+    "link": "6/bobEye.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   }

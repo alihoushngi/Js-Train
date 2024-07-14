@@ -365,4 +365,67 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 }
 .todo_form-result--rmvButton:hover {
   width: 20px;
+}
+
+.bob {
+  background-color: #fef66a;
+  border-radius: 20px;
+}
+.bob-face {
+  padding: 2rem;
+  position: relative;
+}
+.bob-face-image {
+  width: 220px;
+}
+.bob-face-eye {
+  position: absolute;
+  top: 95px;
+  z-index: 1;
+  width: 40px;
+  transition: all 300ms ease-in;
+}
+.bob-face-eye-first {
+  left: 75px;
+}
+.bob-face-eye-second {
+  left: 170px;
+}
+.bob-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 1rem;
+}
+.bob-form-label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  margin-top: 0.7rem;
+}
+.bob-form-input {
+  background-color: #ffffff;
+  border: 1px solid #e2a036;
+  border-radius: 5px;
+  padding: 0.5rem;
+  transition: 300ms all ease-in;
+}
+.bob-form-input:focus {
+  outline: 2px solid #e2a036;
+}
+.bob-form-button {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 0.7rem;
+  border: none;
+  padding: 0.7rem;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2588235294);
+  transition: 300ms all ease-in;
+  cursor: pointer;
+}
+.bob-form-button:hover {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4745098039);
 }/*# sourceMappingURL=style.css.map */

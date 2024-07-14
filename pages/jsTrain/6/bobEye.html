@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Input Tracking in JS</title>
+</head>
+
+
+<body class="cl-body">
+    <h1 class="title">Input Tracking in JS</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">6</span>
+                    <h2 class="train-question">Bob Eye</h2>
+                </div>
+            </div>
+            <div class="bob">
+                <div class="bob-face">
+                    <img src="./assets/bobno.png" alt="bob face" id="face" class="bob-face-image">
+                    <img src="./assets/eye.png" alt="bob eye" id="eye1" class="bob-face-eye bob-face-eye-first">
+                    <img src="./assets/eye.png" alt="bob eye" id="eye2" class="bob-face-eye bob-face-eye-second">
+                </div>
+                <!-- form -->
+                <form action="#" class="bob-form">
+                    <label for="userName" class="bob-form-label">User Name</label>
+                    <input type="text" id="userName" name="userName" class="bob-form-input">
+                    <label for="password" class="bob-form-label">Password</label>
+                    <input type="password" id="password" name="password" class="bob-form-input">
+                    <button type="submit" class="bob-form-button">Submit</button>
+                </form>
+                <!-- form -->
+            </div>
+
+            <div class="code-wrapper">
+                <span>// ! get eyes from dom</span>
+                <span>const firstEye = document.querySelector("#eye1");</span>
+                <span>const secondEye = document.querySelector("#eye2");</span>
+                <br />
+                <span>// ? get inputs from form</span>
+                <span>const userName = document.querySelector("#userName");</span>
+                <span>const password = document.querySelector("#password");</span>
+                <br />
+                <span>// * username focus and blur</span>
+                <span>userName.addEventListener("focus", () => {</span>
+                <span>firstEye.style.paddingTop = "1rem";</span>
+                <span>secondEye.style.paddingTop = "1rem";</span>
+                <span>firstEye.style.left = "50px";</span>
+                <span>secondEye.style.left = "150px";</span>
+                <span>});</span>
+                <br />
+                <span>userName.addEventListener("blur", () => {</span>
+                <span>firstEye.style.paddingTop = "0";</span>
+                <span>secondEye.style.paddingTop = "0";</span>
+                <span>firstEye.style.left = "75px";</span>
+                <span>secondEye.style.left = "170px";</span>
+                <span>});</span>
+                <br />
+                <span>// * password focus and blur</span>
+                <span>password.addEventListener("focus", () => {</span>
+                <span>firstEye.style.top = "75px";</span>
+                <span>secondEye.style.top = "75px";</span>
+                <span>});</span>
+                <br />
+                <span>password.addEventListener("blur", () => {</span>
+                <span>firstEye.style.top = "95px";</span>
+                <span>secondEye.style.top = "95px";</span>
+                <span>});</span>
+                <br />
+                <span>// event listener for when input have value</span>
+                <span>userName.addEventListener("input", (e) => {</span>
+                <span>const inputBox = e.target.value;</span>
+                <span>let firstEyePosition = 50;</span>
+                <span>let secondEyePosition = 150;</span>
+                <span>for (let i = 0; i < inputBox.length; i++) {</span>
+                        <span>firstEyePosition += 1;</span>
+                        <span>secondEyePosition += 1;</span>
+                        <span>firstEye.style.left = `${firstEyePosition}px`;</span>
+                        <span>secondEye.style.left = `${secondEyePosition}px`;</span>
+                        <span>}</span>
+                        <span>});</span>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="bobEye.js"></script>
+</body>
+
+</html>
