@@ -52,24 +52,19 @@
                 <br />
                 <span>// todo toggle control</span>
                 <span>toggleButton.addEventListener("click", () => {</span>
-                <span> isOpen = !isOpen;</span>
-                <span> if (isOpen) {</span>
-                <span> toggleButton.classList.add("toggleActive");</span>
-                <span> menuItems[0].style.transform = "translate(12px , -50px)";</span>
-                <span> menuItems[1].style.transform = "translate(48px , -35px)";</span>
-                <span> menuItems[2].style.transform = "translate(62px , 2px)";</span>
-                <span> menuItems[3].style.transform = "translate(46px , 38px)";</span>
-                <span> menuItems[4].style.transform = "translate(9px , 50px)";</span>
-                <span> menuItems[5].style.transform = "translate(-27px , 33px)";</span>
-                <span> } else {</span>
-                <span> toggleButton.classList.remove("toggleActive");</span>
-                <span> menuItems[0].style.transform = "translate(0px , 0px)";</span>
-                <span> menuItems[1].style.transform = "translate(0px , 0px)";</span>
-                <span> menuItems[2].style.transform = "translate(0px , 0px)";</span>
-                <span> menuItems[3].style.transform = "translate(0px , 0px)";</span>
-                <span> menuItems[4].style.transform = "translate(0px , 0px)";</span>
-                <span> menuItems[5].style.transform = "translate(0px , 0px)";</span>
-                <span> }</span>
+                <span>isOpen = !isOpen;</span>
+                <span>if (isOpen) {</span>
+                <span>toggleButton.classList.add("toggleActive");</span>
+                <span>menuItems[0].style.transform = "translate(12px , -50px)";</span>
+                <span>menuItems[1].style.transform = "translate(48px , -35px)";</span>
+                <span>menuItems[2].style.transform = "translate(62px , 2px)";</span>
+                <span>menuItems[3].style.transform = "translate(46px , 38px)";</span>
+                <span>menuItems[4].style.transform = "translate(9px , 50px)";</span>
+                <span>menuItems[5].style.transform = "translate(-27px , 33px)";</span>
+                <span>} else {</span>
+                <span>toggleButton.classList.remove("toggleActive");</span>
+                <span>menuItems.forEach((item) => (item.style.transform = "translate(0 , 0)"));</span>
+                <span>}</span>
                 <span>}); </span>
             </div>
         </div>

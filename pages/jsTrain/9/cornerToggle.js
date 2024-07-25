@@ -18,11 +18,6 @@ toggleButton.addEventListener("click", () => {
     menuItems[5].style.transform = "translate(-27px , 33px)";
   } else {
     toggleButton.classList.remove("toggleActive");
-    menuItems[0].style.transform = "translate(0px , 0px)";
-    menuItems[1].style.transform = "translate(0px , 0px)";
-    menuItems[2].style.transform = "translate(0px , 0px)";
-    menuItems[3].style.transform = "translate(0px , 0px)";
-    menuItems[4].style.transform = "translate(0px , 0px)";
-    menuItems[5].style.transform = "translate(0px , 0px)";
+    menuItems.forEach((item) => (item.style.transform = "translate(0 , 0)"));
   }
 });
