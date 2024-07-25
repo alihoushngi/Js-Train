@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Corner Menu</title>
+</head>
+
+
+<body class="cl-body">
+    <h1 class="title">Corner Menu with JS</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">9</span>
+                    <h2 class="train-question">Corner Menu</h2>
+                </div>
+            </div>
+            <section class="corner-menu">
+                <a href="tel:09115447316" class="corner-menu-item" id="phone">
+                    <img src="./assets/phone.png" alt="phone" class="corner-menu-item-image">
+                </a>
+                <a href="mailto:blumy.info@gmail.com" class="corner-menu-item" id="email">
+                    <img src="./assets/email.png" alt="email" class="corner-menu-item-image">
+                </a>
+                <a href="https://wa.me/+989115447316" class="corner-menu-item" id="whatsapp">
+                    <img src="./assets/whatsapp.png" alt="whatsapp" class="corner-menu-item-image">
+                </a>
+                <a href="https://t.me/+989981560306" class="corner-menu-item" id="telegram">
+                    <img src="./assets/telegram.png" alt="telegram" class="corner-menu-item-image">
+                </a>
+                <a href="https://www.linkedin.com/in/alihoushangi/" class="corner-menu-item" id="linkedin">
+                    <img src="./assets/linkedin.png" alt="linkedin" class="corner-menu-item-image">
+                </a>
+                <a href="https://github.com/alihoushngi" class="corner-menu-item" id="github">
+                    <img src="./assets/github.png" alt="github" class="corner-menu-item-image">
+                </a>
+                <button class="corner-menu-button" id="toggleButton">
+                    <img src="./assets/plus.png" alt="menu button" class="corner-menu-button-image">
+                </button>
+            </section>
+            <div class="code-wrapper">
+                <span>// ? get element from dom</span>
+                <span>const toggleButton = document.querySelector("#toggleButton");</span>
+                <span>const menuItems = document.querySelectorAll(".corner-menu a");</span>
+                <br />
+                <span>// ! create state</span>
+                <span>let isOpen = false;</span>
+                <br />
+                <span>// todo toggle control</span>
+                <span>toggleButton.addEventListener("click", () => {</span>
+                <span> isOpen = !isOpen;</span>
+                <span> if (isOpen) {</span>
+                <span> toggleButton.classList.add("toggleActive");</span>
+                <span> menuItems[0].style.transform = "translate(12px , -50px)";</span>
+                <span> menuItems[1].style.transform = "translate(48px , -35px)";</span>
+                <span> menuItems[2].style.transform = "translate(62px , 2px)";</span>
+                <span> menuItems[3].style.transform = "translate(46px , 38px)";</span>
+                <span> menuItems[4].style.transform = "translate(9px , 50px)";</span>
+                <span> menuItems[5].style.transform = "translate(-27px , 33px)";</span>
+                <span> } else {</span>
+                <span> toggleButton.classList.remove("toggleActive");</span>
+                <span> menuItems[0].style.transform = "translate(0px , 0px)";</span>
+                <span> menuItems[1].style.transform = "translate(0px , 0px)";</span>
+                <span> menuItems[2].style.transform = "translate(0px , 0px)";</span>
+                <span> menuItems[3].style.transform = "translate(0px , 0px)";</span>
+                <span> menuItems[4].style.transform = "translate(0px , 0px)";</span>
+                <span> menuItems[5].style.transform = "translate(0px , 0px)";</span>
+                <span> }</span>
+                <span>}); </span>
+            </div>
+        </div>
+    </section>
+
+    <script src="cornerToggle.js"></script>
+    <script src="../../../js/codeFinder.js"></script>
+</body>
+
+</html>

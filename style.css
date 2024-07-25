@@ -81,6 +81,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
+  max-width: 90%;
 }
 .project-cards-wrapper .project-card {
   background-color: #f0f0f0;
@@ -494,4 +495,53 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   font-weight: 400;
   font-size: 18px;
   color: #343434;
+}
+
+.corner-menu {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.corner-menu-item {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 0.5rem;
+  background-color: #3598da;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 40%;
+  top: 12px;
+  transition: all 300ms ease;
+}
+.corner-menu-item:hover {
+  background-color: #30137d;
+}
+.corner-menu-item-image {
+  width: 100%;
+}
+.corner-menu-button {
+  display: inline-block;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  padding: 0.5rem;
+  background-color: #343434;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 40%;
+  top: 0;
+  transition: all 300ms ease;
+}
+.corner-menu-button:hover {
+  background-color: #000000;
+}
+.corner-menu-button-image {
+  width: 100%;
+}
+
+.toggleActive {
+  transform: rotate(45deg);
 }/*# sourceMappingURL=style.css.map */

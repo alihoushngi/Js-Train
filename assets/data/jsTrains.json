@@ -46,5 +46,11 @@
     "link": "8/counter.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "title": "Corner Menu with JS",
+    "link": "9/cornerToggle.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]

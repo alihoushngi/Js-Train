@@ -121,6 +121,7 @@ html {
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
+  max-width: 90%;
   .project-card {
     background-color: $primaryColor;
     color: $secondaryColor;
@@ -568,3 +569,55 @@ html {
 }
 
 // ! number counter
+
+// ! corner menu
+.corner-menu {
+  position: relative;
+  width: 100%;
+  height: 100px;
+
+  &-item {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 0.5rem;
+    background-color: $codeVariable;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 40%;
+    top: 12px;
+    transition: all 300ms ease;
+    &:hover {
+      background-color: #30137d;
+    }
+    &-image {
+      width: 100%;
+    }
+  }
+  &-button {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    padding: 0.5rem;
+    background-color: $secondaryColor;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 40%;
+    top: 0;
+    transition: all 300ms ease;
+    &:hover {
+      background-color: #000000;
+    }
+    &-image {
+      width: 100%;
+    }
+  }
+}
+
+.toggleActive {
+  transform: rotate(45deg);
+}
+// ! corner menu
