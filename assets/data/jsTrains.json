@@ -40,5 +40,11 @@
     "link": "7/codeFinder.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "title": "Number Counter with JS",
+    "link": "8/counter.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]

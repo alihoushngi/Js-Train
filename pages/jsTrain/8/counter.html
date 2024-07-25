@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Number Counter</title>
+</head>
+
+
+<body class="cl-body">
+    <h1 class="title">Number Counter with JS</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">8</span>
+                    <h2 class="train-question">Counter</h2>
+                </div>
+            </div>
+            <section>
+                <h3>this in my fake content for create gap between counter and up section , this is for create scroll
+                    height</h3>
+                <span style="margin: 0; padding: 0;">description:</span>
+                <p>
+                    This project is an interactive web application featuring a dynamic counter 📈 that increments
+                    numbers based on the user's scroll position and height within a webpage. Crafted using
+                    <strong>HTML</strong>, <strong>CSS (Sass)</strong>, and <strong>JavaScript</strong>, it serves as a
+                    practical exercise to enhance my front-end development skills 🌐.
+                </p>
+                <p>
+                    The core functionality revolves around detecting the user's scroll position. As users scroll down,
+                    the counter activates, providing real-time feedback and engagement 💡. This was achieved using
+                    JavaScript's event listeners and interval functions ⏱️, allowing for smooth and responsive number
+                    animations 🔢.
+                </p>
+                <p>
+                    In terms of design, the project employs <strong>Sass</strong> for styling 🎨. Sass enabled me to
+                    write maintainable and modular CSS, making the design process efficient. Using variables, mixins,
+                    and nested rules, I created a clean and cohesive look for the application 🖌️.
+                </p>
+                <p>
+                    The project helped me understand scroll events and controlling elements based on user interaction.
+                    By monitoring the scroll position, I learned to trigger animations, creating a more dynamic user
+                    experience 🖥️. This hands-on approach provided valuable insights into building interactive web
+                    interfaces 🌟.
+                </p>
+                <p>
+                    Overall, this project was a comprehensive exercise, combining <strong>HTML</strong>, <strong>CSS
+                        (Sass)</strong>, and <strong>JavaScript</strong> to create a dynamic counter based on scroll
+                    position. It enhanced my skills in handling user events, time-based functions, and modular styling,
+                    laying a solid foundation for future web development projects 🚀.
+                </p>
+            </section>
+            <section class="counter">
+                <h3 class="counter-title">
+                    My Project Numbers :
+                </h3>
+                <div class="counter-wrapper" id="counterSection">
+                    <div class="counter-item">
+                        <h4 class="counter-item-name">VanillaJS</h4>
+                        <span class="counter-item-number" data-count="114">0</span>
+                    </div>
+                    <div class="counter-item">
+                        <h4 class="counter-item-name">React</h4>
+                        <span class="counter-item-number" data-count="35">0</span>
+                    </div>
+                    <div class="counter-item">
+                        <h4 class="counter-item-name">Next</h4>
+                        <span class="counter-item-number" data-count="23">0</span>
+                    </div>
+                    <div class="counter-item">
+                        <h4 class="counter-item-name">Wordpress</h4>
+                        <span class="counter-item-number" data-count="120">0</span>
+                    </div>
+                </div>
+            </section>
+            <div class="code-wrapper">
+                <span>// ? get data from dom</span>
+                <span>const counterSection = document.querySelector("#counterSection");</span>
+                <span>const counterPosition = counterSection.scrollHeight;</span>
+                <span>const $ = document;</span>
+                <span>let startCounter = false;</span>
+                <br />
+                <span>// * get items number section from dom</span>
+                <span>const itemsNumber = $.querySelectorAll(".counter-item-number");</span>
+                <br />
+                <span>// ! find current scroll</span>
+                <span>window.addEventListener("scroll", () => {</span>
+                <span>if (window.scrollY >= counterPosition) {</span>
+                <span>if (!startCounter) {</span>
+                <span>itemsNumber.forEach((counter) => setCounter(counter));</span>
+                <span>}</span>
+                <span>startCounter = true;</span>
+                <span>}</span>
+                <span>});</span>
+                <br />
+                <span>// todo counter function</span>
+                <span>function setCounter(element) {</span>
+                <span>let elementNumberCount = element.dataset.count;</span>
+                <span>let counterInterval = setInterval(() => {</span>
+                <span>if (element.textContent == elementNumberCount) {</span>
+                <span>clearInterval(counterInterval);</span>
+                <span>}</span>
+                <span>element.textContent++;</span>
+                <span>}, 20);</span>
+                <span>}</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="counter.js"></script>
+    <script src="../../../js/codeFinder.js"></script>
+</body>
+
+</html>

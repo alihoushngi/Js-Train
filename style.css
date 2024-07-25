@@ -19,6 +19,7 @@ html body main {
   align-items: center;
   flex-direction: column;
   min-height: calc(100vh - 60px);
+  margin-bottom: 0.5rem;
 }
 html body nav {
   width: 100%;
@@ -449,4 +450,48 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 }
 .bob-form-button:hover {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4745098039);
+}
+
+.counter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 20px;
+}
+.counter-title {
+  margin: 10px 0;
+}
+.counter-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.counter-item {
+  padding: 1rem;
+  border: 3px solid #e5e5e5;
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+  border-radius: 10px;
+  min-width: 150px;
+  text-align: center;
+}
+.counter-item-name {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 14px;
+  text-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+  color: maroon;
+  text-transform: uppercase;
+}
+.counter-item-number {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  color: #343434;
 }/*# sourceMappingURL=style.css.map */
