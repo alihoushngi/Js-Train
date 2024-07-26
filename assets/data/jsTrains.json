@@ -1,24 +1,24 @@
 [
   {
-    "title": "Find the largest number and the smallest number",
+    "title": "largest and Smallest number",
     "link": "1/minAndMaxNumber.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Checking whether the image is vertical or horizontal",
+    "title": "Vertical or Horizontal",
     "link": "2/verticalOrHorizontal.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Printing words relative to the divisibility of numbers",
+    "title": "Divisibility of Numbers",
     "link": "3/divisibility.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Checking whether the number is even or odd",
+    "title": "Even or Odd",
     "link": "4/evenOrOdd.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
@@ -36,20 +36,26 @@
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Code Finder with JS ***",
+    "title": "Code Finder ***",
     "link": "7/codeFinder.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Number Counter with JS",
+    "title": "Number Counter",
     "link": "8/counter.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Corner Menu with JS",
+    "title": "Corner Menu",
     "link": "9/cornerToggle.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "title": "Color Changer",
+    "link": "10/colorChanger.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   }
