@@ -19,9 +19,92 @@
                     <h2 class="train-question">Color Changer</h2>
                 </div>
             </div>
+            <section class="theme-card">
+                <div class="theme-card-wrapper">
+                    <div class="theme-card-header">
+                        <img src="./assets/AliHoushangi.JPEG" alt="Ali Houshangi | علی هوشنگی"
+                            class="theme-card-header-image">
+                        <div class="theme-card-header-wrapper">
+                            <div class="theme-card-header-up">
+                                <div class="theme-card-header-des">
+                                    <h3 class="theme-card-header-title">Ali Houshangi</h3>
+                                    <span class="theme-card-header-lable">Frontend Developer</span>
+                                </div>
+                                <div class="theme-card-header-social">
+                                    <a href="tel:09115447316" class="theme-card-header-social-item" id="phone">
+                                        <img src="./assets/phone.png" alt="phone"
+                                            class="theme-card-header-social-image">
+                                    </a>
+                                    <a href="mailto:blumy.info@gmail.com" class="theme-card-header-social-item"
+                                        id="email">
+                                        <img src="./assets/email.png" alt="email"
+                                            class="theme-card-header-social-image">
+                                    </a>
+                                    <a href="https://wa.me/+989115447316" class="theme-card-header-social-item"
+                                        id="whatsapp">
+                                        <img src="./assets/whatsapp.png" alt="whatsapp"
+                                            class="theme-card-header-social-image">
+                                    </a>
+                                    <a href="https://t.me/+989981560306" class="theme-card-header-social-item"
+                                        id="telegram">
+                                        <img src="./assets/telegram.png" alt="telegram"
+                                            class="theme-card-header-social-image">
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/alihoushangi/"
+                                        class="theme-card-header-social-item" id="linkedin">
+                                        <img src="./assets/linkedin.png" alt="linkedin"
+                                            class="theme-card-header-social-image">
+                                    </a>
+                                    <a href="https://github.com/alihoushngi" class="theme-card-header-social-item"
+                                        id="github">
+                                        <img src="./assets/github.png" alt="github"
+                                            class="theme-card-header-social-image">
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="theme-card-description">My primary interest was programming from the
+                                beginning,
+                                and I have always tried to elevate my knowledge in this field. After years of
+                                experience
+                                in
+                                web development, I have been able to utilize my experiences to manage a team of
+                                diverse
+                                programmers as a technical manager. Additionally, I aim to transfer my knowledge and
+                                experience to aspiring learners in this field.</p>
+                        </div>
+                    </div>
 
+                </div>
+
+            </section>
+            <section class="theme-changer">
+                <h4>Which one ? </h4>
+                <button class="theme-changer-button red" data-color="#a20000"></button>
+                <button class="theme-changer-button yellow" data-color="#edb603"></button>
+                <button class="theme-changer-button blue" data-color="#1f01c8"></button>
+                <button class="theme-changer-button green" data-color="#007c0a"></button>
+            </section>
             <div class="code-wrapper">
-
+                <span>// ? get items from dom</span>
+                <span>const buttons = document.querySelectorAll("button");</span>
+                <span>const image = document.querySelector(".theme-card-header-image");</span>
+                <span>const title = document.querySelector(".theme-card-header-title");</span>
+                <span>const social = document.querySelectorAll(".theme-card-header-social-item");</span>
+                <br />
+                <span>// ! find color changer button</span>
+                <span>buttons.forEach((item) => {</span>
+                <span> // * when client click on color button</span>
+                <span> item.addEventListener("click", () => {</span>
+                <span> // get colors from button dataset</span>
+                <span> const color = item.dataset.color;</span>
+                <span> // todo change colors item</span>
+                <span> image.style.borderColor = `${color}`;</span>
+                <span> title.style.color = `${color}`;</span>
+                <span> social.forEach((items) => {</span>
+                <span> items.style.backgroundColor = `${color}`;</span>
+                <span> });</span>
+                <span> });</span>
+                <span>});</span>
             </div>
         </div>
     </section>
