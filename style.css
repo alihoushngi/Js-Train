@@ -9,7 +9,7 @@ html {
 html body {
   margin: 0;
   padding: 0;
-  background-color: #343434;
+  background-color: #262846;
   color: #f0f0f0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -23,7 +23,7 @@ html body main {
 }
 html body nav {
   width: 100%;
-  background-color: #474747;
+  background-color: #080840;
   margin: 0;
   padding: 0.3rem 0;
 }
@@ -85,7 +85,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 }
 .project-cards-wrapper .project-card {
   background-color: #f0f0f0;
-  color: #343434;
+  color: #262846;
   max-width: 200px;
   min-height: 300px;
   display: flex;
@@ -165,7 +165,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 }
 .cl-wrapper .codes {
   background-color: #f0f0f0;
-  color: #343434;
+  color: #262846;
   box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
   border-radius: 5px;
   padding: 1rem;
@@ -232,7 +232,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   gap: inherit;
 }
 .cl-wrapper .train-number {
-  background-color: #343434;
+  background-color: #262846;
   color: #f0f0f0;
   width: 20px;
   height: 20px;
@@ -494,7 +494,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   padding: 0;
   font-weight: 400;
   font-size: 18px;
-  color: #343434;
+  color: #262846;
 }
 
 .corner-menu {
@@ -527,7 +527,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   width: 60px;
   height: 60px;
   padding: 0.5rem;
-  background-color: #343434;
+  background-color: #262846;
   border-radius: 100%;
   position: absolute;
   z-index: 2;
