@@ -11,6 +11,8 @@ html body {
   padding: 0;
   background-color: #262846;
   color: #f0f0f0;
+  min-height: 100vh;
+  background-repeat: no-repeat;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 html body main {
@@ -667,4 +669,132 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 }
 .theme-changer .green:hover {
   background-color: rgb(0, 87, 7);
+}
+
+.colorGenerator {
+  display: flex;
+  width: 98%;
+  gap: 5px;
+}
+.colorGenerator-leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+}
+.colorGenerator-rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+  justify-content: space-between;
+}
+.colorGenerator-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+}
+.colorGenerator-box label {
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+.colorGenerator-box-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.colorGenerator-box-input::-webkit-color-swatch {
+  border-radius: 5px;
+  border: none;
+}
+.colorGenerator-box-input::-moz-color-swatch {
+  border-radius: 5px;
+  border: none;
+}
+.colorGenerator-box-input::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.colorGenerator-box-input::-moz-focus-inner {
+  padding: 0;
+}
+.colorGenerator-directions {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #e3e3e3;
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.colorGenerator-directions-arrow {
+  width: 20px;
+  background-color: #1f01c8;
+  padding: 0.1rem;
+  border-radius: 5px;
+  transition: all 300ms ease-in;
+  cursor: pointer;
+}
+.colorGenerator-directions-arrow:hover {
+  background-color: #6652d7;
+}
+.colorGenerator-directions-arrow:nth-child(1) {
+  transform: rotate(-90deg);
+}
+.colorGenerator-directions-arrow:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.colorGenerator-directions-arrow:nth-child(4) {
+  transform: rotate(45deg);
+}
+.colorGenerator-directions-arrow:nth-child(5) {
+  transform: rotate(90deg);
+}
+.colorGenerator-directions-arrow:nth-child(5) {
+  transform: rotate(90deg);
+}
+.colorGenerator-directions-arrow:nth-child(6) {
+  transform: rotate(135deg);
+}
+.colorGenerator-directions-arrow:nth-child(7) {
+  transform: rotate(180deg);
+}
+.colorGenerator-directions-arrow:nth-child(8) {
+  transform: rotate(225deg);
+}
+.colorGenerator-generate {
+  background-color: #080840;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  transition: all 300ms ease-in;
+}
+.colorGenerator-generate:hover {
+  background-color: #1f01c8;
+}
+.colorGenerator-style {
+  min-height: 48px;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  cursor: text;
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+}
+.colorGenerator-copy {
+  background-color: #4ec8b0;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  transition: all 300ms ease-in;
+}
+.colorGenerator-copy:hover {
+  background-color: #007c0a;
 }/*# sourceMappingURL=style.css.map */

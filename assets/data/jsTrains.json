@@ -58,5 +58,11 @@
     "link": "10/colorChanger.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "title": "Gradient Generator",
+    "link": "11/GradientGenerator.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]
