@@ -64,5 +64,11 @@
     "link": "11/GradientGenerator.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "title": "Country Select",
+    "link": "12/CountrySelect.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]
