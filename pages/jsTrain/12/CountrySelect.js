@@ -62,7 +62,7 @@ formTitle.addEventListener("click", () => {
 searchInput.addEventListener("keyup", (e) => {
   const query = e.target.value.toUpperCase();
 
-  if (query.length > 1) {
+  if (query.length > 2) {
     let zoneName = [];
     let searchedHtml = "";
     countriesList.filter((country) => {
