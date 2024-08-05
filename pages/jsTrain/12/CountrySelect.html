@@ -34,6 +34,81 @@
                 </div>
             </section>
             <div class="code-wrapper">
+                <span>// ! select element from dom</span>
+                <span>let formSelect = document.querySelector("#countries");</span>
+                <span>let formTitle = document.querySelector(".countries-title");</span>
+                <span>let titleIcon = document.querySelector(".countries-title-icon");</span>
+                <span>let searchInput = document.querySelector("#countries-search");</span>
+                <span>let itemsWrapper = document.querySelector(".countries-wrapper");</span>
+                <span>let countriesList = [];</span>
+                <br />
+                <span>// ? fetch data from json file</span>
+                <span>fetch("../../../assets/data/countries.json")</span>
+                <span> .then((item) => item.json())</span>
+                <span> .then((res) => {</span>
+                <span> countriesList.push(res);</span>
+                <span> countriesList.forEach((element) => {</span>
+                <span> let countHtml = "";</span>
+                <span> element.forEach((item) => {</span>
+                <span> countHtml += `</span>
+                <span>
+                    < h5 onclick="updateName(this)" value="${item.name}" class="countries-wrapper-list-item"
+                        id="countries-item">${item.name}< /h5>
+                </span>
+                <span> `;</span>
+                <span> });</span>
+                <span> formSelect.innerHTML = countHtml;</span>
+                <span> });</span>
+                <span> });</span>
+                <br />
+                <span>// ? open list when onclick</span>
+                <span>formTitle.addEventListener("click", () => {</span>
+                <span> itemsWrapper.style.display = "block";</span>
+                <span> titleIcon.classList.add("iconRotate");</span>
+                <span>});</span>
+                <br />
+                <span>// todo update form title name</span>
+                <span>const updateName = (el) => {</span>
+                <span> // ? close list</span>
+                <span> itemsWrapper.style.display = "none";</span>
+                <span> titleIcon.classList.remove("iconRotate");</span>
+                <br />
+                <span> // * form title update</span>
+                <span> formTitle.textContent = el.textContent;</span>
+                <br />
+                <span> // ? add active class to item</span>
+                <span> const options = document.querySelectorAll("#countries-item");</span>
+                <span> for (let option of options) {</span>
+                <span> if (option.innerHTML === el.innerHTML) {</span>
+                <span> option.classList.add("selected-country");</span>
+                <span> } else {</span>
+                <span> option.classList.remove("selected-country");</span>
+                <span> }</span>
+                <span> }</span>
+                <span>};</span>
+                <br />
+                <span>// handel search input</span>
+                <span>searchInput.addEventListener("keyup", (e) => {</span>
+                <span> const searchedValue = e.target.value.toUpperCase();</span>
+                <br />
+                <span> let zoneName = [];</span>
+                <span> let searchedHtml = "";</span>
+                <span> countriesList.filter((country) => {</span>
+                <span> return country.some((zone) => {</span>
+                <span> if (zone.name.toUpperCase().startsWith(searchedValue)) {</span>
+                <span> zoneName.push(zone.name);</span>
+                <span> }</span>
+                <span> });</span>
+                <span> });</span>
+                <span> zoneName.forEach((item) => {</span>
+                <span> searchedHtml += `</span>
+                <span>
+                    < h5 value="${item}" class="countries-wrapper-list-item" id="countries-item">${item}< /h5>
+                </span>
+                <span> `;</span>
+                <span> });</span>
+                <span> formSelect.innerHTML = searchedHtml;</span>
+                <span>});</span>
 
             </div>
         </div>
