@@ -38,7 +38,6 @@ countriesName()
     const countryItem = document.querySelectorAll("#countries-item");
     countryItem.forEach((selection) => {
       selection.addEventListener("click", (e) => {
-        console.log(e.target.textContent);
         formTitle.textContent = e.target.textContent;
       });
     });
