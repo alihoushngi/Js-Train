@@ -4,78 +4,67 @@ let formTitle = document.querySelector(".countries-title");
 let titleIcon = document.querySelector(".countries-title-icon");
 let searchInput = document.querySelector("#countries-search");
 let itemsWrapper = document.querySelector(".countries-wrapper");
-let listVisibility = false;
 let countriesList = [];
 
 // ? fetch data from json file
-const countriesName = async () => {
-  try {
-    let response = await fetch("../../../assets/data/countries.json");
-    let countData = response.json();
-    return countData;
-  } catch (error) {
-    throw new Error(error);
+fetch("../../../assets/data/countries.json")
+  .then((item) => item.json())
+  .then((res) => {
+    countriesList.push(res);
+    countriesList.forEach((element) => {
+      let countHtml = "";
+      element.forEach((item) => {
+        countHtml += `
+        <h5 onclick="updateName(this)" value="${item.name}" class="countries-wrapper-list-item" id="countries-item">${item.name}</h5>
+        `;
+      });
+      formSelect.innerHTML = countHtml;
+    });
+  });
+
+// ? open list when onclick
+formTitle.addEventListener("click", () => {
+  itemsWrapper.style.display = "block";
+  titleIcon.classList.add("iconRotate");
+});
+
+// todo update form title name
+const updateName = (el) => {
+  // ? close list
+  itemsWrapper.style.display = "none";
+  titleIcon.classList.remove("iconRotate");
+
+  // * form title update
+  formTitle.textContent = el.textContent;
+
+  // ? add active class to item
+  const options = document.querySelectorAll("#countries-item");
+  for (let option of options) {
+    if (option.innerHTML === el.innerHTML) {
+      option.classList.add("selected-country");
+    } else {
+      option.classList.remove("selected-country");
+    }
   }
 };
 
-// * create remove icon
-const removeItem = `<img src="./assets/remove.png" alt="selection arrow icon" class="countries-title-icon" id="removeButton">`;
-// * create opener icon
-const listOpener = `<img src="./assets/arrow-down.png" alt="selection arrow icon" class="countries-title-icon">`;
-
-// todo create items
-countriesName()
-  .then((items) => {
-    countriesList.push(items);
-    let countHtml = "";
-    items.forEach((item) => {
-      countHtml += `
-        <h5 value="${item.name}" class="countries-wrapper-list-item" id="countries-item">${item.name}</h5>
-        `;
-    });
-    formSelect.innerHTML = countHtml;
-    // * items onclick handler
-    const countryItem = document.querySelectorAll("#countries-item");
-    countryItem.forEach((selection) => {
-      selection.addEventListener("click", (e) => {
-        formTitle.textContent = e.target.textContent;
-      });
-    });
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-
-// ? show items when click on select country
-formTitle.addEventListener("click", () => {
-  listVisibility = !listVisibility;
-  if (!listVisibility) {
-    itemsWrapper.style.display = "none";
-    titleIcon.classList.remove("iconRotate");
-  } else {
-    itemsWrapper.style.display = "block";
-    titleIcon.classList.add("iconRotate");
-  }
-});
-
+// handel search input
 searchInput.addEventListener("keyup", (e) => {
-  const query = e.target.value.toUpperCase();
+  const searchedValue = e.target.value.toUpperCase();
 
-  if (query.length > 2) {
-    let zoneName = [];
-    let searchedHtml = "";
-    countriesList.filter((country) => {
-      return country.some((zone) => {
-        if (zone.name.toUpperCase().includes(query)) {
-          zoneName.push(zone.name);
-        }
-      });
+  let zoneName = [];
+  let searchedHtml = "";
+  countriesList.filter((country) => {
+    return country.some((zone) => {
+      if (zone.name.toUpperCase().startsWith(searchedValue)) {
+        zoneName.push(zone.name);
+      }
     });
-    zoneName.forEach((item) => {
-      searchedHtml += `
+  });
+  zoneName.forEach((item) => {
+    searchedHtml += `
           <h5 value="${item}" class="countries-wrapper-list-item" id="countries-item">${item}</h5>
           `;
-    });
-    formSelect.innerHTML = searchedHtml;
-  }
+  });
+  formSelect.innerHTML = searchedHtml;
 });

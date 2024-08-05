@@ -885,4 +885,9 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 .iconRotate {
   transition: all 300ms ease-in-out;
   transform: rotate(360deg);
+}
+
+.selected-country {
+  background-color: #000000 !important;
+  color: #ffffff !important;
 }/*# sourceMappingURL=style.css.map */
