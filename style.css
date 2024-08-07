@@ -890,4 +890,90 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 .selected-country {
   background-color: #000000 !important;
   color: #ffffff !important;
+}
+
+.tagGenerator {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tagGenerator-title {
+  text-transform: capitalize;
+  color: #474747;
+  margin: 0;
+}
+.tagGenerator-list {
+  background-color: #ffffff;
+  border: 1px solid #acacac;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(126, 126, 115, 0.4117647059);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+  list-style: none;
+}
+.tagGenerator-list-item {
+  background-color: rgb(242, 242, 242);
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: baseline;
+  margin: 5px;
+}
+.tagGenerator-list-item-trash {
+  background-color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #b9b9b9;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.tagGenerator-list-item-trash::before {
+  content: "x";
+}
+.tagGenerator-list-item-trash:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.tagGenerator-list-input {
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  display: inline;
+}
+.tagGenerator-footer {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  width: 100%;
+}
+.tagGenerator-footer-counter {
+  color: #1f01c8;
+  font-weight: 400;
+}
+.tagGenerator-footer-remover {
+  border: 1px solid #dadada;
+  background-color: #e70202;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 5px 20px;
+  text-transform: capitalize;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+.tagGenerator-footer-remover:hover {
+  background-color: #940202;
 }/*# sourceMappingURL=style.css.map */

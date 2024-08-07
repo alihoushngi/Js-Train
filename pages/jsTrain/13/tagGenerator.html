@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Tag Generator</title>
+</head>
+
+
+<body class="cl-body">
+    <h1 class="title">Tag Generator with JS</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">12</span>
+                    <h2 class="train-question">Tag Generator</h2>
+                </div>
+            </div>
+            <section class="tagGenerator">
+                <h2 class="tagGenerator-title">type word and press enter to generate your tags : </h2>
+                <ul class="tagGenerator-list" id="tagGeneratorList">
+
+                    <input type="text" spellcheck="false" class="tagGenerator-list-input" id="tagGeneratorInput">
+                </ul>
+                <div class="tagGenerator-footer">
+                    <div>
+                        you have
+                        <span class="tagGenerator-footer-counter" id="tagGeneratorCounter">10</span> tags maximum
+                    </div>
+                    <button class="tagGenerator-footer-remover" id="TagGeneratorRemover">remove all</button>
+                </div>
+            </section>
+
+            <div class="code-wrapper">
+                <span>// ? Get elements from the DOM</span>
+                <span>const $ = document;</span>
+                <span>const list = $.querySelector("#tagGeneratorList");</span>
+                <span>const input = $.querySelector("#tagGeneratorInput");</span>
+                <span>const counter = $.querySelector("#tagGeneratorCounter");</span>
+                <span>const remover = $.querySelector("#TagGeneratorRemover");</span>
+                <br />
+                <span>let tags = ["Ali", "Mohammad"];</span>
+                <span>// ! period of create tags</span>
+                <span>let maxTags = 10;</span>
+                <span>const tagCounter = () => {</span>
+                <span> input.focus();</span>
+                <span> counter.innerHTML = maxTags - tags.length;</span>
+                <span>};</span>
+                <br />
+                <span>// remove all li</span>
+                <span>const removeAllLis = () => {</span>
+                <span> list.querySelectorAll("li").forEach((tag) => tag.remove());</span>
+                <span>};</span>
+                <br />
+                <span>// * tag remover function</span>
+                <span>const tagRemover = (e, tagElem) => {</span>
+                <span> // ? we have to access or parent element get in e to can be delete</span>
+                <span> e.parentElement.remove();</span>
+                <br />
+                <span> // ? we have to access to tag element index to remove from array</span>
+                <span> myTag = tags.indexOf(tagElem);</span>
+                <span> tags.splice(myTag, 1);</span>
+                <br />
+                <span> // ? at end for update or numbers of tag in dom , call tag counter function</span>
+                <span> tagCounter();</span>
+                <span>};</span>
+                <br />
+                <span>// ? show tags function</span>
+                <span>const showTags = () => {</span>
+                <span> // * for no repeat show my tags in input , we delete all li</span>
+                <span> removeAllLis();</span>
+                <br />
+                <span> // * create new li to create new tag</span>
+                <span> let newLi = "";</span>
+                <br />
+                <span> // * for added or tag at end of tags we have , reverse it and added new tag</span>
+                <span> [...tags].reverse().forEach((tag) => {</span>
+                <span> newLi += `< li class="tagGenerator-list-item">${tag} < i class="tagGenerator-list-item-trash"
+                            onclick="tagRemover(this , '${tag}')">
+                            < /i>
+                                < /li>`;</span>
+                <span> });</span>
+                <br />
+                <span> // * add to list</span>
+                <span> list.insertAdjacentHTML("afterbegin", newLi);</span>
+                <br />
+                <span> // * update or tag counter number</span>
+                <span> tagCounter();</span>
+                <span>};</span>
+                <br />
+                <span>// todo added input text to array</span>
+                <span>const addTag = (e) => {</span>
+                <span> // ! check when enter key on keyboard do something</span>
+                <span> if (e.key == "Enter") {</span>
+                <span> let tagTitle = e.target.value;</span>
+                <br />
+                <span> // ! change or any inputs word to lowerCase</span>
+                <span> let normalizedName = tagTitle.toLowerCase();</span>
+                <span> // ! check if name not in array with any formation</span>
+                <span> let nameExists = tags.some((tag) => tag.toLowerCase() === normalizedName);</span>
+                <br />
+                <span> // ! have 10 period tag in our array and now we check it</span>
+                <span> if (tags.length < 10 && !nameExists) {</span>
+                        <span> // ! user cant enter empty</span>
+                        <span> if (tagTitle.length > 0) {</span>
+                        <span> // ! check if user use , and write more than one word without press enter , split and get
+                            array and push</span>
+                        <span> tagTitle.split(",").forEach((tag) => {</span>
+                        <span> tags.push(tag);</span>
+                        <span> });</span>
+                        <span> }</span>
+                        <span> }</span>
+                        <br />
+                        <span> // ! do empty input</span>
+                        <span> e.target.value = "";</span>
+                        <span> showTags();</span>
+                        <span> }</span>
+                        <span>};</span>
+                        <span>input.addEventListener("keypress", addTag);</span>
+                        <br />
+                        <span>showTags();</span>
+                        <span>tagCounter();</span>
+                        <br />
+                        <span>// todo function for remove all item</span>
+                        <span>remover.addEventListener("click", () => {</span>
+                        <span> tags.length = 0;</span>
+                        <span> removeAllLis();</span>
+                        <span> tagCounter();</span>
+                        <span>});</span>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="tagGenerator.js"></script>
+    <script src="../../../js/codeFinder.js"></script>
+</body>
+
+</html>

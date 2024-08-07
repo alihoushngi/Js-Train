@@ -70,5 +70,11 @@
     "link": "12/CountrySelect.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "title": "Tag Generator",
+    "link": "13/tagGenerator.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]
