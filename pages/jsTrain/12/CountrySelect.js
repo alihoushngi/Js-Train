@@ -24,8 +24,13 @@ fetch("../../../assets/data/countries.json")
 
 // ? open list when onclick
 formTitle.addEventListener("click", () => {
-  itemsWrapper.style.display = "block";
-  titleIcon.classList.add("iconRotate");
+  if (itemsWrapper.style.display != "block") {
+    itemsWrapper.style.display = "block";
+    titleIcon.classList.add("iconRotate");
+  } else {
+    itemsWrapper.style.display = "none";
+    titleIcon.classList.remove("iconRotate");
+  }
 });
 
 // todo update form title name

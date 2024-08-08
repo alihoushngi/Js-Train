@@ -1,36 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../style.css">
-    <title>Divisibility in Js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>بخش پذیری اعداد در جاوااسکریپت</title>
 </head>
 
 <body class="cl-body">
-    <h1 class="title">Divisibility in Js</h1>
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">بخش پذیری اعداد در جاوااسکریپت</h1>
     <section class="cl-wrapper">
         <div class="codes">
             <div class="train-wrapper">
                 <div class="train-details">
-                    <span class="train-number">3</span>
-                    <h2 class="train-question">Printing words relative to the divisibility of numbers.</h2>
+                    <span class="train-number">۳</span>
+                    <h2 class="train-question">بخش پذیر بودن یا نبودن اعداد را بنویسید</h2>
                 </div>
             </div>
             <div class="numberForm-wrapper">
-                <div class="numberForm-title">Enter numbers to check</div>
+                <div class="numberForm-title">عدد ها را وارد کنید</div>
                 <form action="#" id="numberCheckerForm" class="numberForm">
                     <div class="numberForm-input_wrapper">
-                        <label for="num1" class="numberForm-label">number one :</label>
+                        <label for="num1" class="numberForm-label">عدد اول :</label>
                         <input type="number" name="num1" id="num1" class="numberForm-input">
                     </div>
                     <div class="numberForm-input_wrapper">
-                        <label for="num2" class="numberForm-label">number two :</label>
+                        <label for="num2" class="numberForm-label">عدد دوم :</label>
                         <input type="number" name="num2" id="num2" class="numberForm-input">
                     </div>
                 </form>
-                <button class="numberForm-button" id="number-button">Check</button>
+                <button class="numberForm-button" id="number-button">بررسی</button>
                 <div class="numberForm-result" id="number-result"></div>
             </div>
             <div class="code-wrapper">
@@ -61,6 +70,7 @@
 
     <script src="../../../js/codeFinder.js"></script>
     <script src="divisibility.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
 </body>
 
 </html>

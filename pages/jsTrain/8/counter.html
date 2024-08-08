@@ -1,61 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../style.css">
-    <title>Number Counter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>شمارنده عدد با جاوااسکریپت</title>
 </head>
 
 
 <body class="cl-body">
-    <h1 class="title">Number Counter with JS</h1>
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">شمارنده عدد با جاوااسکریپت</h1>
     <section class="cl-wrapper">
         <div class="codes">
             <div class="train-wrapper">
                 <div class="train-details">
-                    <span class="train-number">8</span>
-                    <h2 class="train-question">Counter</h2>
+                    <span class="train-number">۸</span>
+                    <h2 class="train-question">شمارنده</h2>
                 </div>
             </div>
             <section>
-                <h3>this in my fake content for create gap between counter and up section , this is for create scroll
-                    height</h3>
-                <span style="margin: 0; padding: 0;">description:</span>
+                <h3>این محتوای جعلی من برای ایجاد فاصله بین شمارنده و بخش بالا است
+                </h3>
+                <span style="margin: 0; padding: 0;">توضیحات:</span>
                 <p>
-                    This project is an interactive web application featuring a dynamic counter 📈 that increments
-                    numbers based on the user's scroll position and height within a webpage. Crafted using
-                    <strong>HTML</strong>, <strong>CSS (Sass)</strong>, and <strong>JavaScript</strong>, it serves as a
-                    practical exercise to enhance my front-end development skills 🌐.
+                    این پروژه یک کامپوننت است که شامل یک شمارنده 📈 است که اعداد را بر اساس موقعیت اسکرول و
+                    ارتفاع کاربر در یک صفحه وب افزایش می‌دهد. ساخته شده با
+                    <strong>HTML</strong>، <strong>CSS (Sass)</strong> و <strong>JavaScript</strong>، به عنوان یک
+                    تمرین عملی برای بهبود مهارت‌های توسعه فرانت‌اند است.
                 </p>
                 <p>
-                    The core functionality revolves around detecting the user's scroll position. As users scroll down,
-                    the counter activates, providing real-time feedback and engagement 💡. This was achieved using
-                    JavaScript's event listeners and interval functions ⏱️, allowing for smooth and responsive number
-                    animations 🔢.
+                    عملکرد اصلی این پروژه حول تشخیص موقعیت اسکرول کاربر می‌چرخد. وقتی کاربران به پایین پیمایش می‌کنند،
+                    شمارنده فعال می‌شود و بازخورد و تعامل در زمان رسیدن به کامپوننت را فراهم می‌کند 💡. این کار با
+                    استفاده از
+                    جاوا اسکریپت و توابع interval ⏱️ انجام شد، که به انیمیشن‌های عددی نرم و پاسخگو اجازه می‌دهد 🔢.
                 </p>
                 <p>
-                    In terms of design, the project employs <strong>Sass</strong> for styling 🎨. Sass enabled me to
-                    write maintainable and modular CSS, making the design process efficient. Using variables, mixins,
-                    and nested rules, I created a clean and cohesive look for the application 🖌️.
+                    از نظر طراحی، این پروژه از <strong>Sass</strong> برای استایل‌دهی 🎨 استفاده می‌کند. Sass به من اجازه
+                    داد تا CSS قابل نگهداری و ماژولار بنویسم و فرآیند طراحی را کارآمدتر کنم. با استفاده از متغیرها،
+                    mixins و قوانین تو در تو، یک ظاهر تمیز و یکپارچه برای برنامه ایجاد کردم 🖌️.
                 </p>
                 <p>
-                    The project helped me understand scroll events and controlling elements based on user interaction.
-                    By monitoring the scroll position, I learned to trigger animations, creating a more dynamic user
-                    experience 🖥️. This hands-on approach provided valuable insights into building interactive web
-                    interfaces 🌟.
+                    این پروژه به من کمک کرد تا رویدادهای اسکرول و کنترل عناصر بر اساس تعامل کاربر را بفهمم. با نظارت بر
+                    موقعیت اسکرول، یاد گرفتم که انیمیشن‌ها را راه‌اندازی کنم و یک تجربه کاربری پویا‌تر ایجاد کنم 🖥️.
+                    این رویکرد عملی به من بینش‌های ارزشمندی در مورد ساخت رابط‌های وب تعاملی 🌟 ارائه داد.
                 </p>
                 <p>
-                    Overall, this project was a comprehensive exercise, combining <strong>HTML</strong>, <strong>CSS
-                        (Sass)</strong>, and <strong>JavaScript</strong> to create a dynamic counter based on scroll
-                    position. It enhanced my skills in handling user events, time-based functions, and modular styling,
-                    laying a solid foundation for future web development projects 🚀.
+                    به طور کلی، این پروژه یک تمرین جامع بود که <strong>HTML</strong>، <strong>CSS (Sass)</strong> و
+                    <strong>JavaScript</strong> را ترکیب می‌کرد تا یک شمارنده پویا بر اساس موقعیت اسکرول ایجاد کند. این
+                    مهارت‌های من را در مدیریت رویدادهای کاربر، توابع زمانی و استایل‌دهی مدولار بهبود داد و پایه‌ای محکم
+                    برای پروژه‌های توسعه وب آینده 🚀 ایجاد کرد.
                 </p>
             </section>
             <section class="counter">
                 <h3 class="counter-title">
-                    My Project Numbers :
+                    اعداد پروژه من:
                 </h3>
                 <div class="counter-wrapper" id="counterSection">
                     <div class="counter-item">
@@ -71,7 +79,7 @@
                         <span class="counter-item-number" data-count="23">0</span>
                     </div>
                     <div class="counter-item">
-                        <h4 class="counter-item-name">Wordpress</h4>
+                        <h4 class="counter-item-name">WordPress</h4>
                         <span class="counter-item-number" data-count="120">0</span>
                     </div>
                 </div>
@@ -112,6 +120,7 @@
 
     <script src="counter.js"></script>
     <script src="../../../js/codeFinder.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
 </body>
 
 </html>

@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../style.css">
-    <title>Gradient Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>سازنده گرادیانت با جاوااسکریپت</title>
 </head>
 
 
 <body class="cl-body">
-    <h1 class="title">Gradient Generator with JS</h1>
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">سازنده گرادیانت با جاوااسکریپت</h1>
     <section class="cl-wrapper">
         <div class="codes">
             <div class="train-wrapper">
                 <div class="train-details">
-                    <span class="train-number">11</span>
-                    <h2 class="train-question">Gradient Generator</h2>
+                    <span class="train-number">۱۱</span>
+                    <h2 class="train-question">سازنده گرادیانت</h2>
                 </div>
             </div>
             <section class="colorGenerator">
                 <div class="colorGenerator-leftSide">
                     <div class="colorGenerator-box">
-                        <label for="firstColor" id="firstColorLabel">First Color:</label>
+                        <label for="firstColor" id="firstColorLabel">رنگ اول</label>
                         <input name="firstColor" id="firstColor" type="color" class="colorGenerator-box-input"
                             value="#1f01c8">
-                        <label for="secondColor" id="secondColorLabel">Second Color:</label>
+                        <label for="secondColor" id="secondColorLabel">رنگ دوم</label>
                         <input name="secondColor" id="secondColor" type="color" class="colorGenerator-box-input"
                             value="#edb603">
                     </div>
@@ -47,11 +56,11 @@
                         <img src="./assets/arrow.png" alt="arrow" class="colorGenerator-directions-arrow"
                             data-rotate="to left top">
                     </div>
-                    <button class="colorGenerator-generate" id="generateButton">Generate</button>
+                    <button class="colorGenerator-generate" id="generateButton">ساخت گرادیانت</button>
                 </div>
                 <div class="colorGenerator-rightSide">
                     <span class="colorGenerator-style" id="styleArea"></span>
-                    <button class="colorGenerator-copy" id="copyButton">Copy</button>
+                    <button class="colorGenerator-copy" id="copyButton">کپی</button>
                 </div>
             </section>
             <div class="code-wrapper">
@@ -131,6 +140,7 @@
 
     <script src="GradientGenerator.js"></script>
     <script src="../../../js/codeFinder.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
 </body>
 
 </html>

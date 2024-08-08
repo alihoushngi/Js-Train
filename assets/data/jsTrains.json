@@ -1,78 +1,91 @@
 [
   {
-    "title": "largest and Smallest number",
+    "englandTitle": "largest and Smallest number",
+    "persianTitle": "بزرگترین و کوچکترین عدد",
     "link": "1/minAndMaxNumber.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Vertical or Horizontal",
+    "englandTitle": "Vertical or Horizontal",
+    "persianTitle": "عمودی یا افقی",
     "link": "2/verticalOrHorizontal.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Divisibility of Numbers",
+    "englandTitle": "Divisibility of Numbers",
+    "persianTitle": "بخش پذیری اعداد",
     "link": "3/divisibility.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Even or Odd",
+    "englandTitle": "Even or Odd",
+    "persianTitle": "زوج یا فرد",
     "link": "4/evenOrOdd.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Todo List ***",
+    "englandTitle": "Todo List ***",
+    "persianTitle": "لیست برنامه ها",
     "link": "5/todoList.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Bob Eye ( Input Tracking In JS )",
+    "englandTitle": "Bob Eye ( Input Tracking In JS )",
+    "persianTitle": "چشم باب",
     "link": "6/bobEye.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Code Finder ***",
+    "englandTitle": "Code Finder ***",
+    "persianTitle": "پیدا کننده کد",
     "link": "7/codeFinder.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Number Counter",
+    "englandTitle": "Number Counter",
+    "persianTitle": "شمارنده",
     "link": "8/counter.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Corner Menu",
+    "englandTitle": "Corner Menu",
+    "persianTitle": "منو کناری",
     "link": "9/cornerToggle.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Color Changer",
+    "englandTitle": "Color Changer",
+    "persianTitle": "تغییر دهنده رنگ",
     "link": "10/colorChanger.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Gradient Generator",
+    "englandTitle": "Gradient Generator",
+    "persianTitle": "تولید کننده گرادیانت",
     "link": "11/GradientGenerator.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Country Select",
+    "englandTitle": "Country Select",
+    "persianTitle": "انتخاب کشور",
     "link": "12/CountrySelect.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
   },
   {
-    "title": "Tag Generator",
+    "englandTitle": "Tag Generator",
+    "persianTitle": "برچسب ساز",
     "link": "13/tagGenerator.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"

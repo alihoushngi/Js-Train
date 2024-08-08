@@ -47,6 +47,10 @@
   font-weight: 900;
   src: url(assets/fonts/Kalameh/_Woff/KalamehWebBlack.woff) format("woff"), url(assets/fonts/Kalameh/_Woff2/KalamehWebBlack.woff2) format("woff2");
 }
+button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif, "Kalameh";
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -54,26 +58,25 @@ html {
 html body {
   margin: 0;
   padding: 0;
-  background-color: #2f2f2f;
+  background-color: #1e1e1e;
   color: #e4e4e4;
-  min-height: 100vh;
   background-repeat: no-repeat;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif, "Kalameh";
 }
 html body main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: calc(100vh - 60px);
   margin-bottom: 0.5rem;
 }
 html body #main {
-  flex-direction: row !important;
-  justify-content: space-evenly !important;
-  align-items: center !important;
+  max-width: 85%;
+  margin: 20px auto;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   gap: 50px;
-  padding: 1.8rem;
 }
 html body #main .about {
   max-width: 50%;
@@ -95,7 +98,7 @@ html body #main .about-title {
   font-family: "Kalameh";
 }
 html body #main .about-title a {
-  color: #ffffff !important;
+  color: #ffffff;
   text-decoration: none;
 }
 html body #main .about-tagline {
@@ -137,7 +140,7 @@ html body #main .about-description {
   font-family: "Kalameh";
 }
 html body #main .about-description a {
-  color: #d7d7d7 !important;
+  color: #d7d7d7;
   text-decoration: none;
 }
 html body #main .project {
@@ -151,8 +154,8 @@ html body #main .project-wrapper {
   align-items: center;
 }
 html body #main .project-wrapper #jsCard .project-cards-wrapper {
-  position: relative !important;
-  max-width: 100% !important;
+  position: relative;
+  max-width: 100%;
 }
 html body #main .project-wrapper #jsCard .project-cards-wrapper .disable {
   position: absolute;
@@ -165,7 +168,7 @@ html body #main .project-wrapper #jsCard .project-cards-wrapper .disable {
 }
 html body #main .project-wrapper #jsCard .project-cards-wrapper .project-card {
   background-color: #fdd54a;
-  min-height: unset !important;
+  min-height: unset;
 }
 html body #main .project-wrapper #jsCard .project-cards-wrapper .project-card-title {
   text-align: center;
@@ -179,11 +182,11 @@ html body #main .project-wrapper #jsCard .project-cards-wrapper .project-card-bu
   font-family: "Kalameh";
 }
 html body #main .project-wrapper #jsCard .project-cards-wrapper .project-card-image {
-  box-shadow: unset !important;
+  box-shadow: unset;
 }
 html body #main .project-wrapper #nextCard .project-cards-wrapper {
-  position: relative !important;
-  max-width: 100% !important;
+  position: relative;
+  max-width: 100%;
 }
 html body #main .project-wrapper #nextCard .project-cards-wrapper .disable {
   position: absolute;
@@ -196,7 +199,7 @@ html body #main .project-wrapper #nextCard .project-cards-wrapper .disable {
 }
 html body #main .project-wrapper #nextCard .project-cards-wrapper .project-card {
   background-color: #ffffff;
-  min-height: unset !important;
+  min-height: unset;
 }
 html body #main .project-wrapper #nextCard .project-cards-wrapper .project-card-title {
   text-align: center;
@@ -210,11 +213,11 @@ html body #main .project-wrapper #nextCard .project-cards-wrapper .project-card-
   font-family: "Kalameh";
 }
 html body #main .project-wrapper #nextCard .project-cards-wrapper .project-card-image {
-  box-shadow: unset !important;
+  box-shadow: unset;
 }
 html body #main .project-wrapper #reactCard .project-cards-wrapper {
-  position: relative !important;
-  max-width: 100% !important;
+  position: relative;
+  max-width: 100%;
 }
 html body #main .project-wrapper #reactCard .project-cards-wrapper .disable {
   position: absolute;
@@ -227,7 +230,7 @@ html body #main .project-wrapper #reactCard .project-cards-wrapper .disable {
 }
 html body #main .project-wrapper #reactCard .project-cards-wrapper .project-card {
   background-color: #4ad5fe;
-  min-height: unset !important;
+  min-height: unset;
 }
 html body #main .project-wrapper #reactCard .project-cards-wrapper .project-card-title {
   text-align: center;
@@ -241,16 +244,24 @@ html body #main .project-wrapper #reactCard .project-cards-wrapper .project-card
   font-family: "Kalameh";
 }
 html body #main .project-wrapper #reactCard .project-cards-wrapper .project-card-image {
-  box-shadow: unset !important;
+  box-shadow: unset;
 }
 html body nav {
-  width: 100%;
-  background-color: #080840;
-  margin: 0;
-  padding: 0.3rem 0;
+  width: 85%;
+  background-color: #d4d4d4;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 5px;
+  position: sticky;
+  top: 10px;
+  box-shadow: 5px 1px 10px #0c0c0c;
+  z-index: 10000;
 }
 html body nav .navbar-category-wrapper {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 html body nav .navbar-category-wrapper .navbar-category-list {
   display: flex;
@@ -258,7 +269,7 @@ html body nav .navbar-category-wrapper .navbar-category-list {
   text-align: center;
   gap: 10px;
   list-style: none;
-  padding: 0;
+  padding-right: 20px;
 }
 html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-item {
   text-transform: uppercase;
@@ -267,25 +278,43 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-item a {
   text-decoration: none;
   transition: all 300ms ease-in-out;
-  color: rgb(161, 161, 161);
+  color: rgb(31, 31, 31);
 }
 html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-item a:hover {
-  color: #ffffff;
+  color: #a60000;
 }
 html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-item a.activeRoute {
   text-decoration: none;
   transition: all 300ms ease-in-out;
-  color: #ffd629;
+  color: #7b0202;
 }
 html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-item a.activeRoute:hover {
-  color: #ffffff;
+  color: #a60000;
+}
+html body nav .navbar-category-wrapper .navbar-category-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 20px;
+  color: rgb(31, 31, 31);
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+html body nav .navbar-category-wrapper .navbar-category-back:hover {
+  color: #a60000;
 }
 
 .title {
   text-align: center;
   text-transform: uppercase;
-  margin: 0.5rem 0;
-  font-size: 50px;
+  margin: 0;
+  margin-top: 10px;
+  font-size: 40px;
   font-weight: 900;
 }
 
@@ -299,15 +328,25 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 
 .project-cards-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  max-width: 90%;
+  gap: 15px;
+  max-width: 85%;
+}
+.project-cards-wrapper #jsCard {
+  background-color: #fdd54a;
+}
+.project-cards-wrapper #jsCard .project-card-image {
+  border-radius: 5px;
+  box-shadow: unset;
+}
+.project-cards-wrapper #jsCard .project-card-category {
+  color: #000000;
 }
 .project-cards-wrapper .project-card {
   background-color: #e4e4e4;
-  color: #2f2f2f;
+  color: #1e1e1e;
   max-width: 200px;
   min-height: 300px;
   display: flex;
@@ -318,8 +357,9 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   border-radius: 5px;
 }
 .project-cards-wrapper .project-card .project-card-title {
+  text-shadow: 1px 2px 0px rgba(255, 255, 255, 0.55);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .project-cards-wrapper .project-card .project-card-image-wrapper .project-card-image {
   border-radius: 5px;
@@ -365,6 +405,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   padding: 10px 0;
   cursor: pointer;
   transition: all 300ms ease-in-out;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif, "Kalameh";
 }
 .project-cards-wrapper .project-card .project-card-content .project-card-button-wrapper .project-card-button-link .project-card-button:hover {
   background-color: rgb(23, 23, 135);
@@ -377,9 +418,12 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   flex-direction: column;
   align-items: center;
 }
+.cl-body .title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .cl-wrapper {
-  width: 100%;
-  max-width: 60%;
+  width: 85%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -387,7 +431,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 }
 .cl-wrapper .codes {
   background-color: #e4e4e4;
-  color: #2f2f2f;
+  color: #1e1e1e;
   box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
   border-radius: 5px;
   padding: 1rem;
@@ -395,7 +439,6 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   flex-wrap: wrap;
   flex-direction: column;
   gap: 8px;
-  min-width: 100%;
   align-items: center;
 }
 .cl-wrapper .codes .numberForm {
@@ -454,7 +497,10 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   gap: inherit;
 }
 .cl-wrapper .train-number {
-  background-color: #2f2f2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
   color: #e4e4e4;
   width: 20px;
   height: 20px;
@@ -484,6 +530,8 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   min-height: 40px;
   color: #d4d4d4;
   width: 95%;
+  text-align: left;
+  direction: ltr;
 }
 .cl-wrapper .code-comment {
   color: #6b9955;
@@ -529,7 +577,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   font-size: 20px;
 }
 .cl-wrapper .code-strings {
-  color: #ce9277 !important;
+  color: #ce9277;
 }
 
 .todo {
@@ -554,7 +602,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   margin: 0;
 }
 .todo_form-textarea {
-  resize: none !important;
+  resize: none;
   font-size: 12px;
   padding: 0.5rem;
   border: 0;
@@ -716,7 +764,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   padding: 0;
   font-weight: 400;
   font-size: 18px;
-  color: #2f2f2f;
+  color: #1e1e1e;
 }
 
 .corner-menu {
@@ -749,7 +797,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   width: 60px;
   height: 60px;
   padding: 0.5rem;
-  background-color: #2f2f2f;
+  background-color: #1e1e1e;
   border-radius: 100%;
   position: absolute;
   z-index: 2;
@@ -1033,7 +1081,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   cursor: pointer;
   transition: all 300ms ease-in;
   text-transform: uppercase;
-  text-align: left;
+  text-align: right;
   font-size: 18px;
   font-weight: 700;
 }
@@ -1044,7 +1092,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 .countries-title-icon {
   position: absolute;
   top: 13px;
-  right: 5px;
+  left: 5px;
   width: 20px;
   transition: all 300ms ease-in-out;
   transform: rotate(180deg);
@@ -1063,6 +1111,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   transition: all 300ms ease-in-out;
 }
 .countries-wrapper-search {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif, "Kalameh";
   background-color: #f1f1f1;
   color: #30137d;
   font-size: 14px;
@@ -1076,7 +1125,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 .countries-wrapper-search-icon {
   position: absolute;
   top: 11px;
-  right: 5px;
+  left: 5px;
   width: 25px;
 }
 .countries-wrapper-list {
@@ -1108,8 +1157,8 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
 }
 
 .selected-country {
-  background-color: #000000 !important;
-  color: #ffffff !important;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .tagGenerator {

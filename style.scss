@@ -72,7 +72,7 @@
 
 //! my variables
 $primaryColor: #e4e4e4;
-$secondaryColor: #2f2f2f;
+$secondaryColor: #1e1e1e;
 $softBlack: #474747;
 $darkBlue: #080840;
 $buttonColor: rgb(11, 11, 80);
@@ -102,6 +102,9 @@ $codeManualText: #d4d4d4;
 $codeAnswer: #ffffff;
 
 //! main page-----------------------
+button {
+  font-family: $GillFont, $PersianFont;
+}
 // styles
 html {
   margin: 0;
@@ -111,26 +114,26 @@ html {
     padding: 0;
     background-color: $secondaryColor;
     color: $primaryColor;
-    min-height: 100vh;
     background-repeat: no-repeat;
     font: {
-      family: $GillFont;
+      family: $GillFont, $PersianFont;
     }
     main {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      min-height: calc(100vh - 60px);
       margin-bottom: 0.5rem;
     }
 
     #main {
-      flex-direction: row !important;
-      justify-content: space-evenly !important;
-      align-items: center !important;
+      max-width: 85%;
+      margin: 20px auto;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
       gap: 50px;
-      padding: 1.8rem;
+
       .about {
         max-width: 50%;
         &-profile {
@@ -146,7 +149,7 @@ html {
           text-transform: uppercase;
           margin: 0;
           a {
-            color: #ffffff !important;
+            color: #ffffff;
             text-decoration: none;
           }
           font : {
@@ -195,7 +198,7 @@ html {
             family: $PersianFont;
           }
           a {
-            color: #d7d7d7 !important;
+            color: #d7d7d7;
             text-decoration: none;
           }
         }
@@ -212,8 +215,8 @@ html {
             .project {
               &-cards {
                 &-wrapper {
-                  position: relative !important;
-                  max-width: 100% !important;
+                  position: relative;
+                  max-width: 100%;
                   .disable {
                     position: absolute;
                     top: 0;
@@ -228,7 +231,7 @@ html {
             }
             .project-cards-wrapper .project-card {
               background-color: #fdd54a;
-              min-height: unset !important;
+              min-height: unset;
               &-title {
                 text-align: center;
                 font: {
@@ -245,7 +248,7 @@ html {
                 }
               }
               &-image {
-                box-shadow: unset !important;
+                box-shadow: unset;
               }
             }
           }
@@ -253,8 +256,8 @@ html {
             .project {
               &-cards {
                 &-wrapper {
-                  position: relative !important;
-                  max-width: 100% !important;
+                  position: relative;
+                  max-width: 100%;
                   .disable {
                     position: absolute;
                     top: 0;
@@ -269,7 +272,7 @@ html {
             }
             .project-cards-wrapper .project-card {
               background-color: #ffffff;
-              min-height: unset !important;
+              min-height: unset;
               &-title {
                 text-align: center;
                 font: {
@@ -286,7 +289,7 @@ html {
                 }
               }
               &-image {
-                box-shadow: unset !important;
+                box-shadow: unset;
               }
             }
           }
@@ -294,8 +297,8 @@ html {
             .project {
               &-cards {
                 &-wrapper {
-                  position: relative !important;
-                  max-width: 100% !important;
+                  position: relative;
+                  max-width: 100%;
                   .disable {
                     position: absolute;
                     top: 0;
@@ -310,7 +313,7 @@ html {
             }
             .project-cards-wrapper .project-card {
               background-color: #4ad5fe;
-              min-height: unset !important;
+              min-height: unset;
               &-title {
                 text-align: center;
                 font: {
@@ -327,48 +330,71 @@ html {
                 }
               }
               &-image {
-                box-shadow: unset !important;
+                box-shadow: unset;
               }
             }
           }
         }
-        &-description {
-        }
       }
     }
     nav {
-      width: 100%;
-      background-color: $darkBlue;
-      margin: 0;
-      padding: 0.3rem 0;
+      width: 85%;
+      background-color: #d4d4d4;
+      margin: 0 auto;
+      padding: 0;
+      border-radius: 5px;
+      position: sticky;
+      top: 10px;
+      box-shadow: 5px 1px 10px #0c0c0c;
+      z-index: 10000;
       .navbar-category-wrapper {
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         .navbar-category-list {
           display: flex;
           justify-content: center;
           text-align: center;
           gap: 10px;
           list-style: none;
-          padding: 0;
+          padding-right: 20px;
           .navbar-category-item {
             text-transform: uppercase;
             cursor: pointer;
             a {
               text-decoration: none;
               transition: all 300ms ease-in-out;
-              color: rgb(161, 161, 161);
+              color: rgb(31, 31, 31);
               &:hover {
-                color: $codeAnswer;
+                color: #a60000;
               }
             }
             a.activeRoute {
               text-decoration: none;
               transition: all 300ms ease-in-out;
-              color: $codeArrayBracket;
+              color: #7b0202;
               &:hover {
-                color: $codeAnswer;
+                color: #a60000;
               }
             }
+          }
+        }
+        .navbar-category-back {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          margin-left: 20px;
+          color: rgb(31, 31, 31);
+          background-color: white;
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          cursor: pointer;
+          transition: all 300ms ease-in-out;
+          &:hover {
+            color: #a60000;
           }
         }
       }
@@ -379,9 +405,10 @@ html {
 .title {
   text-align: center;
   text-transform: uppercase;
-  margin: 0.5rem 0;
+  margin: 0;
+  margin-top: 10px;
   font : {
-    size: 50px;
+    size: 40px;
     weight: 900;
   }
 }
@@ -398,11 +425,21 @@ html {
 //! Cards ---
 .project-cards-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  max-width: 90%;
+  gap: 15px;
+  max-width: 85%;
+  #jsCard {
+    background-color: #fdd54a;
+    .project-card-image {
+      border-radius: $borderRadius;
+      box-shadow: unset;
+    }
+    .project-card-category {
+      color: #000000;
+    }
+  }
   .project-card {
     background-color: $primaryColor;
     color: $secondaryColor;
@@ -415,9 +452,10 @@ html {
     padding: 1rem;
     border-radius: $borderRadius;
     .project-card-title {
+      text-shadow: 1px 2px 0px rgb(255 255 255 / 55%);
       font: {
         size: 14px;
-        weight: 500;
+        weight: 600;
       }
     }
     .project-card-image-wrapper {
@@ -465,7 +503,7 @@ html {
             padding: 10px 0;
             cursor: pointer;
             transition: all 300ms ease-in-out;
-
+            font-family: $GillFont, $PersianFont;
             &:hover {
               background-color: $buttonHoverColor;
               box-shadow: $customBoxShadow;
@@ -485,10 +523,13 @@ html {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    .title {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
   }
   &-wrapper {
-    width: 100%;
-    max-width: 60%;
+    width: 85%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -503,7 +544,6 @@ html {
       flex-wrap: wrap;
       flex-direction: column;
       gap: 8px;
-      min-width: 100%;
       align-items: center;
       .numberForm {
         display: flex;
@@ -567,6 +607,9 @@ html {
         gap: inherit;
       }
       &-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $secondaryColor;
         color: $primaryColor;
         width: 20px;
@@ -599,6 +642,8 @@ html {
         min-height: 40px;
         color: $codeManualText;
         width: 95%;
+        text-align: left;
+        direction: ltr;
       }
       &-comment {
         color: $codeComment;
@@ -645,7 +690,7 @@ html {
         font-size: 20px;
       }
       &-strings {
-        color: $codeString !important;
+        color: $codeString;
       }
     }
   }
@@ -674,7 +719,7 @@ html {
       margin: 0;
     }
     &-textarea {
-      resize: none !important;
+      resize: none;
       font-size: 12px;
       padding: 0.5rem;
       border: 0;
@@ -1178,7 +1223,7 @@ html {
     transition: all 300ms ease-in;
     text: {
       transform: uppercase;
-      align: left;
+      align: right;
     }
     font: {
       size: 18px;
@@ -1191,7 +1236,7 @@ html {
     &-icon {
       position: absolute;
       top: 13px;
-      right: 5px;
+      left: 5px;
       width: 20px;
       transition: all 300ms ease-in-out;
       transform: rotate(180deg);
@@ -1210,6 +1255,7 @@ html {
     overflow-y: scroll;
     transition: all 300ms ease-in-out;
     &-search {
+      font-family: $GillFont, $PersianFont;
       background-color: #f1f1f1;
       color: #30137d;
       font: {
@@ -1224,7 +1270,7 @@ html {
       &-icon {
         position: absolute;
         top: 11px;
-        right: 5px;
+        left: 5px;
         width: 25px;
       }
     }
@@ -1259,8 +1305,8 @@ html {
 }
 
 .selected-country {
-  background-color: #000000 !important;
-  color: #ffffff !important;
+  background-color: #000000;
+  color: #ffffff;
 }
 // ! Country Select
 // ! tag generator

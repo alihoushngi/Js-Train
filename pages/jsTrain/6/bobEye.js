@@ -10,8 +10,8 @@ const password = document.querySelector("#password");
 userName.addEventListener("focus", () => {
   firstEye.style.paddingTop = "1rem";
   secondEye.style.paddingTop = "1rem";
-  firstEye.style.left = "50px";
-  secondEye.style.left = "150px";
+  firstEye.style.left = "100px";
+  secondEye.style.left = "180px";
 });
 
 userName.addEventListener("blur", () => {
@@ -35,11 +35,11 @@ password.addEventListener("blur", () => {
 // event listener for when input have value
 userName.addEventListener("input", (e) => {
   const inputBox = e.target.value;
-  let firstEyePosition = 50;
-  let secondEyePosition = 150;
+  let firstEyePosition = 100;
+  let secondEyePosition = 180;
   for (let i = 0; i < inputBox.length; i++) {
-    firstEyePosition += 1;
-    secondEyePosition += 1;
+    firstEyePosition -= 1;
+    secondEyePosition -= 1;
     firstEye.style.left = `${firstEyePosition}px`;
     secondEye.style.left = `${secondEyePosition}px`;
   }

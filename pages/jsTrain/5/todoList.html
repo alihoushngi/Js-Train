@@ -1,34 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../style.css">
-    <title>Todo List in JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>لیست برنامه های روزانه در جاوا اسکریپت</title>
 </head>
 
 <body class="cl-body">
-    <h1 class="title">Todo List in JS</h1>
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">لیست برنامه های روزانه در جاوا اسکریپت</h1>
     <section class="cl-wrapper">
         <div class="codes">
             <div class="train-wrapper">
                 <div class="train-details">
-                    <span class="train-number">5</span>
-                    <h2 class="train-question">Todo List</h2>
+                    <span class="train-number">۵</span>
+                    <h2 class="train-question">لیست برنامه های روزانه</h2>
                 </div>
             </div>
             <div class="todo">
-                <h3 class="todo_title">My Todo List</h3>
+                <h3 class="todo_title"> لیست برنامه های روزانه من</h3>
                 <div class="todo_wrapper">
                     <form action="#" id="todoForm" class="todo_form">
-                        <label for="todoTask" class="todo_form-label">Enter Your Task: </label>
+                        <label for="todoTask" class="todo_form-label">برنامه های خود را وارد کنید :</label>
                         <textarea name="todoTask" id="todoTask" cols="30" rows="10" placeholder="do something ..."
                             class="todo_form-textarea"></textarea>
-                        <button id="submit-task" class="todo_form-button" type="submit">submit</button>
+                        <button id="submit-task" class="todo_form-button" type="submit">تایید</button>
                     </form>
                     <div class="todo_form-result">
-                        <h4 class="todo_form-result--title">Tasks</h4>
+                        <h4 class="todo_form-result--title">برنامه ها</h4>
                         <div class="todo_form-result--data">
                             <ul id="todoResult" class="todo_form-result--list"></ul>
                         </div>
@@ -139,6 +148,7 @@
 
     <script src="../../../js/codeFinder.js"></script>
     <script src="todoList.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
 </body>
 
 </html>

@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../style.css">
-    <title>Even and Odd number in JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>اعداد زوج یا فرد در جاوااسکریپت</title>
 </head>
 
 <body class="cl-body">
-    <h1 class="title">Even and Odd number in JS</h1>
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">اعداد زوج یا فرد در جاوااسکریپت</h1>
     <section class="cl-wrapper">
         <div class="codes">
             <div class="train-wrapper">
                 <div class="train-details">
-                    <span class="train-number">4</span>
-                    <h2 class="train-question">Checking whether the number is even or odd.</h2>
+                    <span class="train-number">۴</span>
+                    <h2 class="train-question">بررسی کردن زوج یا فرد بودن اعداد</h2>
                 </div>
             </div>
             <div class="numberForm-wrapper">
-                <div class="numberForm-title">Enter numbers to check</div>
                 <form action="#" id="oddNumberCheckerForm" class="numberForm">
                     <div class="numberForm-input_wrapper">
-                        <label for="oddNum1" class="numberForm-label">oddNumber one :</label>
+                        <label for="oddNum1" class="numberForm-label">عدد :</label>
                         <input type="number" name="oddNum1" id="oddNum1" class="numberForm-input">
                     </div>
                 </form>
-                <button class="numberForm-button" id="oddNumber-button">Check</button>
+                <button class="numberForm-button" id="oddNumber-button">بررسی</button>
                 <div class="numberForm-result" id="oddNumber-result"></div>
             </div>
             <div class="code-wrapper">
@@ -57,6 +65,7 @@
 
     <script src="../../../js/codeFinder.js"></script>
     <script src="evenOrOdd.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
 </body>
 
 </html>

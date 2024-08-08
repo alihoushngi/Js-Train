@@ -1,18 +1,24 @@
 // menu items
 const navList = [
-  { name: "JavaScript", link: "./pages/jsTrain/js.html" },
-  { name: "React", link: "#" },
-  { name: "Next", link: "#" },
+  { name: "صفحه اصلی", link: "/" },
+  { name: "جاوا اسکریپت", link: "./pages/jsTrain/js.html" },
+  // { name: "ریکت", link: "#" },
+  // { name: "نکست", link: "#" },
 ];
 
 const navbar = document.querySelector("#nav-list");
+const route = window.location.pathname;
 
 let customHtml = "";
 
 navList.forEach((item, index) => {
   customHtml += `
-    <li key="${index}" class="navbar-category-item">
-        <a href="${item.link}">
+    <li key="${index}" class="navbar-category-item" >
+    <a href="${item.link}" ${
+    route.includes(item.link) && item.link !== "js.html"
+      ? "class=activeRoute"
+      : null
+  } >
         ${item.name}
         </a>
     </li>

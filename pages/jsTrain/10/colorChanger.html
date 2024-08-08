@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../style.css">
-    <title>Color Changer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>تغییر دهنده رنگ با جاوا اسکریپت</title>
 </head>
 
 
 <body class="cl-body">
-    <h1 class="title">Color Changer with JS</h1>
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">تغییر دهنده رنگ با جاوا اسکریپت</h1>
     <section class="cl-wrapper">
         <div class="codes">
             <div class="train-wrapper">
                 <div class="train-details">
-                    <span class="train-number">10</span>
-                    <h2 class="train-question">Color Changer</h2>
+                    <span class="train-number">۱۰</span>
+                    <h2 class="train-question">تغییر دهنده رنگ با جاوا اسکریپت</h2>
                 </div>
             </div>
             <section class="theme-card">
@@ -27,8 +36,8 @@
                         <div class="theme-card-header-wrapper">
                             <div class="theme-card-header-up">
                                 <div class="theme-card-header-des">
-                                    <h3 class="theme-card-header-title">Ali Houshangi</h3>
-                                    <span class="theme-card-header-lable">Frontend Developer</span>
+                                    <h3 class="theme-card-header-title">علی هوشنگی</h3>
+                                    <span class="theme-card-header-lable">توسعه دهنده فرانت اند</span>
                                 </div>
                                 <div class="theme-card-header-social">
                                     <a href="tel:09115447316" class="theme-card-header-social-item" id="phone">
@@ -62,15 +71,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="theme-card-description">My primary interest was programming from the
-                                beginning,
-                                and I have always tried to elevate my knowledge in this field. After years of
-                                experience
-                                in
-                                web development, I have been able to utilize my experiences to manage a team of
-                                diverse
-                                programmers as a technical manager. Additionally, I aim to transfer my knowledge and
-                                experience to aspiring learners in this field.</p>
+                            <p class="theme-card-description">علاقه اصلی من از ابتدا برنامه‌نویسی بود و همیشه سعی
+                                کرده‌ام دانش خود را در این زمینه ارتقاء دهم. پس از سال‌ها تجربه در توسعه وب، توانسته‌ام
+                                از تجربیات خود برای مدیریت یک تیم از برنامه‌نویسان متنوع به عنوان مدیر فنی استفاده کنم.
+                                علاوه بر این، هدف من انتقال دانش و تجربه خود به علاقه‌مندان به یادگیری در این حوزه است.
+                            </p>
                         </div>
                     </div>
 
@@ -78,7 +83,7 @@
 
             </section>
             <section class="theme-changer">
-                <h4>Which one ? </h4>
+                <h4>رنگ را انتخاب کن</h4>
                 <button class="theme-changer-button red" data-color="#a20000"></button>
                 <button class="theme-changer-button yellow" data-color="#edb603"></button>
                 <button class="theme-changer-button blue" data-color="#1f01c8"></button>
@@ -111,6 +116,7 @@
 
     <script src="colorChanger.js"></script>
     <script src="../../../js/codeFinder.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,9 @@
 // menu items
 const navList = [
-  { name: "JavaScript", link: "js.html" },
-  { name: "React", link: "#" },
-  { name: "Next", link: "#" },
+  { name: "صفحه اصلی", link: "/" },
+  { name: "جاوا اسکریپت", link: "js.html" },
+  // { name: "React", link: "#" },
+  // { name: "Next", link: "#" },
 ];
 
 const navbar = document.querySelector("#nav-list");
@@ -14,7 +15,11 @@ const route = window.location.pathname;
 navList.forEach((item, index) => {
   customHtml += `
   <li key="${index}" class="navbar-category-item" >
-    <a href="${item.link}" ${route.includes(item.link) && "class=activeRoute"} >
+    <a href="${item.link}" ${
+    route.includes(item.link) && item.link === "js.html"
+      ? "class=activeRoute"
+      : null
+  } >
       ${item.name}
     </a>
   </li>
@@ -41,16 +46,17 @@ pages()
 
     data.forEach((element) => {
       html += `
-      <div class="project-card">
+      <div class="project-card" id="jsCard">
             <div class="project-card-image-wrapper">
-                <img src=${element.imageUrl} width="200" alt="${element.title}" class="project-card-image">
+                <img src=${element.imageUrl} width="200" alt="${element.englandTitle}" class="project-card-image">
             </div>
             <div class="project-card-content">
                 <span class="project-card-category">${element.category}</span>
-                <h3 class="project-card-title">${element.title}</h3>
+                
+                <h3 class="project-card-title">${element.persianTitle}</h3>
                 <div class="project-card-button-wrapper">
                     <a href="${element.link}" class="project-card-button-link">
-                        <button class="project-card-button">see project</button>
+                        <button class="project-card-button">مشاهده پروژه</button>
                     </a>
                 </div>
             </div>
