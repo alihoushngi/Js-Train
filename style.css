@@ -71,11 +71,12 @@ html body main {
 html body #main {
   flex-direction: row !important;
   justify-content: space-evenly !important;
-  align-items: start !important;
-  margin-top: 2rem;
+  align-items: center !important;
+  gap: 50px;
+  padding: 1.8rem;
 }
 html body #main .about {
-  max-width: 40%;
+  max-width: 50%;
 }
 html body #main .about-profile {
   width: 100px;
@@ -140,15 +141,20 @@ html body #main .about-description a {
   text-decoration: none;
 }
 html body #main .project {
-  max-width: 60%;
+  max-width: 50%;
+}
+html body #main .project-wrapper {
+  max-width: 100%;
   display: flex;
   gap: 8px;
+  justify-content: center;
+  align-items: center;
 }
-html body #main .project-cards-wrapper {
+html body #main .project-wrapper #jsCard .project-cards-wrapper {
   position: relative !important;
   max-width: 100% !important;
 }
-html body #main .project-cards-wrapper .disable {
+html body #main .project-wrapper #jsCard .project-cards-wrapper .disable {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -157,19 +163,85 @@ html body #main .project-cards-wrapper .disable {
   background-color: rgba(0, 0, 0, 0.3568627451);
   cursor: not-allowed;
 }
-html body #main .project-card {
+html body #main .project-wrapper #jsCard .project-cards-wrapper .project-card {
+  background-color: #fdd54a;
   min-height: unset !important;
 }
-html body #main .project-card-title {
+html body #main .project-wrapper #jsCard .project-cards-wrapper .project-card-title {
   text-align: center;
   font-size: 16px;
   font-weight: 500;
   font-family: "Kalameh";
 }
-html body #main .project-card-button {
+html body #main .project-wrapper #jsCard .project-cards-wrapper .project-card-button {
   font-size: 12px;
   font-weight: 500;
   font-family: "Kalameh";
+}
+html body #main .project-wrapper #jsCard .project-cards-wrapper .project-card-image {
+  box-shadow: unset !important;
+}
+html body #main .project-wrapper #nextCard .project-cards-wrapper {
+  position: relative !important;
+  max-width: 100% !important;
+}
+html body #main .project-wrapper #nextCard .project-cards-wrapper .disable {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3568627451);
+  cursor: not-allowed;
+}
+html body #main .project-wrapper #nextCard .project-cards-wrapper .project-card {
+  background-color: #ffffff;
+  min-height: unset !important;
+}
+html body #main .project-wrapper #nextCard .project-cards-wrapper .project-card-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Kalameh";
+}
+html body #main .project-wrapper #nextCard .project-cards-wrapper .project-card-button {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Kalameh";
+}
+html body #main .project-wrapper #nextCard .project-cards-wrapper .project-card-image {
+  box-shadow: unset !important;
+}
+html body #main .project-wrapper #reactCard .project-cards-wrapper {
+  position: relative !important;
+  max-width: 100% !important;
+}
+html body #main .project-wrapper #reactCard .project-cards-wrapper .disable {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3568627451);
+  cursor: not-allowed;
+}
+html body #main .project-wrapper #reactCard .project-cards-wrapper .project-card {
+  background-color: #4ad5fe;
+  min-height: unset !important;
+}
+html body #main .project-wrapper #reactCard .project-cards-wrapper .project-card-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Kalameh";
+}
+html body #main .project-wrapper #reactCard .project-cards-wrapper .project-card-button {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Kalameh";
+}
+html body #main .project-wrapper #reactCard .project-cards-wrapper .project-card-image {
+  box-shadow: unset !important;
 }
 html body nav {
   width: 100%;

@@ -128,10 +128,11 @@ html {
     #main {
       flex-direction: row !important;
       justify-content: space-evenly !important;
-      align-items: start !important;
-      margin-top: 2rem;
+      align-items: center !important;
+      gap: 50px;
+      padding: 1.8rem;
       .about {
-        max-width: 40%;
+        max-width: 50%;
         &-profile {
           width: 100px;
           margin: 0;
@@ -200,42 +201,138 @@ html {
         }
       }
       .project {
-        max-width: 60%;
-        display: flex;
-        gap: 8px;
-
-        &-cards {
-          &-wrapper {
-            position: relative !important;
-            max-width: 100% !important;
-            .disable {
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              background-color: #0000005b;
-              cursor: not-allowed;
+        max-width: 50%;
+        &-wrapper {
+          max-width: 100%;
+          display: flex;
+          gap: 8px;
+          justify-content: center;
+          align-items: center;
+          #jsCard {
+            .project {
+              &-cards {
+                &-wrapper {
+                  position: relative !important;
+                  max-width: 100% !important;
+                  .disable {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #0000005b;
+                    cursor: not-allowed;
+                  }
+                }
+              }
+            }
+            .project-cards-wrapper .project-card {
+              background-color: #fdd54a;
+              min-height: unset !important;
+              &-title {
+                text-align: center;
+                font: {
+                  size: 16px;
+                  weight: 500;
+                  family: $PersianFont;
+                }
+              }
+              &-button {
+                font: {
+                  size: 12px;
+                  weight: 500;
+                  family: $PersianFont;
+                }
+              }
+              &-image {
+                box-shadow: unset !important;
+              }
+            }
+          }
+          #nextCard {
+            .project {
+              &-cards {
+                &-wrapper {
+                  position: relative !important;
+                  max-width: 100% !important;
+                  .disable {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #0000005b;
+                    cursor: not-allowed;
+                  }
+                }
+              }
+            }
+            .project-cards-wrapper .project-card {
+              background-color: #ffffff;
+              min-height: unset !important;
+              &-title {
+                text-align: center;
+                font: {
+                  size: 16px;
+                  weight: 500;
+                  family: $PersianFont;
+                }
+              }
+              &-button {
+                font: {
+                  size: 12px;
+                  weight: 500;
+                  family: $PersianFont;
+                }
+              }
+              &-image {
+                box-shadow: unset !important;
+              }
+            }
+          }
+          #reactCard {
+            .project {
+              &-cards {
+                &-wrapper {
+                  position: relative !important;
+                  max-width: 100% !important;
+                  .disable {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #0000005b;
+                    cursor: not-allowed;
+                  }
+                }
+              }
+            }
+            .project-cards-wrapper .project-card {
+              background-color: #4ad5fe;
+              min-height: unset !important;
+              &-title {
+                text-align: center;
+                font: {
+                  size: 16px;
+                  weight: 500;
+                  family: $PersianFont;
+                }
+              }
+              &-button {
+                font: {
+                  size: 12px;
+                  weight: 500;
+                  family: $PersianFont;
+                }
+              }
+              &-image {
+                box-shadow: unset !important;
+              }
             }
           }
         }
-        &-card {
-          min-height: unset !important;
-          &-title {
-            text-align: center;
-            font: {
-              size: 16px;
-              weight: 500;
-              family: $PersianFont;
-            }
-          }
-          &-button {
-            font: {
-              size: 12px;
-              weight: 500;
-              family: $PersianFont;
-            }
-          }
+        &-description {
         }
       }
     }
