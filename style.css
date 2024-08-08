@@ -2,6 +2,51 @@
   font-family: "firaCode";
   src: url(assets/fonts/FiraCode-Light.woff2) format("woff2");
 }
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 100;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebThin.woff) format("woff"), url(assets/fonts/Kalameh/_Woff2/KalamehWebThin.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 200;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebExtraLight.woff) format("woff"), url(assets/fonts/Kalameh/_Woff2/KalamehWebExtraLight.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 300;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebLight.woff) format("woff"), url(assets/fonts/Kalameh/_Woff2/KalamehWebLight.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 400;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebRegular.woff) format("woff"), url(assets/fonts/Kalameh/_Woff2/KalamehWebRegular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 500;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebMedium.woff) format("woff"), url(assets/fonts/Kalameh/_Woff2/KalamehWebMedium.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 600;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebSemiBold.woff) format("woff"), url(assets/fonts/Kalameh/_Woff2/KalamehWebSemiBold.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 700;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebBold.woff) format("woff"), url(assets/fonts/Kalameh/_Woff2/KalamehWebBold.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 800;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebExtraBold.woff) format("woff"), url(assets/fonts/Kalameh/_Woff2/KalamehWebExtraBold.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 900;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebBlack.woff) format("woff"), url(assets/fonts/Kalameh/_Woff2/KalamehWebBlack.woff2) format("woff2");
+}
 html {
   margin: 0;
   padding: 0;
@@ -9,8 +54,8 @@ html {
 html body {
   margin: 0;
   padding: 0;
-  background-color: #262846;
-  color: #f0f0f0;
+  background-color: #2f2f2f;
+  color: #e4e4e4;
   min-height: 100vh;
   background-repeat: no-repeat;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -22,6 +67,109 @@ html body main {
   flex-direction: column;
   min-height: calc(100vh - 60px);
   margin-bottom: 0.5rem;
+}
+html body #main {
+  flex-direction: row !important;
+  justify-content: space-evenly !important;
+  align-items: start !important;
+  margin-top: 2rem;
+}
+html body #main .about {
+  max-width: 40%;
+}
+html body #main .about-profile {
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #ffffff;
+  border-radius: 40px;
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+}
+html body #main .about-title {
+  text-align: right;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Kalameh";
+}
+html body #main .about-title a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+html body #main .about-tagline {
+  text-align: right;
+  display: block;
+  margin: 0.6rem 0;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+html body #main .about-social {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+html body #main .about-social-item {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4d4d4;
+  color: #210c5b;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+html body #main .about-social-item:hover {
+  background-color: #ffffff;
+}
+html body #main .about-description {
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Kalameh";
+}
+html body #main .about-description a {
+  color: #d7d7d7 !important;
+  text-decoration: none;
+}
+html body #main .project {
+  max-width: 60%;
+  display: flex;
+  gap: 8px;
+}
+html body #main .project-cards-wrapper {
+  position: relative !important;
+  max-width: 100% !important;
+}
+html body #main .project-cards-wrapper .disable {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3568627451);
+  cursor: not-allowed;
+}
+html body #main .project-card {
+  min-height: unset !important;
+}
+html body #main .project-card-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Kalameh";
+}
+html body #main .project-card-button {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Kalameh";
 }
 html body nav {
   width: 100%;
@@ -86,8 +234,8 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   max-width: 90%;
 }
 .project-cards-wrapper .project-card {
-  background-color: #f0f0f0;
-  color: #262846;
+  background-color: #e4e4e4;
+  color: #2f2f2f;
   max-width: 200px;
   min-height: 300px;
   display: flex;
@@ -141,7 +289,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   border-radius: 5px;
   border: 0;
   background-color: rgb(11, 11, 80);
-  color: #f0f0f0;
+  color: #e4e4e4;
   padding: 10px 0;
   cursor: pointer;
   transition: all 300ms ease-in-out;
@@ -166,8 +314,8 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   gap: 8px;
 }
 .cl-wrapper .codes {
-  background-color: #f0f0f0;
-  color: #262846;
+  background-color: #e4e4e4;
+  color: #2f2f2f;
   box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
   border-radius: 5px;
   padding: 1rem;
@@ -234,8 +382,8 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   gap: inherit;
 }
 .cl-wrapper .train-number {
-  background-color: #262846;
-  color: #f0f0f0;
+  background-color: #2f2f2f;
+  color: #e4e4e4;
   width: 20px;
   height: 20px;
   padding: 3px;
@@ -349,7 +497,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   background-color: rgb(11, 11, 80);
   border-radius: 5px;
   border: 0;
-  color: #f0f0f0;
+  color: #e4e4e4;
   transition: all 300ms ease-in-out;
   padding: 0.5rem;
   cursor: pointer;
@@ -496,7 +644,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   padding: 0;
   font-weight: 400;
   font-size: 18px;
-  color: #262846;
+  color: #2f2f2f;
 }
 
 .corner-menu {
@@ -529,7 +677,7 @@ html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-it
   width: 60px;
   height: 60px;
   padding: 0.5rem;
-  background-color: #262846;
+  background-color: #2f2f2f;
   border-radius: 100%;
   position: absolute;
   z-index: 2;

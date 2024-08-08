@@ -3,16 +3,82 @@
   font-family: "firaCode";
   src: url(assets/fonts/FiraCode-Light.woff2) format("woff2");
 }
+
+// Kalameh
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 100;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebThin.woff) format("woff"),
+    url(assets/fonts/Kalameh/_Woff2/KalamehWebThin.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 200;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebExtraLight.woff) format("woff"),
+    url(assets/fonts/Kalameh/_Woff2/KalamehWebExtraLight.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 300;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebLight.woff) format("woff"),
+    url(assets/fonts/Kalameh/_Woff2/KalamehWebLight.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 400;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebRegular.woff) format("woff"),
+    url(assets/fonts/Kalameh/_Woff2/KalamehWebRegular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 500;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebMedium.woff) format("woff"),
+    url(assets/fonts/Kalameh/_Woff2/KalamehWebMedium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 600;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebSemiBold.woff) format("woff"),
+    url(assets/fonts/Kalameh/_Woff2/KalamehWebSemiBold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 700;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebBold.woff) format("woff"),
+    url(assets/fonts/Kalameh/_Woff2/KalamehWebBold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 800;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebExtraBold.woff) format("woff"),
+    url(assets/fonts/Kalameh/_Woff2/KalamehWebExtraBold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Kalameh";
+  font-weight: 900;
+  src: url(assets/fonts/Kalameh/_Woff/KalamehWebBlack.woff) format("woff"),
+    url(assets/fonts/Kalameh/_Woff2/KalamehWebBlack.woff2) format("woff2");
+}
+
 //! fonts
 
 //! my variables
-$primaryColor: #f0f0f0;
-$secondaryColor: #262846;
+$primaryColor: #e4e4e4;
+$secondaryColor: #2f2f2f;
 $softBlack: #474747;
 $darkBlue: #080840;
 $buttonColor: rgb(11, 11, 80);
 $buttonHoverColor: rgb(23, 23, 135);
 $GillFont: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+$PersianFont: "Kalameh";
 $customBoxShadow: 0px 1px 1px 0px #34343438;
 $borderRadius: 5px;
 //* code style
@@ -57,6 +123,121 @@ html {
       flex-direction: column;
       min-height: calc(100vh - 60px);
       margin-bottom: 0.5rem;
+    }
+
+    #main {
+      flex-direction: row !important;
+      justify-content: space-evenly !important;
+      align-items: start !important;
+      margin-top: 2rem;
+      .about {
+        max-width: 40%;
+        &-profile {
+          width: 100px;
+          margin: 0;
+          padding: 0;
+          border: 2px solid #ffffff;
+          border-radius: 40px;
+          box-shadow: $customBoxShadow;
+        }
+        &-title {
+          text-align: right;
+          text-transform: uppercase;
+          margin: 0;
+          a {
+            color: #ffffff !important;
+            text-decoration: none;
+          }
+          font : {
+            size: 50px;
+            weight: 700;
+            family: $PersianFont;
+          }
+        }
+        &-tagline {
+          text-align: right;
+          display: block;
+          margin: 0.6rem 0;
+          color: rgb(255, 255, 255);
+          text-transform: uppercase;
+        }
+        &-social {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          gap: 8px;
+          list-style: none;
+          padding: 0;
+          &-item {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $codeManualText;
+            color: #210c5b;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            box-shadow: $customBoxShadow;
+            transition: all 150ms ease-in-out;
+            cursor: pointer;
+            &:hover {
+              background-color: #ffffff;
+            }
+          }
+        }
+        &-description {
+          text-align: justify;
+          font : {
+            size: 16px;
+            weight: 300;
+            family: $PersianFont;
+          }
+          a {
+            color: #d7d7d7 !important;
+            text-decoration: none;
+          }
+        }
+      }
+      .project {
+        max-width: 60%;
+        display: flex;
+        gap: 8px;
+
+        &-cards {
+          &-wrapper {
+            position: relative !important;
+            max-width: 100% !important;
+            .disable {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background-color: #0000005b;
+              cursor: not-allowed;
+            }
+          }
+        }
+        &-card {
+          min-height: unset !important;
+          &-title {
+            text-align: center;
+            font: {
+              size: 16px;
+              weight: 500;
+              family: $PersianFont;
+            }
+          }
+          &-button {
+            font: {
+              size: 12px;
+              weight: 500;
+              family: $PersianFont;
+            }
+          }
+        }
+      }
     }
     nav {
       width: 100%;
