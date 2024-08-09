@@ -133,7 +133,18 @@ html {
       justify-content: space-evenly;
       align-items: center;
       gap: 50px;
-
+      @media (max-width: 425px) {
+        gap: 10px;
+      }
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        .about {
+          max-width: 100% !important;
+        }
+        .project {
+          max-width: 100% !important;
+        }
+      }
       .about {
         max-width: 50%;
         &-profile {
@@ -145,6 +156,9 @@ html {
           box-shadow: $customBoxShadow;
         }
         &-title {
+          @media (max-width: 425px) {
+            font-size: 25px !important;
+          }
           text-align: right;
           text-transform: uppercase;
           margin: 0;
@@ -191,6 +205,10 @@ html {
           }
         }
         &-description {
+          @media (max-width: 425px) {
+            font-size: 14px !important;
+            letter-spacing: -0.3px;
+          }
           text-align: justify;
           font : {
             size: 16px;
@@ -208,10 +226,20 @@ html {
         &-wrapper {
           max-width: 100%;
           display: flex;
+          flex-wrap: wrap;
           gap: 8px;
           justify-content: center;
           align-items: center;
+          @media (max-width: 1024px) {
+            justify-content: space-between;
+          }
           #jsCard {
+            @media (max-width: 1024px) {
+              width: 32%;
+            }
+            @media (max-width: 425px) {
+              width: 100%;
+            }
             .project {
               &-cards {
                 &-wrapper {
@@ -253,6 +281,12 @@ html {
             }
           }
           #nextCard {
+            @media (max-width: 1024px) {
+              width: 32%;
+            }
+            @media (max-width: 425px) {
+              width: 100%;
+            }
             .project {
               &-cards {
                 &-wrapper {
@@ -294,6 +328,12 @@ html {
             }
           }
           #reactCard {
+            @media (max-width: 1024px) {
+              width: 32%;
+            }
+            @media (max-width: 425px) {
+              width: 100%;
+            }
             .project {
               &-cards {
                 &-wrapper {
@@ -451,6 +491,16 @@ html {
     align-items: center;
     padding: 1rem;
     border-radius: $borderRadius;
+    @media (max-width: 1024px) {
+      max-width: unset !important;
+      min-height: unset !important;
+      width: 100%;
+    }
+    @media (max-width: 425px) {
+      max-width: unset !important;
+      min-height: unset !important;
+      width: 100%;
+    }
     .project-card-title {
       text-shadow: 1px 2px 0px rgb(255 255 255 / 55%);
       font: {

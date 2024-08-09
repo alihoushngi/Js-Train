@@ -78,6 +78,22 @@ html body #main {
   align-items: center;
   gap: 50px;
 }
+@media (max-width: 425px) {
+  html body #main {
+    gap: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  html body #main {
+    flex-direction: column;
+  }
+  html body #main .about {
+    max-width: 100% !important;
+  }
+  html body #main .project {
+    max-width: 100% !important;
+  }
+}
 html body #main .about {
   max-width: 50%;
 }
@@ -96,6 +112,11 @@ html body #main .about-title {
   font-size: 50px;
   font-weight: 700;
   font-family: "Kalameh";
+}
+@media (max-width: 425px) {
+  html body #main .about-title {
+    font-size: 25px !important;
+  }
 }
 html body #main .about-title a {
   color: #ffffff;
@@ -139,6 +160,12 @@ html body #main .about-description {
   font-weight: 300;
   font-family: "Kalameh";
 }
+@media (max-width: 425px) {
+  html body #main .about-description {
+    font-size: 14px !important;
+    letter-spacing: -0.3px;
+  }
+}
 html body #main .about-description a {
   color: #d7d7d7;
   text-decoration: none;
@@ -149,9 +176,25 @@ html body #main .project {
 html body #main .project-wrapper {
   max-width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 1024px) {
+  html body #main .project-wrapper {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1024px) {
+  html body #main .project-wrapper #jsCard {
+    width: 32%;
+  }
+}
+@media (max-width: 425px) {
+  html body #main .project-wrapper #jsCard {
+    width: 100%;
+  }
 }
 html body #main .project-wrapper #jsCard .project-cards-wrapper {
   position: relative;
@@ -184,6 +227,16 @@ html body #main .project-wrapper #jsCard .project-cards-wrapper .project-card-bu
 html body #main .project-wrapper #jsCard .project-cards-wrapper .project-card-image {
   box-shadow: unset;
 }
+@media (max-width: 1024px) {
+  html body #main .project-wrapper #nextCard {
+    width: 32%;
+  }
+}
+@media (max-width: 425px) {
+  html body #main .project-wrapper #nextCard {
+    width: 100%;
+  }
+}
 html body #main .project-wrapper #nextCard .project-cards-wrapper {
   position: relative;
   max-width: 100%;
@@ -214,6 +267,16 @@ html body #main .project-wrapper #nextCard .project-cards-wrapper .project-card-
 }
 html body #main .project-wrapper #nextCard .project-cards-wrapper .project-card-image {
   box-shadow: unset;
+}
+@media (max-width: 1024px) {
+  html body #main .project-wrapper #reactCard {
+    width: 32%;
+  }
+}
+@media (max-width: 425px) {
+  html body #main .project-wrapper #reactCard {
+    width: 100%;
+  }
 }
 html body #main .project-wrapper #reactCard .project-cards-wrapper {
   position: relative;
@@ -355,6 +418,20 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   align-items: center;
   padding: 1rem;
   border-radius: 5px;
+}
+@media (max-width: 1024px) {
+  .project-cards-wrapper .project-card {
+    max-width: unset !important;
+    min-height: unset !important;
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .project-cards-wrapper .project-card {
+    max-width: unset !important;
+    min-height: unset !important;
+    width: 100%;
+  }
 }
 .project-cards-wrapper .project-card .project-card-title {
   text-shadow: 1px 2px 0px rgba(255, 255, 255, 0.55);
