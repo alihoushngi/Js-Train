@@ -127,6 +127,18 @@ html {
     }
 
     #main {
+      .project-card {
+        @media (max-width: 1024px) {
+          max-width: unset !important;
+          min-height: unset !important;
+          width: 100%;
+        }
+        @media (max-width: 425px) {
+          max-width: unset !important;
+          min-height: unset !important;
+          width: 100%;
+        }
+      }
       max-width: 85%;
       margin: 20px auto;
       flex-direction: row;
@@ -443,6 +455,9 @@ html {
 }
 
 .title {
+  @media (max-width: 425px) {
+    font-size: 30px;
+  }
   text-align: center;
   text-transform: uppercase;
   margin: 0;
@@ -470,6 +485,15 @@ html {
   flex-wrap: wrap;
   gap: 15px;
   max-width: 85%;
+  @media (max-width: 1024px) {
+    justify-content: space-between;
+  }
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
+  @media (max-width: 425px) {
+    justify-content: space-between;
+  }
   #jsCard {
     background-color: #fdd54a;
     .project-card-image {
@@ -494,7 +518,12 @@ html {
     @media (max-width: 1024px) {
       max-width: unset !important;
       min-height: unset !important;
-      width: 100%;
+      width: 28%;
+    }
+    @media (max-width: 768px) {
+      max-width: unset !important;
+      min-height: unset !important;
+      width: 40%;
     }
     @media (max-width: 425px) {
       max-width: unset !important;

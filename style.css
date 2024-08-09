@@ -78,6 +78,20 @@ html body #main {
   align-items: center;
   gap: 50px;
 }
+@media (max-width: 1024px) {
+  html body #main .project-card {
+    max-width: unset !important;
+    min-height: unset !important;
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  html body #main .project-card {
+    max-width: unset !important;
+    min-height: unset !important;
+    width: 100%;
+  }
+}
 @media (max-width: 425px) {
   html body #main {
     gap: 10px;
@@ -380,6 +394,11 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   font-size: 40px;
   font-weight: 900;
 }
+@media (max-width: 425px) {
+  .title {
+    font-size: 30px;
+  }
+}
 
 .main-desc {
   text-align: center;
@@ -396,6 +415,21 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   flex-wrap: wrap;
   gap: 15px;
   max-width: 85%;
+}
+@media (max-width: 1024px) {
+  .project-cards-wrapper {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  .project-cards-wrapper {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 425px) {
+  .project-cards-wrapper {
+    justify-content: space-between;
+  }
 }
 .project-cards-wrapper #jsCard {
   background-color: #fdd54a;
@@ -423,7 +457,14 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   .project-cards-wrapper .project-card {
     max-width: unset !important;
     min-height: unset !important;
-    width: 100%;
+    width: 28%;
+  }
+}
+@media (max-width: 768px) {
+  .project-cards-wrapper .project-card {
+    max-width: unset !important;
+    min-height: unset !important;
+    width: 40%;
   }
 }
 @media (max-width: 425px) {
