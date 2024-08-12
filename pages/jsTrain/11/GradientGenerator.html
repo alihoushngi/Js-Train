@@ -64,76 +64,78 @@
                 </div>
             </section>
             <div class="code-wrapper">
-                <span>// ! get element from dom</span>
-                <span>// inputs</span>
-                <span>const firstInput = document.querySelector("#firstColor");</span>
-                <span>const secondInput = document.querySelector("#secondColor");</span>
-                <span>// labels</span>
-                <span>const firstColorLabel = document.querySelector("#firstColorLabel");</span>
-                <span>const secondColorLabel = document.querySelector("#secondColorLabel");</span>
-                <span>// directions</span>
-                <span>const directions = document.querySelectorAll(</span>
-                <span> ".colorGenerator-directions-arrow"</span>
-                <span>);</span>
-                <span>// buttons</span>
-                <span>const generateButton = document.querySelector("#generateButton");</span>
-                <span>const copyButton = document.querySelector("#copyButton");</span>
-                <span>// style area</span>
-                <span>const styleArea = document.querySelector("#styleArea");</span>
+                <span class="code-wrap">// ! get element from dom</span>
+                <span class="code-wrap">// inputs</span>
+                <span class="code-wrap">const firstInput = document.querySelector("#firstColor");</span>
+                <span class="code-wrap">const secondInput = document.querySelector("#secondColor");</span>
+                <span class="code-wrap">// labels</span>
+                <span class="code-wrap">const firstColorLabel = document.querySelector("#firstColorLabel");</span>
+                <span class="code-wrap">const secondColorLabel = document.querySelector("#secondColorLabel");</span>
+                <span class="code-wrap">// directions</span>
+                <span class="code-wrap">const directions = document.querySelectorAll(</span>
+                <span class="code-wrap"> ".colorGenerator-directions-arrow"</span>
+                <span class="code-wrap">);</span>
+                <span class="code-wrap">// buttons</span>
+                <span class="code-wrap">const generateButton = document.querySelector("#generateButton");</span>
+                <span class="code-wrap">const copyButton = document.querySelector("#copyButton");</span>
+                <span class="code-wrap">// style area</span>
+                <span class="code-wrap">const styleArea = document.querySelector("#styleArea");</span>
                 <br />
-                <span>// ? functions</span>
-                <span>let firstColor = null;</span>
-                <span>let secondColor = null;</span>
-                <span>let rotation = "to top";</span>
+                <span class="code-wrap">// ? functions</span>
+                <span class="code-wrap">let firstColor = null;</span>
+                <span class="code-wrap">let secondColor = null;</span>
+                <span class="code-wrap">let rotation = "to top";</span>
                 <br />
-                <span>// * first input change handler</span>
-                <span>firstInput.addEventListener("change", (e) => {</span>
-                <span> firstColor = e.target.value;</span>
-                <span> firstColorLabel.textContent = e.target.value;</span>
-                <span> firstColorLabel.style.color = `${e.target.value}`;</span>
-                <span>});</span>
+                <span class="code-wrap">// * first input change handler</span>
+                <span class="code-wrap">firstInput.addEventListener("change", (e) => {</span>
+                <span class="code-wrap"> firstColor = e.target.value;</span>
+                <span class="code-wrap"> firstColorLabel.textContent = e.target.value;</span>
+                <span class="code-wrap"> firstColorLabel.style.color = `${e.target.value}`;</span>
+                <span class="code-wrap">});</span>
                 <br />
-                <span>// * second input change handler</span>
-                <span>secondInput.addEventListener("change", (e) => {</span>
-                <span> secondColor = e.target.value;</span>
-                <span> secondColorLabel.textContent = e.target.value;</span>
-                <span> secondColorLabel.style.color = `${e.target.value}`;</span>
-                <span>});</span>
+                <span class="code-wrap">// * second input change handler</span>
+                <span class="code-wrap">secondInput.addEventListener("change", (e) => {</span>
+                <span class="code-wrap"> secondColor = e.target.value;</span>
+                <span class="code-wrap"> secondColorLabel.textContent = e.target.value;</span>
+                <span class="code-wrap"> secondColorLabel.style.color = `${e.target.value}`;</span>
+                <span class="code-wrap">});</span>
                 <br />
-                <span>// * directions input change handler</span>
-                <span>directions.forEach((item) => {</span>
-                <span> item.addEventListener("click", (direct) => {</span>
-                <span> rotation = direct.target.dataset.rotate;</span>
-                <span> });</span>
-                <span>});</span>
+                <span class="code-wrap">// * directions input change handler</span>
+                <span class="code-wrap">directions.forEach((item) => {</span>
+                <span class="code-wrap"> item.addEventListener("click", (direct) => {</span>
+                <span class="code-wrap"> rotation = direct.target.dataset.rotate;</span>
+                <span class="code-wrap"> });</span>
+                <span class="code-wrap">});</span>
                 <br />
-                <span>// todo check the color and direction to style body</span>
+                <span class="code-wrap">// todo check the color and direction to style body</span>
                 <br />
-                <span>generateButton.addEventListener("click", () => {</span>
-                <span> if (firstColor != null && secondColor != null) {</span>
-                <span> document.body.style = `background-image: linear-gradient(${rotation}, ${firstColor} ,
+                <span class="code-wrap">generateButton.addEventListener("click", () => {</span>
+                <span class="code-wrap"> if (firstColor != null && secondColor != null) {</span>
+                <span class="code-wrap"> document.body.style = `background-image: linear-gradient(${rotation},
+                    ${firstColor} ,
                     ${secondColor});`;</span>
-                <span> styleArea.textContent = `background-image: linear-gradient(${rotation}, ${firstColor} ,
+                <span class="code-wrap"> styleArea.textContent = `background-image: linear-gradient(${rotation},
+                    ${firstColor} ,
                     ${secondColor});`;</span>
-                <span> generateButton.textContent = "Color Generated";</span>
-                <span> generateButton.style.backgroundColor = "green";</span>
-                <span> } else {</span>
-                <span> generateButton.textContent = "Select Colors";</span>
-                <span> generateButton.style.backgroundColor = "red";</span>
-                <span> }</span>
-                <span>});</span>
+                <span class="code-wrap"> generateButton.textContent = "Color Generated";</span>
+                <span class="code-wrap"> generateButton.style.backgroundColor = "green";</span>
+                <span class="code-wrap"> } else {</span>
+                <span class="code-wrap"> generateButton.textContent = "Select Colors";</span>
+                <span class="code-wrap"> generateButton.style.backgroundColor = "red";</span>
+                <span class="code-wrap"> }</span>
+                <span class="code-wrap">});</span>
                 <br />
-                <span>// ? copy button click handler</span>
-                <span>copyButton.addEventListener("click", () => {</span>
-                <span> if (styleArea.innerHTML != "") {</span>
-                <span> navigator.clipboard.writeText(styleArea.innerHTML);</span>
-                <span> copyButton.textContent = "Copied";</span>
-                <span> copyButton.style.backgroundColor = "green";</span>
-                <span> } else {</span>
-                <span> copyButton.textContent = "Generate Gradient";</span>
-                <span> copyButton.style.backgroundColor = "red";</span>
-                <span> }</span>
-                <span>});</span>
+                <span class="code-wrap">// ? copy button click handler</span>
+                <span class="code-wrap">copyButton.addEventListener("click", () => {</span>
+                <span class="code-wrap"> if (styleArea.innerHTML != "") {</span>
+                <span class="code-wrap"> navigator.clipboard.writeText(styleArea.innerHTML);</span>
+                <span class="code-wrap"> copyButton.textContent = "Copied";</span>
+                <span class="code-wrap"> copyButton.style.backgroundColor = "green";</span>
+                <span class="code-wrap"> } else {</span>
+                <span class="code-wrap"> copyButton.textContent = "Generate Gradient";</span>
+                <span class="code-wrap"> copyButton.style.backgroundColor = "red";</span>
+                <span class="code-wrap"> }</span>
+                <span class="code-wrap">});</span>
             </div>
         </div>
     </section>

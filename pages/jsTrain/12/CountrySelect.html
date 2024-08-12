@@ -43,81 +43,81 @@
                 </div>
             </section>
             <div class="code-wrapper">
-                <span>// ! select element from dom</span>
-                <span>let formSelect = document.querySelector("#countries");</span>
-                <span>let formTitle = document.querySelector(".countries-title");</span>
-                <span>let titleIcon = document.querySelector(".countries-title-icon");</span>
-                <span>let searchInput = document.querySelector("#countries-search");</span>
-                <span>let itemsWrapper = document.querySelector(".countries-wrapper");</span>
-                <span>let countriesList = [];</span>
+                <span class="code-wrap">// ! select element from dom</span>
+                <span class="code-wrap">let formSelect = document.querySelector("#countries");</span>
+                <span class="code-wrap">let formTitle = document.querySelector(".countries-title");</span>
+                <span class="code-wrap">let titleIcon = document.querySelector(".countries-title-icon");</span>
+                <span class="code-wrap">let searchInput = document.querySelector("#countries-search");</span>
+                <span class="code-wrap">let itemsWrapper = document.querySelector(".countries-wrapper");</span>
+                <span class="code-wrap">let countriesList = [];</span>
                 <br />
-                <span>// ? fetch data from json file</span>
-                <span>fetch("../../../assets/data/countries.json")</span>
-                <span> .then((item) => item.json())</span>
-                <span> .then((res) => {</span>
-                <span> countriesList.push(res);</span>
-                <span> countriesList.forEach((element) => {</span>
-                <span> let countHtml = "";</span>
-                <span> element.forEach((item) => {</span>
-                <span> countHtml += `</span>
-                <span>
+                <span class="code-wrap">// ? fetch data from json file</span>
+                <span class="code-wrap">fetch("../../../assets/data/countries.json")</span>
+                <span class="code-wrap"> .then((item) => item.json())</span>
+                <span class="code-wrap"> .then((res) => {</span>
+                <span class="code-wrap"> countriesList.push(res);</span>
+                <span class="code-wrap"> countriesList.forEach((element) => {</span>
+                <span class="code-wrap"> let countHtml = "";</span>
+                <span class="code-wrap"> element.forEach((item) => {</span>
+                <span class="code-wrap"> countHtml += `</span>
+                <span class="code-wrap">
                     < h5 onclick="updateName(this)" value="${item.name}" class="countries-wrapper-list-item"
                         id="countries-item">${item.name}< /h5>
                 </span>
-                <span> `;</span>
-                <span> });</span>
-                <span> formSelect.innerHTML = countHtml;</span>
-                <span> });</span>
-                <span> });</span>
+                <span class="code-wrap"> `;</span>
+                <span class="code-wrap"> });</span>
+                <span class="code-wrap"> formSelect.innerHTML = countHtml;</span>
+                <span class="code-wrap"> });</span>
+                <span class="code-wrap"> });</span>
                 <br />
-                <span>// ? open list when onclick</span>
-                <span>formTitle.addEventListener("click", () => {</span>
-                <span> itemsWrapper.style.display = "block";</span>
-                <span> titleIcon.classList.add("iconRotate");</span>
-                <span>});</span>
+                <span class="code-wrap">// ? open list when onclick</span>
+                <span class="code-wrap">formTitle.addEventListener("click", () => {</span>
+                <span class="code-wrap"> itemsWrapper.style.display = "block";</span>
+                <span class="code-wrap"> titleIcon.classList.add("iconRotate");</span>
+                <span class="code-wrap">});</span>
                 <br />
-                <span>// todo update form title name</span>
-                <span>const updateName = (el) => {</span>
-                <span> // ? close list</span>
-                <span> itemsWrapper.style.display = "none";</span>
-                <span> titleIcon.classList.remove("iconRotate");</span>
+                <span class="code-wrap">// todo update form title name</span>
+                <span class="code-wrap">const updateName = (el) => {</span>
+                <span class="code-wrap"> // ? close list</span>
+                <span class="code-wrap"> itemsWrapper.style.display = "none";</span>
+                <span class="code-wrap"> titleIcon.classList.remove("iconRotate");</span>
                 <br />
-                <span> // * form title update</span>
-                <span> formTitle.textContent = el.textContent;</span>
+                <span class="code-wrap"> // * form title update</span>
+                <span class="code-wrap"> formTitle.textContent = el.textContent;</span>
                 <br />
-                <span> // ? add active class to item</span>
-                <span> const options = document.querySelectorAll("#countries-item");</span>
-                <span> for (let option of options) {</span>
-                <span> if (option.innerHTML === el.innerHTML) {</span>
-                <span> option.classList.add("selected-country");</span>
-                <span> } else {</span>
-                <span> option.classList.remove("selected-country");</span>
-                <span> }</span>
-                <span> }</span>
-                <span>};</span>
+                <span class="code-wrap"> // ? add active class to item</span>
+                <span class="code-wrap"> const options = document.querySelectorAll("#countries-item");</span>
+                <span class="code-wrap"> for (let option of options) {</span>
+                <span class="code-wrap"> if (option.innerHTML === el.innerHTML) {</span>
+                <span class="code-wrap"> option.classList.add("selected-country");</span>
+                <span class="code-wrap"> } else {</span>
+                <span class="code-wrap"> option.classList.remove("selected-country");</span>
+                <span class="code-wrap"> }</span>
+                <span class="code-wrap"> }</span>
+                <span class="code-wrap">};</span>
                 <br />
-                <span>// handel search input</span>
-                <span>searchInput.addEventListener("keyup", (e) => {</span>
-                <span> const searchedValue = e.target.value.toUpperCase();</span>
+                <span class="code-wrap">// handel search input</span>
+                <span class="code-wrap">searchInput.addEventListener("keyup", (e) => {</span>
+                <span class="code-wrap"> const searchedValue = e.target.value.toUpperCase();</span>
                 <br />
-                <span> let zoneName = [];</span>
-                <span> let searchedHtml = "";</span>
-                <span> countriesList.filter((country) => {</span>
-                <span> return country.some((zone) => {</span>
-                <span> if (zone.name.toUpperCase().startsWith(searchedValue)) {</span>
-                <span> zoneName.push(zone.name);</span>
-                <span> }</span>
-                <span> });</span>
-                <span> });</span>
-                <span> zoneName.forEach((item) => {</span>
-                <span> searchedHtml += `</span>
-                <span>
+                <span class="code-wrap"> let zoneName = [];</span>
+                <span class="code-wrap"> let searchedHtml = "";</span>
+                <span class="code-wrap"> countriesList.filter((country) => {</span>
+                <span class="code-wrap"> return country.some((zone) => {</span>
+                <span class="code-wrap"> if (zone.name.toUpperCase().startsWith(searchedValue)) {</span>
+                <span class="code-wrap"> zoneName.push(zone.name);</span>
+                <span class="code-wrap"> }</span>
+                <span class="code-wrap"> });</span>
+                <span class="code-wrap"> });</span>
+                <span class="code-wrap"> zoneName.forEach((item) => {</span>
+                <span class="code-wrap"> searchedHtml += `</span>
+                <span class="code-wrap">
                     < h5 value="${item}" class="countries-wrapper-list-item" id="countries-item">${item}< /h5>
                 </span>
-                <span> `;</span>
-                <span> });</span>
-                <span> formSelect.innerHTML = searchedHtml;</span>
-                <span>});</span>
+                <span class="code-wrap"> `;</span>
+                <span class="code-wrap"> });</span>
+                <span class="code-wrap"> formSelect.innerHTML = searchedHtml;</span>
+                <span class="code-wrap">});</span>
 
             </div>
         </div>

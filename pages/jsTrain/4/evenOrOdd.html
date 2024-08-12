@@ -38,26 +38,26 @@
                 <div class="numberForm-result" id="oddNumber-result"></div>
             </div>
             <div class="code-wrapper">
-                <span>// ! Checking whether the number is even or odd.</span>
-                <span>// ? get number , button and result section from document</span>
-                <span>const oddNumber = document.querySelector("#oddNum1");</span>
-                <span>oddSubmitNumberButton = document.querySelector("#oddNumber-button");</span>
-                <span>oddNumberResult = document.querySelector("#oddNumber-result");</span>
+                <span class="code-wrap">// ! Checking whether the number is even or odd.</span>
+                <span class="code-wrap">// ? get number , button and result section from document</span>
+                <span class="code-wrap">const oddNumber = document.querySelector("#oddNum1");</span>
+                <span class="code-wrap">oddSubmitNumberButton = document.querySelector("#oddNumber-button");</span>
+                <span class="code-wrap">oddNumberResult = document.querySelector("#oddNumber-result");</span>
                 <br>
-                <span>// ? Checking whether the number is even or odd function</span>
-                <span>const oddNumbers = (e) => {</span>
-                <span>e.preventDefault();</span>
-                <span>const oddRes = parseInt(oddNumber.value) % 2;</span>
-                <span>if (oddRes === 0) {</span>
-                <span>oddNumberResult.innerHTML = `Your number is Even`;</span>
-                <span>} else {</span>
-                <span>oddNumberResult.innerHTML = ` Your number is Odd `; </span>
-                <span> }</span>
-                <span>};</span>
+                <span class="code-wrap">// ? Checking whether the number is even or odd function</span>
+                <span class="code-wrap">const oddNumbers = (e) => {</span>
+                <span class="code-wrap">e.preventDefault();</span>
+                <span class="code-wrap">const oddRes = parseInt(oddNumber.value) % 2;</span>
+                <span class="code-wrap">if (oddRes === 0) {</span>
+                <span class="code-wrap">oddNumberResult.innerHTML = `Your number is Even`;</span>
+                <span class="code-wrap">} else {</span>
+                <span class="code-wrap">oddNumberResult.innerHTML = ` Your number is Odd `; </span>
+                <span class="code-wrap"> }</span>
+                <span class="code-wrap">};</span>
                 <br>
-                <span>// ! add event for my button</span>
-                <span>oddSubmitNumberButton.addEventListener("click", oddNumbers);</span>
-                <span>// * end</span>
+                <span class="code-wrap">// ! add event for my button</span>
+                <span class="code-wrap">oddSubmitNumberButton.addEventListener("click", oddNumbers);</span>
+                <span class="code-wrap">// * end</span>
             </div>
         </div>
     </section>

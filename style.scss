@@ -603,6 +603,13 @@ html {
     flex-direction: column;
     align-items: center;
     .title {
+      @media (max-width: 1024px) {
+        font-size: 25px;
+      }
+      @media (max-width: 425px) {
+        font-size: 16px;
+      }
+      max-width: 85%;
       margin-top: 30px;
       margin-bottom: 30px;
     }
@@ -723,6 +730,9 @@ html {
         width: 95%;
         text-align: left;
         direction: ltr;
+        @media (max-width: 425px) {
+          width: unset;
+        }
       }
       &-comment {
         color: $codeComment;
@@ -788,6 +798,9 @@ html {
     display: flex;
     min-width: 100%;
     gap: 10px;
+    @media (max-width: 425px) {
+      flex-direction: column;
+    }
   }
   &_form {
     display: flex;
@@ -829,6 +842,9 @@ html {
       background-color: #e2e2e2;
       border-radius: $borderRadius;
       box-shadow: $customBoxShadow;
+      @media (max-width: 425px) {
+        width: unset;
+      }
       &--title {
         margin: 0;
       }
@@ -858,6 +874,11 @@ html {
       }
     }
   }
+}
+
+.code-wrap {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 //todo------------------------------
@@ -945,6 +966,9 @@ html {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    @media (max-width: 425px) {
+      flex-wrap: wrap;
+    }
   }
   &-item {
     padding: 1rem;
@@ -1060,6 +1084,9 @@ html {
       justify-content: space-between;
       align-items: center;
       gap: 10px;
+      @media (max-width: 425px) {
+        flex-wrap: wrap;
+      }
       &-wrapper {
         display: flex;
         flex-direction: column;
@@ -1070,6 +1097,9 @@ html {
         width: 100%;
         justify-content: space-between;
         align-items: start;
+        @media (max-width: 425px) {
+          flex-wrap: wrap;
+        }
       }
       &-des {
         display: flex;
@@ -1162,11 +1192,17 @@ html {
   display: flex;
   width: 98%;
   gap: 5px;
+  @media (max-width: 425px) {
+    flex-wrap: wrap;
+  }
   &-leftSide {
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 50%;
+    @media (max-width: 425px) {
+      width: 100%;
+    }
   }
   &-rightSide {
     display: flex;
@@ -1174,6 +1210,9 @@ html {
     gap: 5px;
     width: 50%;
     justify-content: space-between;
+    @media (max-width: 425px) {
+      width: 100%;
+    }
   }
   &-box {
     display: flex;
@@ -1298,6 +1337,9 @@ html {
     box-shadow: $customBoxShadow;
     padding: 12px 7px;
     min-width: 345px;
+    @media (max-width: 425px) {
+      min-width: 290px;
+    }
     cursor: pointer;
     transition: all 300ms ease-in;
     text: {
