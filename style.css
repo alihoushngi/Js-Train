@@ -1633,4 +1633,18 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
 .textMark-text {
   direction: ltr;
   text-align: justify;
+}
+
+.detectCapsLock-input {
+  width: 200px;
+  height: 30px;
+  border: 2px solid #bfbfbf;
+  border-radius: 10px;
+}
+.detectCapsLock-error {
+  padding: 0.6rem;
+  color: rgb(168, 3, 3);
+  background-color: rgb(255, 146, 146);
+  border-radius: 10px;
+  display: none;
 }/*# sourceMappingURL=style.css.map */

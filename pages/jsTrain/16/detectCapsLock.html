@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>تشخیص کپس لاک با جاوااسکریپت</title>
+</head>
+
+
+<body class="cl-body">
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">تشخیص کپس لاک با جاوااسکریپت</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">۱۶</span>
+                    <h2 class="train-question">تشخیص کپس لاک</h2>
+                </div>
+            </div>
+            <section class="detectCapsLock">
+                <input id="password" type="password" class="detectCapsLock-input">
+                <span id="error" class="detectCapsLock-error">کپس لاک شما روشن است</span>
+            </section>
+
+            <div class="code-wrapper">
+                <span>// ? get elements from dom</span>
+                <span>const input = document.querySelector("#password");</span>
+                <span>const error = document.querySelector("#error");</span>
+                <br />
+                <span>// ! detect caps lock</span>
+                <span>input.addEventListener("keyup", (e) => {</span>
+                <span> let capsLock = e.getModifierState("CapsLock");</span>
+                <span> if (capsLock) {</span>
+                <span> error.style.display = "inline";</span>
+                <span> } else {</span>
+                <span> error.style.display = "none";</span>
+                <span> }</span>
+                <span>});</span>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="detectCapsLock.js"></script>
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
+</body>
+
+</html>
