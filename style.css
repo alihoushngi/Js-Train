@@ -1429,4 +1429,110 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
 }
 .tagGenerator-footer-remover:hover {
   background-color: #940202;
+}
+
+.carRun {
+  width: 900px;
+  height: 400px;
+  background-image: url(./pages/jsTrain/14/assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border: 1px solid #474747;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media (max-width: 1024px) {
+  .carRun {
+    width: 800px;
+  }
+}
+@media (max-width: 768px) {
+  .carRun {
+    width: 600px;
+  }
+}
+@media (max-width: 425px) {
+  .carRun {
+    width: 320px;
+  }
+}
+@media (max-width: 375px) {
+  .carRun {
+    width: 270px;
+  }
+}
+@media (max-width: 320px) {
+  .carRun {
+    width: 240px;
+  }
+}
+.carRun-Road {
+  width: 990%;
+  height: 190px;
+  background-image: url(./pages/jsTrain/14/assets/road.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media (max-width: 768px) {
+  .carRun-Road {
+    width: 800%;
+  }
+}
+@media (max-width: 425px) {
+  .carRun-Road {
+    width: 1200%;
+  }
+}
+.carRun-car-wrapper {
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+}
+.carRun-Hint {
+  display: flex;
+  gap: 30px;
+  margin: 20px;
+}
+@media (max-width: 768px) {
+  .carRun-Hint {
+    gap: 20px;
+    margin: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .carRun-Hint {
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px;
+  }
+}
+.carRun-Hint span {
+  background-color: #210c5b;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+@keyframes road {
+  100% {
+    transform: translate(-1300px);
+  }
+}
+@keyframes car {
+  0% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
 }/*# sourceMappingURL=style.css.map */
