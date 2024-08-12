@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>علامت گذاری متن با جاوااسکریپت</title>
+</head>
+
+
+<body class="cl-body">
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">علامت گذاری متن با جاوااسکریپت</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">۱۵</span>
+                    <h2 class="train-question">علامت گذاری متن</h2>
+                </div>
+            </div>
+            <section class="textMark">
+                <div class="textMark-Search">
+                    <input type="text" class="textMark-Search-Input">
+                    <button class="textMark-Search-Button">جستجو</button>
+                </div>
+                <p class="textMark-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus
+                    quo enim vero
+                    possimus nihil dolor quas. Assumenda quia officia doloremque omnis expedita! Nisi totam minima animi
+                    debitis molestiae exercitationem et sint, deleniti doloremque inventore velit cupiditate id optio
+                    ullam cumque eius recusandae delectus dolorum. Sunt, quis sequi quod amet totam aperiam repellat
+                    culpa provident quos! Fugit eveniet doloribus perspiciatis accusamus, placeat beatae eum nam quasi
+                    at quibusdam? Incidunt officia minus maxime voluptates minima perspiciatis, commodi illo, eos
+                    obcaecati mollitia repellat voluptatum necessitatibus? Ex quod pariatur voluptate, nesciunt
+                    excepturi quibusdam, quidem corrupti eveniet perferendis, laudantium possimus. Voluptatibus ullam
+                    assumenda numquam?</p>
+            </section>
+
+            <div class="code-wrapper">
+                <span>// ! get element from dom</span>
+                <span>const $ = document;</span>
+                <span>const input = $.querySelector(".textMark-Search-Input");</span>
+                <span>const button = $.querySelector(".textMark-Search-Button");</span>
+                <span>const text = $.querySelector(".textMark-text");</span>
+                <br />
+                <span>// ? Search Handel</span>
+                <span>button.addEventListener("click", () => {</span>
+                <span> const value = input.value;</span>
+                <span> // * Create Regex</span>
+                <span> const nameRegex = new RegExp(`${value}`, "g");</span>
+                <span> text.innerHTML = text.textContent.replace(</span>
+                <span> nameRegex,</span>
+                <span> (item) => `<mark>${item}</mark>`</span>
+                <span> );</span>
+                <span>});</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="textMark.js"></script>
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
+</body>
+
+</html>

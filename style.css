@@ -1535,4 +1535,102 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   100% {
     transform: translateY(-1px);
   }
+}
+.textMark {
+  width: 95%;
+  background-color: #ffffff;
+  border: 2px solid #d1d1d1;
+  padding: 1rem;
+  border-radius: 5px;
+}
+@media (max-width: 1024px) {
+  .textMark {
+    width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  .textMark {
+    width: 85%;
+  }
+}
+@media (max-width: 425px) {
+  .textMark {
+    width: 85%;
+  }
+}
+@media (max-width: 375px) {
+  .textMark {
+    width: 85%;
+  }
+}
+@media (max-width: 320px) {
+  .textMark {
+    width: 85%;
+  }
+}
+.textMark-Search-Input {
+  width: 200px;
+  border: 2px solid #d1d1d1;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+@media (max-width: 1024px) {
+  .textMark-Search-Input {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .textMark-Search-Input {
+    width: 90%;
+  }
+}
+@media (max-width: 425px) {
+  .textMark-Search-Input {
+    width: 90%;
+  }
+}
+@media (max-width: 375px) {
+  .textMark-Search-Input {
+    width: 90%;
+  }
+}
+@media (max-width: 320px) {
+  .textMark-Search-Input {
+    width: 90%;
+  }
+}
+.textMark-Search-Button {
+  width: 200px;
+  border: 2px solid #d1d1d1;
+  padding: 0.25rem;
+  border-radius: 5px;
+}
+@media (max-width: 1024px) {
+  .textMark-Search-Button {
+    width: 97%;
+  }
+}
+@media (max-width: 768px) {
+  .textMark-Search-Button {
+    width: 97%;
+  }
+}
+@media (max-width: 425px) {
+  .textMark-Search-Button {
+    width: 97%;
+  }
+}
+@media (max-width: 375px) {
+  .textMark-Search-Button {
+    width: 97%;
+  }
+}
+@media (max-width: 320px) {
+  .textMark-Search-Button {
+    width: 97%;
+  }
+}
+.textMark-text {
+  direction: ltr;
+  text-align: justify;
 }/*# sourceMappingURL=style.css.map */

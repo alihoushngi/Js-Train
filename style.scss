@@ -1611,3 +1611,75 @@ html {
 }
 
 // ! car run
+// ! Text Mark
+.textMark {
+  width: 95%;
+  background-color: #ffffff;
+  border: 2px solid #d1d1d1;
+  padding: 1rem;
+  border-radius: 5px;
+  @media (max-width: 1024px) {
+    width: 85%;
+  }
+  @media (max-width: 768px) {
+    width: 85%;
+  }
+  @media (max-width: 425px) {
+    width: 85%;
+  }
+  @media (max-width: 375px) {
+    width: 85%;
+  }
+  @media (max-width: 320px) {
+    width: 85%;
+  }
+  &-Search {
+    &-Input {
+      width: 200px;
+      border: 2px solid #d1d1d1;
+      padding: 0.5rem;
+      border-radius: 5px;
+      @media (max-width: 1024px) {
+        width: 90%;
+      }
+      @media (max-width: 768px) {
+        width: 90%;
+      }
+      @media (max-width: 425px) {
+        width: 90%;
+      }
+      @media (max-width: 375px) {
+        width: 90%;
+      }
+      @media (max-width: 320px) {
+        width: 90%;
+      }
+    }
+    &-Button {
+      width: 200px;
+      border: 2px solid #d1d1d1;
+      padding: 0.25rem;
+      border-radius: 5px;
+      @media (max-width: 1024px) {
+        width: 97%;
+      }
+      @media (max-width: 768px) {
+        width: 97%;
+      }
+      @media (max-width: 425px) {
+        width: 97%;
+      }
+      @media (max-width: 375px) {
+        width: 97%;
+      }
+      @media (max-width: 320px) {
+        width: 97%;
+      }
+    }
+  }
+  &-text {
+    direction: ltr;
+    text-align: justify;
+  }
+}
+// ! Text Mark

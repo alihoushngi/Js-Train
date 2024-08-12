@@ -96,5 +96,12 @@
     "link": "14/carRun.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "englandTitle": "ُText Mark",
+    "persianTitle": "علامت گذاری متن",
+    "link": "15/textMark.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]
