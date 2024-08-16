@@ -124,5 +124,12 @@
     "link": "18/tabChange.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "englandTitle": "Tab Toggle",
+    "persianTitle": "تب محتوا",
+    "link": "19/tabToggle.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]

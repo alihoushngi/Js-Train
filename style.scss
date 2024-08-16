@@ -1778,3 +1778,75 @@ html {
 }
 
 // ! TabChange
+// ! TabToggle
+
+.TabToggle {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 5px;
+  @media (max-width: 375px) {
+    width: 100%;
+  }
+  @media (max-width: 320px) {
+    width: 100%;
+  }
+  &-tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0 0 100%;
+
+    &-item {
+      background-color: rgb(220 220 220);
+      color: rgb(162 162 162);
+      margin: 0;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      transition: all 300ms ease-in-out;
+
+      @media (max-width: 375px) {
+        font-size: 10px;
+      }
+      @media (max-width: 320px) {
+        font-size: 10px;
+      }
+      &:hover {
+        background-color: #0f0f81;
+        color: #ffffff;
+      }
+      &:first-child {
+        border-top-right-radius: 5px;
+      }
+      &:last-child {
+        border-top-left-radius: 5px;
+      }
+      &.active {
+        background-color: #080840;
+        color: #ffffff;
+      }
+    }
+  }
+  &-contents {
+    &-item {
+      display: none;
+      padding: 1rem;
+      font-size: 12px;
+      text-align: justify;
+      margin: 0;
+      transition: all 300ms ease-in-out;
+      &.active {
+        display: block;
+        background-color: #080840;
+        color: #ffffff;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+    }
+  }
+}
+
+// ! TabToggle
