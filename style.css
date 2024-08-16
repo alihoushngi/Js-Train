@@ -1726,4 +1726,15 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   .menu-item {
     padding: 0.5rem 0.5rem;
   }
+}
+
+.TabChange-text {
+  text-transform: uppercase;
+  color: #080840;
+}
+.TabChange-text-status {
+  color: #6b9955;
+}
+.TabChange-text-failed {
+  color: #ff2c06;
 }/*# sourceMappingURL=style.css.map */

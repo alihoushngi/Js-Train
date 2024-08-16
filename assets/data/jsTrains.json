@@ -117,5 +117,12 @@
     "link": "17/menuHover.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "englandTitle": "Tab Change",
+    "persianTitle": "تعویض تب",
+    "link": "18/tabChange.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]

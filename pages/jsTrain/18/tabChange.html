@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>تعویض تب با جاوااسکریپت</title>
+</head>
+
+
+<body class="cl-body">
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">تعویض تب با جاوااسکریپت</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">۱۸</span>
+                    <h2 class="train-question">تعویض تب</h2>
+                </div>
+            </div>
+            <section class="TabChange">
+                <h3 class="TabChange-text">Detecting Tab Change ( <span class="TabChange-text-status" id="status"> RUN
+                    </span> )</h3>
+            </section>
+
+            <div class="code-wrapper">
+                <span>// ! get elements from dom</span>
+                <span>const $ = document;</span>
+                <span>let statusText = $.querySelector("#status");</span>
+                <br />
+                <span>// ? detect visibility</span>
+                <span>$.addEventListener("visibilitychange", () => {</span>
+                <span> if ($.visibilityState === "visible") {</span>
+                <span> document.title = "تعویض تب با جاوااسکریپت ( در دسترس )";</span>
+                <span> } else {</span>
+                <span> document.title = "تعویض تب با جاوااسکریپت ( خارج از دسترس )";</span>
+                <span> statusText.textContent = "Failed";</span>
+                <span> statusText.classList.add("TabChange-text-failed");</span>
+                <span> }</span>
+                <span>});</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="tabChange.js"></script>
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
+</body>
+
+</html>

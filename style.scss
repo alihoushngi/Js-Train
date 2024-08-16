@@ -1762,3 +1762,19 @@ html {
 }
 
 // ! Menu Hover
+// ! TabChange
+
+.TabChange {
+  &-text {
+    text-transform: uppercase;
+    color: #080840;
+    &-status {
+      color: $codeComment;
+    }
+    &-failed {
+      color: $codeCommentRed;
+    }
+  }
+}
+
+// ! TabChange
