@@ -110,5 +110,12 @@
     "link": "16/detectCapsLock.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "englandTitle": "Menu Hover",
+    "persianTitle": "هاور منو",
+    "link": "17/menuHover.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]

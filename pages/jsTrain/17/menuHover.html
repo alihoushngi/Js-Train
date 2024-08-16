@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>هاور منو با جاوااسکریپت</title>
+</head>
+
+
+<body class="cl-body">
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">هاور منو با جاوااسکریپت</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">۱۷</span>
+                    <h2 class="train-question">هاور منو</h2>
+                </div>
+            </div>
+            <section class="menu-wrapper">
+                <div class="menu">
+                    <div class="menu-light" id="light"></div>
+                    <a href="#" class="menu-item">خانه</a>
+                    <a href="#" class="menu-item">فروشگاه</a>
+                    <a href="#" class="menu-item">درباره ما</a>
+                    <a href="#" class="menu-item">ارتباط با ما</a>
+                </div>
+            </section>
+
+            <div class="code-wrapper">
+                <span>// ! get data from dom</span>
+                <span>const $ = document;</span>
+                <span>const menuItems = $.querySelectorAll(".menu-item");</span>
+                <span>const light = $.querySelector("#light");</span>
+                <br />
+                <span>// ? find items width and move light</span>
+                <span>menuItems.forEach((item) => {</span>
+                <span> item.addEventListener("mousemove", (e) => {</span>
+                <span> let margin = e.target.offsetLeft;</span>
+                <span> let width = e.target.offsetWidth;</span>
+                <span> light.style.width = `${width}px`;</span>
+                <span> light.style.left = `${margin}px`;</span>
+                <span> });</span>
+                <span>});</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="menuHover.js"></script>
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
+</body>
+
+</html>

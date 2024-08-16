@@ -1700,3 +1700,65 @@ html {
   }
 }
 // ! Detect Caps Lock
+// ! Menu Hover
+
+.menu {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  @media (max-width: 1024px) {
+    gap: 10px;
+  }
+  @media (max-width: 768px) {
+    gap: 5px;
+  }
+  @media (max-width: 425px) {
+    gap: 5px;
+  }
+  @media (max-width: 375px) {
+    gap: 2px;
+  }
+  @media (max-width: 320px) {
+    gap: 2px;
+  }
+  &-wrapper {
+    background-color: #080840;
+    border-radius: 5px;
+    position: relative;
+  }
+  &-light {
+    background-color: #5f1af1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    transition: all 300ms ease-in-out;
+    border-radius: 5px;
+  }
+  &-item {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    z-index: 2;
+    @media (max-width: 1024px) {
+      padding: 1rem 2rem;
+    }
+    @media (max-width: 768px) {
+      padding: 0.5rem 0.5rem;
+    }
+    @media (max-width: 425px) {
+      padding: 0.5rem 0.5rem;
+    }
+    @media (max-width: 375px) {
+      padding: 0.5rem 0.5rem;
+    }
+    @media (max-width: 320px) {
+      padding: 0.5rem 0.5rem;
+    }
+  }
+}
+
+// ! Menu Hover

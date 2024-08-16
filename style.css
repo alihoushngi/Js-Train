@@ -1647,4 +1647,83 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   background-color: rgb(255, 146, 146);
   border-radius: 10px;
   display: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 1024px) {
+  .menu {
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .menu {
+    gap: 5px;
+  }
+}
+@media (max-width: 425px) {
+  .menu {
+    gap: 5px;
+  }
+}
+@media (max-width: 375px) {
+  .menu {
+    gap: 2px;
+  }
+}
+@media (max-width: 320px) {
+  .menu {
+    gap: 2px;
+  }
+}
+.menu-wrapper {
+  background-color: #080840;
+  border-radius: 5px;
+  position: relative;
+}
+.menu-light {
+  background-color: #5f1af1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  transition: all 300ms ease-in-out;
+  border-radius: 5px;
+}
+.menu-item {
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  z-index: 2;
+}
+@media (max-width: 1024px) {
+  .menu-item {
+    padding: 1rem 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .menu-item {
+    padding: 0.5rem 0.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .menu-item {
+    padding: 0.5rem 0.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .menu-item {
+    padding: 0.5rem 0.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .menu-item {
+    padding: 0.5rem 0.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
