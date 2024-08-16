@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ریزش برف با جاوااسکریپت</title>
+</head>
+
+
+<body class="cl-body">
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">ریزش برف با جاوااسکریپت</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">۲۰</span>
+                    <h2 class="train-question">ریزش برف</h2>
+                </div>
+            </div>
+            <section class="snowFlake">
+                <h4 style="background-color: rgb(0, 0, 0); color: white; padding: 1rem; border-radius: 5px;">❄️ هر جای
+                    صفحه که دوست دارید
+                    کلیک کنید
+                    ❄️</h4>
+            </section>
+
+            <div class="code-wrapper">
+                <span>// ! get document for assign snow flake</span>
+                <span>document.addEventListener("click", (e) => {</span>
+                <span> let snowFlake = document.createElement("span");</span>
+                <span> snowFlake.className = "snow";</span>
+                <span> snowFlake.style.left = `${e.offsetX}px`;</span>
+                <span> snowFlake.style.top = `${e.offsetY}px`;</span>
+                <span> let randomNumberForSnow = Math.random() * (200 - 50) + 50;</span>
+                <span> snowFlake.style.width = `${randomNumberForSnow}px`;</span>
+                <span> snowFlake.style.height = `${randomNumberForSnow}px`;</span>
+                <span> document.body.appendChild(snowFlake);</span>
+                <span>});</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="SnowFlake.js"></script>
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
+</body>
+
+</html>

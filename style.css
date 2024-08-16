@@ -1856,4 +1856,23 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
 }
 .Dictionary-response {
   margin-top: 2rem;
+}
+
+.snow {
+  position: absolute;
+  background-image: url(./pages/jsTrain/20/assets/snow-flake.png);
+  background-size: cover;
+  border-radius: 50px;
+  animation: fall 2s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(50%, 50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(50%, 1000%);
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
