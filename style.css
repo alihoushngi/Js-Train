@@ -1810,4 +1810,50 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   color: #ffffff;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+}
+
+.Dictionary {
+  width: 50%;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.Dictionary-box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+.Dictionary-box-input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #3598db;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif, "Kalameh";
+  width: 300px;
+  padding: 1rem;
+  transition: all 300ms ease-in-out;
+}
+.Dictionary-box-input:focus {
+  border-bottom: 2px solid #1f01c8;
+}
+.Dictionary-box-button {
+  background-color: #3598db;
+  color: #ffffff;
+  width: 100px;
+  padding-inline: 0;
+  padding-block: 0;
+  line-height: 0;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  padding: 1.5rem 0;
+}
+.Dictionary-box-button:hover {
+  background-color: #1f01c8;
+}
+.Dictionary-response {
+  margin-top: 2rem;
 }/*# sourceMappingURL=style.css.map */

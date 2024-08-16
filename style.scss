@@ -1850,3 +1850,50 @@ html {
 }
 
 // ! TabToggle
+// ! Dictionary
+.Dictionary {
+  width: 50%;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  &-box {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    &-input {
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #3598db;
+      font-family: $GillFont, $PersianFont;
+      width: 300px;
+      padding: 1rem;
+      transition: all 300ms ease-in-out;
+      &:focus {
+        border-bottom: 2px solid #1f01c8;
+      }
+    }
+    &-button {
+      background-color: #3598db;
+      color: #ffffff;
+      width: 100px;
+      padding-inline: 0;
+      padding-block: 0;
+      line-height: 0;
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 300ms ease-in-out;
+      padding: 1.5rem 0;
+      &:hover {
+        background-color: #1f01c8;
+      }
+    }
+  }
+  &-response {
+    margin-top: 2rem;
+  }
+}
+// ! Dictionary
