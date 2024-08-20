@@ -414,7 +414,7 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
-  max-width: 85%;
+  max-width: 80%;
 }
 .project-cards-wrapper #jsCard {
   background-color: #fdd54a;
