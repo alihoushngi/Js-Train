@@ -138,5 +138,12 @@
     "link": "20/snowFlake.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "englandTitle": "Type Writer",
+    "persianTitle": "متن رونده",
+    "link": "21/typeWriter.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]

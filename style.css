@@ -1915,4 +1915,14 @@ a {
 }
 .githubIcon i::before {
   font-size: 20px;
+}
+
+.typeWriter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.typeWriter-text {
+  font-size: 20px;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

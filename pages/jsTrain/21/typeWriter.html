@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>متن رونده با جاوااسکریپت</title>
+</head>
+
+
+<body class="cl-body">
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">متن رونده با جاوااسکریپت</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">۲۰</span>
+                    <h2 class="train-question">متن رونده</h2>
+                </div>
+            </div>
+            <section class="typeWriter">
+                <span class="typeWriter-text" id="text"></span>
+            </section>
+            <div class="code-wrapper">
+                <span>// ? get elements from dom</span>
+                <span>const $ = document;</span>
+                <span>const text = $.querySelector("#text");</span>
+                <br />
+                <span>// * functions for type writer</span>
+                <span>const myText = "Im Ali Houshangi , Frontend Developer ";</span>
+                <span>let index = 0;</span>
+                <br />
+                <span>const typeWriter = () => {</span>
+                <span> if (index < myText.length) {</span>
+                        <span> text.innerHTML += myText[index];</span>
+                        <span> index++;</span>
+                        <span> }</span>
+                        <br />
+                        <span> setTimeout(() => {</span>
+                        <span> typeWriter();</span>
+                        <span> }, 200);</span>
+                        <span>};</span>
+                        <br />
+                        <span>typeWriter();</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="typeWriter.js"></script>
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
+</body>
+
+</html>

@@ -1991,3 +1991,15 @@ a {
 }
 
 // ! React Todo
+
+// ! Type Writer
+.typeWriter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-text {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+// ! Type Writer
