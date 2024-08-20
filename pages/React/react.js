@@ -1,7 +1,7 @@
 // menu items
 const navList = [
   { name: "صفحه اصلی", link: "/" },
-  { name: "جاوا اسکریپت", link: "js.html" },
+  { name: "جاوا اسکریپت", link: "../jsTrain/js.html" },
   { name: "ریکت", link: "react.html" },
   // { name: "Next", link: "#" },
 ];
