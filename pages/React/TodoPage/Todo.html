@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+`
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="برنامه مدیریت وظایف با استفاده از React و TailwindCSS. امکان افزودن، ویرایش و حذف وظایف به همراه ذخیره‌سازی در Local Storage.">
+    <meta name="keywords" content="React, TailwindCSS, مدیریت وظایف, To-Do, Local Storage, برنامه ریزی">
+    <meta name="author" content="علی هوشنگی">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>لیست وظایف با ریکت</title>
+</head>
+
+<body class="cl-body">
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">لیست وظایف با ریکت</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">۱</span>
+                    <h2 class="train-question">لیست وظایف</h2>
+                </div>
+                <a target="_blank" href="https://github.com/alihoushngi/React-Todo">
+                    <div class="githubIcon">
+                        <h3>مشاهده فایل پروژه در گیت هاب</h3>
+                        <i class="fab fa-github"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="explain">
+        <div class="explain-project-data">
+
+            <header>
+                <p>این برنامه با استفاده از React و TailwindCSS طراحی شده است تا بتوانید به آسانی وظایف روزمره خود را
+                    مدیریت کنید.</p>
+            </header>
+            <section>
+                <h2>🎯 ویژگی‌ها:</h2>
+                <ul>
+                    <li>افزودن وظایف جدید با یک کلیک</li>
+                    <li>امکان ویرایش و حذف وظایف</li>
+                    <li>نشانه‌گذاری وظایف انجام شده با تیک</li>
+                    <li>ذخیره‌سازی وظایف در Local Storage برای حفظ داده‌ها حتی پس از بستن مرورگر</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🛠️ تکنولوژی‌های استفاده شده:</h2>
+                <ul>
+                    <li>React: برای ساختار و مدیریت کامپوننت‌ها</li>
+                    <li>TailwindCSS: برای طراحی ظاهری سریع و پاسخ‌گو</li>
+                    <li>Local Storage: برای ذخیره‌سازی داده‌ها در مرورگر</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🔍 جزئیات برنامه:</h2>
+                <p>این برنامه به گونه‌ای طراحی شده که هر بخش آن یک کامپوننت جداگانه دارد. این ساختار ماژولار به شما
+                    امکان می‌دهد تا به راحتی بخش‌های مختلف برنامه را ویرایش و سفارشی‌سازی کنید. با استفاده از Local
+                    Storage، اطلاعات مربوط به وظایف شما ذخیره می‌شود و حتی بعد از بستن مرورگر هم از بین نمی‌رود. با این
+                    قابلیت، مدیریت وظایف روزمره‌تان ساده‌تر از همیشه خواهد بود.</p>
+            </section>
+
+            <section>
+                <h2>💻 راهنمای استفاده:</h2>
+                <ol>
+                    <li>برای افزودن متن خود را بنویسید و دکمه Enter را فشار دهید.</li>
+                    <li>برای ویرایش وظیفه، روی آیکون ویرایش کنار هر وظیفه کلیک کنید.</li>
+                    <li>برای حذف یک وظیفه، روی آیکون ضربدر کلیک کنید.</li>
+                    <li>برای علامت‌گذاری یک وظیفه به عنوان انجام شده، روی تیک کنار آن کلیک کنید.</li>
+                </ol>
+            </section>
+        </div>
+        <div class="explain-project-images">
+            <img src="./assets/1.png" alt="todo list">
+            <img src="./assets/2.png" alt="todo list">
+            <img src="./assets/3.png" alt="todo list">
+            <img src="./assets/4.png" alt="todo list">
+        </div>
+    </section>
+
+    <script src="../../React/insideNav.js"></script>
+</body>
+
+</html>

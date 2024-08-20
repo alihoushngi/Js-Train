@@ -16,7 +16,7 @@ navList.forEach((item, index) => {
   customHtml += `
   <li key="${index}" class="navbar-category-item" >
     <a href="${item.link}" ${
-    route.includes(item.link) && item.link === "js.html"
+    route.includes(item.link) && item.link === "react.html"
       ? "class=activeRoute"
       : null
   } >

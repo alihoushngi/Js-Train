@@ -2,7 +2,7 @@
 const navList = [
   { name: "صفحه اصلی", link: "/" },
   { name: "جاوا اسکریپت", link: "./pages/jsTrain/js.html" },
-  // { name: "ریکت", link: "#" },
+  { name: "ریکت", link: "./pages/React/react.html" },
   // { name: "نکست", link: "#" },
 ];
 
