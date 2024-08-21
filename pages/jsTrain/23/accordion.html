@@ -78,6 +78,36 @@
             </section>
 
             <div class="code-wrapper">
+                <span>// ! get elements from dom</span>
+                <span>const $ = document;</span>
+                <span>const questions = $.querySelectorAll(".accordion-list-item-question");</span>
+                <span>const answers = $.querySelectorAll(".accordion-list-item-answer");</span>
+                <br />
+                <span>// ? handle toggle on accordion</span>
+                <span>questions.forEach((question) => {</span>
+                <span> question.addEventListener("click", (e) => {</span>
+                <span> answers.forEach((answer) => {</span>
+                <span> // * set style for close all ( if a accordion is open )</span>
+                <span> answer.style.height = "0";</span>
+                <span> answer.style.padding = "0";</span>
+                <span> answer.style.overflow = "hidden";</span>
+                <br />
+                <span> // todo check if answer have active class , close it and if not open it</span>
+                <span> if (!answer.classList.contains("active")) {</span>
+                <span> e.target.dataset.question == answer.dataset.answer &&</span>
+                <span> ((answer.style.height = `${answer.scrollHeight + 25}px`),</span>
+                <span> (answer.style.padding = "1rem"),</span>
+                <span> (answer.style.overflow = "visible"),</span>
+                <span> answer.classList.add("active"));</span>
+                <span> } else {</span>
+                <span> answer.classList.remove("active");</span>
+                <span> answer.style.height = "0";</span>
+                <span> answer.style.padding = "0";</span>
+                <span> answer.style.overflow = "hidden";</span>
+                <span> }</span>
+                <span> });</span>
+                <span> });</span>
+                <span>});</span>
 
             </div>
         </div>
