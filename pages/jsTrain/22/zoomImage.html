@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>زوم عکس با جاوااسکریپت</title>
+</head>
+
+
+<body class="cl-body">
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">زوم عکس با جاوااسکریپت</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">۲۲</span>
+                    <h2 class="train-question">زوم عکس</h2>
+                </div>
+            </div>
+            <section class="typeWriter">
+                <p>موس خود را به روی عکس ببرید</p>
+                <span class="typeWriter-text" id="text"></span>
+            </section>
+            <section>
+                <div class="zoom" id="zoomWrapper">
+                    <img src="/assets/images/AliHoushangi.png" alt="ali houshangi Profile" class="zoom-image">
+                </div>
+            </section>
+            <div class="code-wrapper">
+                <span>// ! get element from dom</span>
+                <span>const $ = document;</span>
+                <span>const imageWrapper = $.querySelector("#zoomWrapper");</span>
+                <span>const image = $.querySelector(".zoom-image");</span>
+                <br />
+                <span>// ? function for hover image</span>
+                <span>imageWrapper.addEventListener("mousemove", (e) => {</span>
+                <span> let xPos = e.clientX - e.target.offsetLeft;</span>
+                <span> let yPos = e.clientY - e.target.offsetTop;</span>
+                <span> image.style.transformOrigin = `${xPos}px ${yPos}px`;</span>
+                <span> image.style.transform = "scale(2)";</span>
+                <span> image.style.cursor = "zoom-in";</span>
+                <span>});</span>
+                <br />
+                <span>imageWrapper.addEventListener("mouseleave", () => {</span>
+                <span> image.style.transformOrigin = "center";</span>
+                <span> image.style.transform = "scale(1)";</span>
+                <span>});</span>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="zoomImage.js"></script>
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
+</body>
+
+</html>

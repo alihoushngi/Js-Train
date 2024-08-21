@@ -109,6 +109,7 @@ button {
 html {
   margin: 0;
   padding: 0;
+  font-family: $PersianFont !important;
   body {
     margin: 0;
     padding: 0;
@@ -128,6 +129,7 @@ html {
 
     #main {
       .project-card {
+        font-family: $PersianFont !important;
         @media (max-width: 1024px) {
           max-width: unset !important;
           min-height: unset !important;
@@ -166,8 +168,10 @@ html {
           border: 2px solid #ffffff;
           border-radius: 40px;
           box-shadow: $customBoxShadow;
+          font-family: $PersianFont !important;
         }
         &-title {
+          font-family: $PersianFont !important;
           @media (max-width: 425px) {
             font-size: 25px !important;
           }
@@ -177,6 +181,7 @@ html {
           a {
             color: #ffffff;
             text-decoration: none;
+            font-family: $PersianFont !important;
           }
           font : {
             size: 50px;
@@ -235,7 +240,9 @@ html {
       }
       .project {
         max-width: 50%;
+        font-family: $PersianFont !important;
         &-wrapper {
+          font-family: $PersianFont !important;
           max-width: 100%;
           display: flex;
           flex-wrap: wrap;
@@ -246,6 +253,7 @@ html {
             justify-content: space-between;
           }
           #jsCard {
+            font-family: $PersianFont !important;
             @media (max-width: 1024px) {
               width: 32%;
             }
@@ -253,6 +261,7 @@ html {
               width: 100%;
             }
             .project {
+              font-family: $PersianFont !important;
               &-cards {
                 &-wrapper {
                   position: relative;
@@ -399,6 +408,7 @@ html {
       top: 10px;
       box-shadow: 5px 1px 10px #0c0c0c;
       z-index: 10000;
+      font-family: $PersianFont;
       .navbar-category-wrapper {
         width: 100%;
         display: flex;
@@ -413,11 +423,13 @@ html {
           padding-right: 20px;
           .navbar-category-item {
             text-transform: uppercase;
+            font-family: $PersianFont;
             cursor: pointer;
             a {
               text-decoration: none;
               transition: all 300ms ease-in-out;
               color: rgb(31, 31, 31);
+              font-family: $PersianFont;
               &:hover {
                 color: #a60000;
               }
@@ -462,6 +474,7 @@ html {
   text-transform: uppercase;
   margin: 0;
   margin-top: 10px;
+  font-family: $PersianFont !important;
   font : {
     size: 40px;
     weight: 900;
@@ -474,6 +487,7 @@ html {
   margin: 0.6rem 0;
   color: rgb(192, 192, 192);
   text-transform: uppercase;
+  font-family: $PersianFont !important;
 }
 //! main page-----------------------
 
@@ -485,6 +499,7 @@ html {
   flex-wrap: wrap;
   gap: 15px;
   max-width: 80%;
+  font-family: $PersianFont !important;
   // @media (max-width: 1024px) {
   //   justify-content: space-between;
   // }
@@ -575,6 +590,7 @@ html {
         .project-card-button-link {
           width: 100%;
           .project-card-button {
+            font-family: $PersianFont !important;
             width: 100%;
             text-transform: capitalize;
             border-radius: $borderRadius;
@@ -604,6 +620,7 @@ html {
   margin-bottom: 2rem;
   display: flex;
   gap: 2rem;
+  font-family: $PersianFont !important;
   &-project {
     &-data {
       width: 50%;
@@ -667,6 +684,12 @@ html {
       flex-direction: column;
       gap: 8px;
       align-items: center;
+      font-family: $PersianFont !important;
+      button,
+      a,
+      input {
+        font-family: $PersianFont !important;
+      }
       .numberForm {
         display: flex;
         justify-content: center;
@@ -720,6 +743,7 @@ html {
         display: flex;
         align-items: center;
         gap: inherit;
+        font-family: $PersianFont !important;
       }
       &-wrapper {
         width: 100%;
@@ -748,12 +772,13 @@ html {
     }
     .code {
       min-width: 100%;
+      font-family: $PersianFont !important;
       font: {
-        family: $codeFontFamily;
         size: $codeFontSize;
         weight: 300;
       }
       &-wrapper {
+        font-family: $PersianFont, "firaCode" !important;
         background-color: $codeBack;
         border-radius: $borderRadius;
         box-shadow: $customBoxShadow;
@@ -2003,3 +2028,13 @@ a {
   }
 }
 // ! Type Writer
+
+// ! Zoom Image
+.zoom {
+  overflow: hidden;
+  border-radius: 50px;
+  &-image {
+    width: 300px;
+  }
+}
+// ! Zoom Image

@@ -145,5 +145,12 @@
     "link": "21/typeWriter.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "englandTitle": "Zoom Image",
+    "persianTitle": "زوم عکس",
+    "link": "22/zoomImage.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]

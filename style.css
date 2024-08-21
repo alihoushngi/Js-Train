@@ -54,6 +54,7 @@ button {
 html {
   margin: 0;
   padding: 0;
+  font-family: "Kalameh" !important;
 }
 html body {
   margin: 0;
@@ -77,6 +78,9 @@ html body #main {
   justify-content: space-evenly;
   align-items: center;
   gap: 50px;
+}
+html body #main .project-card {
+  font-family: "Kalameh" !important;
 }
 @media (max-width: 1024px) {
   html body #main .project-card {
@@ -118,8 +122,10 @@ html body #main .about-profile {
   border: 2px solid #ffffff;
   border-radius: 40px;
   box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
+  font-family: "Kalameh" !important;
 }
 html body #main .about-title {
+  font-family: "Kalameh" !important;
   text-align: right;
   text-transform: uppercase;
   margin: 0;
@@ -135,6 +141,7 @@ html body #main .about-title {
 html body #main .about-title a {
   color: #ffffff;
   text-decoration: none;
+  font-family: "Kalameh" !important;
 }
 html body #main .about-tagline {
   text-align: right;
@@ -186,8 +193,10 @@ html body #main .about-description a {
 }
 html body #main .project {
   max-width: 50%;
+  font-family: "Kalameh" !important;
 }
 html body #main .project-wrapper {
+  font-family: "Kalameh" !important;
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -200,6 +209,9 @@ html body #main .project-wrapper {
     justify-content: space-between;
   }
 }
+html body #main .project-wrapper #jsCard {
+  font-family: "Kalameh" !important;
+}
 @media (max-width: 1024px) {
   html body #main .project-wrapper #jsCard {
     width: 32%;
@@ -209,6 +221,9 @@ html body #main .project-wrapper {
   html body #main .project-wrapper #jsCard {
     width: 100%;
   }
+}
+html body #main .project-wrapper #jsCard .project {
+  font-family: "Kalameh" !important;
 }
 html body #main .project-wrapper #jsCard .project-cards-wrapper {
   position: relative;
@@ -333,6 +348,7 @@ html body nav {
   top: 10px;
   box-shadow: 5px 1px 10px #0c0c0c;
   z-index: 10000;
+  font-family: "Kalameh";
 }
 html body nav .navbar-category-wrapper {
   width: 100%;
@@ -350,12 +366,14 @@ html body nav .navbar-category-wrapper .navbar-category-list {
 }
 html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-item {
   text-transform: uppercase;
+  font-family: "Kalameh";
   cursor: pointer;
 }
 html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-item a {
   text-decoration: none;
   transition: all 300ms ease-in-out;
   color: rgb(31, 31, 31);
+  font-family: "Kalameh";
 }
 html body nav .navbar-category-wrapper .navbar-category-list .navbar-category-item a:hover {
   color: #a60000;
@@ -391,6 +409,7 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   text-transform: uppercase;
   margin: 0;
   margin-top: 10px;
+  font-family: "Kalameh" !important;
   font-size: 40px;
   font-weight: 900;
 }
@@ -406,6 +425,7 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   margin: 0.6rem 0;
   color: rgb(192, 192, 192);
   text-transform: uppercase;
+  font-family: "Kalameh" !important;
 }
 
 .project-cards-wrapper {
@@ -415,6 +435,7 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   flex-wrap: wrap;
   gap: 15px;
   max-width: 80%;
+  font-family: "Kalameh" !important;
 }
 .project-cards-wrapper #jsCard {
   background-color: #fdd54a;
@@ -495,6 +516,7 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   width: 100%;
 }
 .project-cards-wrapper .project-card .project-card-content .project-card-button-wrapper .project-card-button-link .project-card-button {
+  font-family: "Kalameh" !important;
   width: 100%;
   text-transform: capitalize;
   border-radius: 5px;
@@ -517,6 +539,7 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   margin-bottom: 2rem;
   display: flex;
   gap: 2rem;
+  font-family: "Kalameh" !important;
 }
 .explain-project-data {
   width: 50%;
@@ -580,6 +603,12 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   flex-direction: column;
   gap: 8px;
   align-items: center;
+  font-family: "Kalameh" !important;
+}
+.cl-wrapper .codes button,
+.cl-wrapper .codes a,
+.cl-wrapper .codes input {
+  font-family: "Kalameh" !important;
 }
 .cl-wrapper .codes .numberForm {
   display: flex;
@@ -628,6 +657,7 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
   display: flex;
   align-items: center;
   gap: inherit;
+  font-family: "Kalameh" !important;
 }
 .cl-wrapper .train-wrapper {
   width: 100%;
@@ -655,11 +685,12 @@ html body nav .navbar-category-wrapper .navbar-category-back:hover {
 }
 .cl-wrapper .code {
   min-width: 100%;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Kalameh" !important;
   font-size: 12px;
   font-weight: 300;
 }
 .cl-wrapper .code-wrapper {
+  font-family: "Kalameh", "firaCode" !important;
   background-color: #1e1e1e;
   border-radius: 5px;
   box-shadow: 0px 1px 1px 0px rgba(52, 52, 52, 0.2196078431);
@@ -1925,4 +1956,12 @@ a {
 .typeWriter-text {
   font-size: 20px;
   font-weight: 700;
+}
+
+.zoom {
+  overflow: hidden;
+  border-radius: 50px;
+}
+.zoom-image {
+  width: 300px;
 }/*# sourceMappingURL=style.css.map */
