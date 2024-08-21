@@ -152,5 +152,12 @@
     "link": "22/zoomImage.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "englandTitle": "Accordion",
+    "persianTitle": "آکاردئون",
+    "link": "23/accordion.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]
