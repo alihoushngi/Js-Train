@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>یادداشت با جاوااسکریپت</title>
+</head>
+
+
+<body class="cl-body">
+    <nav>
+        <section class="navbar-category-wrapper">
+            <ul class="navbar-category-list" id="nav-list"></ul>
+            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
+        </section>
+    </nav>
+    <h1 class="title">یادداشت با جاوااسکریپت</h1>
+    <section class="cl-wrapper">
+        <div class="codes">
+            <div class="train-wrapper">
+                <div class="train-details">
+                    <span class="train-number">۲۳</span>
+                    <h2 class="train-question">یادداشت</h2>
+                </div>
+                <div class="note-box" id="note-add">
+                    <div class="note-box-line">
+                        <i class="far fa-plus-circle"></i>
+                        <span class="note-box-line-text">اضافه کردن یادداشت</span>
+                    </div>
+                </div>
+            </div>
+            <section class="note">
+                <div class="note-modal-back" id="modal-back">
+                    <div class="note-modal">
+                        <div id="modal-title" class="note-modal-title"></div>
+                        <input name="input" id="modal-input" class="note-modal-input" placeholder="عنوان یادداشت"
+                            required />
+                        <textarea name="desc" id="modal-desc" class="note-modal-desc"></textarea>
+                        <button id="modal-button" class="note-modal-button">تایید یادداشت</button>
+                        <button id="modal-button-exit" class="note-modal-button-exit">انصراف</button>
+                    </div>
+                </div>
+
+                <section id="notes-list" class="note-list">
+
+                </section>
+            </section>
+
+            <div class="code-wrapper">
+                <span> // ? get elements from dom</span>
+                <span>const $ = document;</span>
+                <span>const addNoteBox = $.querySelector("#note-add");</span>
+                <span>const modal = $.querySelector("#modal-back");</span>
+                <span>const modalTitle = $.querySelector("#modal-title");</span>
+                <span>const modalInput = $.querySelector("#modal-input");</span>
+                <span>const modalDesc = $.querySelector("#modal-desc");</span>
+                <span>const modalButton = $.querySelector("#modal-button");</span>
+                <span>const modalExitButton = $.querySelector("#modal-button-exit");</span>
+                <span>const modalBackDrop = $.querySelector(".note-modal-back");</span>
+                <span></span>
+                <span>// ! modal state</span>
+                <span>let modalState = false;</span>
+                <span></span>
+                <span>// * modal Handler</span>
+                <span>addNoteBox.addEventListener("click", () => {</span>
+                <span> modalState = true;</span>
+                <span> if (modalState) {</span>
+                <span> modal.style.display = "flex";</span>
+                <span> modalTitle.textContent = "اضافه کردن یادداشت";</span>
+                <span> }</span>
+                <span>});</span>
+                <span></span>
+                <span>// * modal exit button handler</span>
+                <span>modalExitButton.addEventListener("click", () => {</span>
+                <span> modalState = false;</span>
+                <span> modal.style.display = "none";</span>
+                <span> modalTitle.textContent = "";</span>
+                <span>});</span>
+                <span></span>
+                <span>// * modal on backdrop click handler</span>
+                <span>modalBackDrop.addEventListener("click", (e) => {</span>
+                <span> if (e.target.className == "note-modal-back") {</span>
+                <span> modalState = false;</span>
+                <span> modal.style.display = "none";</span>
+                <span> modalTitle.textContent = "";</span>
+                <span> }</span>
+                <span>});</span>
+                <span></span>
+                <span>modalButton.addEventListener("click", (e) => {</span>
+                <span> </span>
+                <span> const date = new Date();</span>
+                <span> const year = date.getFullYear();</span>
+                <span> const month = date.getMonth();</span>
+                <span> const day = date.getDate();</span>
+                <span> const fullDate = `${year}/${month}/${day}`;</span>
+                <span></span>
+                <span> const lastNote = getNotesFromLocalStorage();</span>
+                <span> </span>
+                <span></span>
+                <span> if (modalInput.value.length > 0) {</span>
+                <span> let note = {</span>
+                <span> title: modalInput.value,</span>
+                <span> desc: modalDesc.value,</span>
+                <span> id: lastNote.length + 1,</span>
+                <span> date: fullDate,</span>
+                <span> };</span>
+                <span> modalInput.value = "";</span>
+                <span> modalDesc.value = "";</span>
+                <span></span>
+                <span> lastNote.push(note);</span>
+                <span></span>
+                <span> // data must be added to local storage as string</span>
+                <span> localStorage.setItem("jsNote", JSON.stringify(lastNote));</span>
+                <span></span>
+                <span> // todo update</span>
+                <span> putNotesOnHtml();</span>
+                <span></span>
+                <span> // ? close modal</span>
+                <span> modalState = false;</span>
+                <span> modal.style.display = "none";</span>
+                <span> modalTitle.textContent = "";</span>
+                <span> // window.location.reload();</span>
+                <span> }</span>
+                <span>});</span>
+                <span></span>
+                <span>// * function for fetch data from local storage onload page</span>
+                <span>const getNotesFromLocalStorage = () => {</span>
+                <span> let notes;</span>
+                <span> const localStorageData = localStorage.getItem("jsNote");</span>
+                <span> if (localStorageData === null) {</span>
+                <span> notes = [];</span>
+                <span> } else {</span>
+                <span> // data must be came back to us as array to we can map on</span>
+                <span> notes = JSON.parse(localStorageData);</span>
+                <span> }</span>
+                <span> return notes;</span>
+                <span>};</span>
+                <span></span>
+                <span>// todo put data from local storage to html</span>
+                <span>const putNotesOnHtml = () => {</span>
+                <span> const notes = getNotesFromLocalStorage();</span>
+                <span> if (notes.length > 0) {</span>
+                <span> let noteHtml = "";</span>
+                <span> notes.forEach((element) => {</span>
+                <span> noteHtml += `</span>
+                <span> `;</span>
+                <span> });</span>
+                <span> document.querySelector("#notes-list").innerHTML = noteHtml;</span>
+                <span> } else {</span>
+                <span> document.querySelector("#notes-list").innerHTML = "";</span>
+                <span> }</span>
+                <span>};</span>
+                <span>putNotesOnHtml();</span>
+                <span></span>
+                <span>const noteSettings = document.querySelectorAll("#note-setting");</span>
+                <span>const noteEdit = document.querySelectorAll("#note-setting-edit");</span>
+                <span>const noteDelete = document.querySelectorAll("#note-setting-delete");</span>
+                <span>const notesSettingItem = document.querySelectorAll("#note-setting-content");</span>
+                <span></span>
+                <span>const settingHandler = (e) => {</span>
+                <span> console.log(e.target);</span>
+                <span> notesSettingItem.forEach((item) => {</span>
+                <span> item.style.display = "none";</span>
+                <span> if (e.target.dataset.note == item.dataset.id) {</span>
+                <span> item.style.display = "block";</span>
+                <span> }</span>
+                <span> });</span>
+                <span>};</span>
+                <span></span>
+                <span>const editNoteHandler = (e) => {</span>
+                <span> const lastNote = getNotesFromLocalStorage();</span>
+                <span> lastNote.forEach((item) => {</span>
+                <span> if (item.id == e.target.dataset.edit) {</span>
+                <span> modalState = true;</span>
+                <span> if (modalState) {</span>
+                <span> modal.style.display = "flex";</span>
+                <span> modalTitle.textContent = "ویرایش یادداشت";</span>
+                <span> modalInput.value = item.title;</span>
+                <span> if (modalDesc != null) {</span>
+                <span> modalDesc.value = item.desc;</span>
+                <span> }</span>
+                <span> }</span>
+                <span> const editedData = lastNote.filter((data) => data.id == item.id);</span>
+                <span> editedData.forEach((note) => {</span>
+                <span> note.title = modalInput.value;</span>
+                <span> note.desc = modalDesc.value;</span>
+                <span> console.log(editedData);</span>
+                <span> });</span>
+                <span> }</span>
+                <span> });</span>
+                <span>};</span>
+                <span></span>
+                <span>const deleteNoteHandler = (e) => {</span>
+                <span> const lastNote = getNotesFromLocalStorage();</span>
+                <span> lastNote.forEach((item) => {</span>
+                <span> if (item.id == e.target.dataset.delete) {</span>
+                <span> const newItems = lastNote.filter((data) => data.id != item.id);</span>
+                <span> localStorage.setItem("jsNote", JSON.stringify(newItems));</span>
+                <span> putNotesOnHtml();</span>
+                <span> window.location.reload();</span>
+                <span> }</span>
+                <span> });</span>
+                <span>};</span>
+                <span></span>
+                <span>noteEdit.forEach((item) => {</span>
+                <span> item.addEventListener("click", editNoteHandler);</span>
+                <span>});</span>
+                <span></span>
+                <span>noteDelete.forEach((item) => {</span>
+                <span> item.addEventListener("click", deleteNoteHandler);</span>
+                <span>});</span>
+                <span></span>
+                <span>noteSettings.forEach((noteSetting) => {</span>
+                <span> noteSetting.addEventListener("click", settingHandler);</span>
+                <span>});</span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <script src="note.js"></script>
+    <script src="../../../js/codeFinder.js"></script>
+    <script src="../../jsTrain/insideNav.js"></script>
+</body>
+
+</html>

@@ -159,5 +159,12 @@
     "link": "23/accordion.html",
     "category": "Vanilla JavaScript",
     "imageUrl": "../../assets/images/js.png"
+  },
+  {
+    "englandTitle": "note",
+    "persianTitle": "یادداشت",
+    "link": "24/note.html",
+    "category": "Vanilla JavaScript",
+    "imageUrl": "../../assets/images/js.png"
   }
 ]
