@@ -1,7 +1,8 @@
 import "./App.css";
+import TodosSection from "./components";
 
 function App() {
-  return <></>;
+  return <TodosSection />;
 }
 
 export default App;
