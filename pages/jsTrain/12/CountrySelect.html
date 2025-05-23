@@ -1,131 +1,260 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>فرم انتخاب کشور با جاوااسکریپت</title>
-</head>
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
 
-<body class="cl-body">
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
-    <h1 class="title">فرم انتخاب کشور با جاوااسکریپت </h1>
-    <section class="cl-wrapper">
+    <h1 class="title">فرم انتخاب کشور با جاوااسکریپت</h1>
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۱۲</span>
-                    <h2 class="train-question">فرم انتخاب کشور</h2>
-                </div>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۱۲</span>
+              <h2 class="train-question">فرم انتخاب کشور</h2>
             </div>
-            <section class="countries">
-                <div class="countries-title-wrapper">
-                    <h3 class="countries-title">کشور مورد نظر را انتخاب کنید</h3>
-                    <img src="./assets/arrow-down.png" alt="selection arrow icon" class="countries-title-icon">
-                </div>
-                <div class="countries-wrapper">
-                    <div class="countries-search-box">
-                        <input class="countries-wrapper-search" type="search" placeholder="جستجو ...."
-                            id="countries-search">
-                        <img src="./assets/search.png" alt="form search icon" class="countries-wrapper-search-icon">
-                    </div>
-                    <div class="countries-wrapper-list" id="countries"></div>
-                </div>
-            </section>
-            <div class="code-wrapper">
-                <span class="code-wrap">// ! select element from dom</span>
-                <span class="code-wrap">let formSelect = document.querySelector("#countries");</span>
-                <span class="code-wrap">let formTitle = document.querySelector(".countries-title");</span>
-                <span class="code-wrap">let titleIcon = document.querySelector(".countries-title-icon");</span>
-                <span class="code-wrap">let searchInput = document.querySelector("#countries-search");</span>
-                <span class="code-wrap">let itemsWrapper = document.querySelector(".countries-wrapper");</span>
-                <span class="code-wrap">let countriesList = [];</span>
-                <br />
-                <span class="code-wrap">// ? fetch data from json file</span>
-                <span class="code-wrap">fetch("../../../assets/data/countries.json")</span>
-                <span class="code-wrap"> .then((item) => item.json())</span>
-                <span class="code-wrap"> .then((res) => {</span>
-                <span class="code-wrap"> countriesList.push(res);</span>
-                <span class="code-wrap"> countriesList.forEach((element) => {</span>
-                <span class="code-wrap"> let countHtml = "";</span>
-                <span class="code-wrap"> element.forEach((item) => {</span>
-                <span class="code-wrap"> countHtml += `</span>
-                <span class="code-wrap">
-                    < h5 onclick="updateName(this)" value="${item.name}" class="countries-wrapper-list-item"
-                        id="countries-item">${item.name}< /h5>
-                </span>
-                <span class="code-wrap"> `;</span>
-                <span class="code-wrap"> });</span>
-                <span class="code-wrap"> formSelect.innerHTML = countHtml;</span>
-                <span class="code-wrap"> });</span>
-                <span class="code-wrap"> });</span>
-                <br />
-                <span class="code-wrap">// ? open list when onclick</span>
-                <span class="code-wrap">formTitle.addEventListener("click", () => {</span>
-                <span class="code-wrap"> itemsWrapper.style.display = "block";</span>
-                <span class="code-wrap"> titleIcon.classList.add("iconRotate");</span>
-                <span class="code-wrap">});</span>
-                <br />
-                <span class="code-wrap">// todo update form title name</span>
-                <span class="code-wrap">const updateName = (el) => {</span>
-                <span class="code-wrap"> // ? close list</span>
-                <span class="code-wrap"> itemsWrapper.style.display = "none";</span>
-                <span class="code-wrap"> titleIcon.classList.remove("iconRotate");</span>
-                <br />
-                <span class="code-wrap"> // * form title update</span>
-                <span class="code-wrap"> formTitle.textContent = el.textContent;</span>
-                <br />
-                <span class="code-wrap"> // ? add active class to item</span>
-                <span class="code-wrap"> const options = document.querySelectorAll("#countries-item");</span>
-                <span class="code-wrap"> for (let option of options) {</span>
-                <span class="code-wrap"> if (option.innerHTML === el.innerHTML) {</span>
-                <span class="code-wrap"> option.classList.add("selected-country");</span>
-                <span class="code-wrap"> } else {</span>
-                <span class="code-wrap"> option.classList.remove("selected-country");</span>
-                <span class="code-wrap"> }</span>
-                <span class="code-wrap"> }</span>
-                <span class="code-wrap">};</span>
-                <br />
-                <span class="code-wrap">// handel search input</span>
-                <span class="code-wrap">searchInput.addEventListener("keyup", (e) => {</span>
-                <span class="code-wrap"> const searchedValue = e.target.value.toUpperCase();</span>
-                <br />
-                <span class="code-wrap"> let zoneName = [];</span>
-                <span class="code-wrap"> let searchedHtml = "";</span>
-                <span class="code-wrap"> countriesList.filter((country) => {</span>
-                <span class="code-wrap"> return country.some((zone) => {</span>
-                <span class="code-wrap"> if (zone.name.toUpperCase().startsWith(searchedValue)) {</span>
-                <span class="code-wrap"> zoneName.push(zone.name);</span>
-                <span class="code-wrap"> }</span>
-                <span class="code-wrap"> });</span>
-                <span class="code-wrap"> });</span>
-                <span class="code-wrap"> zoneName.forEach((item) => {</span>
-                <span class="code-wrap"> searchedHtml += `</span>
-                <span class="code-wrap">
-                    < h5 value="${item}" class="countries-wrapper-list-item" id="countries-item">${item}< /h5>
-                </span>
-                <span class="code-wrap"> `;</span>
-                <span class="code-wrap"> });</span>
-                <span class="code-wrap"> formSelect.innerHTML = searchedHtml;</span>
-                <span class="code-wrap">});</span>
-
+          </div>
+          <section class="countries">
+            <div class="countries-title-wrapper">
+              <h3 class="countries-title">کشور مورد نظر را انتخاب کنید</h3>
+              <img
+                src="./assets/arrow-down.png"
+                alt="selection arrow icon"
+                class="countries-title-icon"
+              />
             </div>
+            <div class="countries-wrapper">
+              <div class="countries-search-box">
+                <input
+                  class="countries-wrapper-search"
+                  type="search"
+                  placeholder="جستجو ...."
+                  id="countries-search"
+                />
+                <img
+                  src="./assets/search.png"
+                  alt="form search icon"
+                  class="countries-wrapper-search-icon"
+                />
+              </div>
+              <div class="countries-wrapper-list" id="countries"></div>
+            </div>
+          </section>
+          <div class="code-wrapper">
+            <span class="code-wrap">// ! select element from dom</span>
+            <span class="code-wrap"
+              >let formSelect = document.querySelector("#countries");</span
+            >
+            <span class="code-wrap"
+              >let formTitle = document.querySelector(".countries-title");</span
+            >
+            <span class="code-wrap"
+              >let titleIcon =
+              document.querySelector(".countries-title-icon");</span
+            >
+            <span class="code-wrap"
+              >let searchInput =
+              document.querySelector("#countries-search");</span
+            >
+            <span class="code-wrap"
+              >let itemsWrapper =
+              document.querySelector(".countries-wrapper");</span
+            >
+            <span class="code-wrap">let countriesList = [];</span>
+            <br />
+            <span class="code-wrap">// ? fetch data from json file</span>
+            <span class="code-wrap"
+              >fetch("../../../assets/data/countries.json")</span
+            >
+            <span class="code-wrap"> .then((item) => item.json())</span>
+            <span class="code-wrap"> .then((res) => {</span>
+            <span class="code-wrap"> countriesList.push(res);</span>
+            <span class="code-wrap"> countriesList.forEach((element) => {</span>
+            <span class="code-wrap"> let countHtml = "";</span>
+            <span class="code-wrap"> element.forEach((item) => {</span>
+            <span class="code-wrap"> countHtml += `</span>
+            <span class="code-wrap">
+              < h5 onclick="updateName(this)" value="${item.name}"
+              class="countries-wrapper-list-item"
+              id="countries-item">${item.name}< /h5>
+            </span>
+            <span class="code-wrap"> `;</span>
+            <span class="code-wrap"> });</span>
+            <span class="code-wrap"> formSelect.innerHTML = countHtml;</span>
+            <span class="code-wrap"> });</span>
+            <span class="code-wrap"> });</span>
+            <br />
+            <span class="code-wrap">// ? open list when onclick</span>
+            <span class="code-wrap"
+              >formTitle.addEventListener("click", () => {</span
+            >
+            <span class="code-wrap">
+              itemsWrapper.style.display = "block";</span
+            >
+            <span class="code-wrap">
+              titleIcon.classList.add("iconRotate");</span
+            >
+            <span class="code-wrap">});</span>
+            <br />
+            <span class="code-wrap">// todo update form title name</span>
+            <span class="code-wrap">const updateName = (el) => {</span>
+            <span class="code-wrap"> // ? close list</span>
+            <span class="code-wrap"> itemsWrapper.style.display = "none";</span>
+            <span class="code-wrap">
+              titleIcon.classList.remove("iconRotate");</span
+            >
+            <br />
+            <span class="code-wrap"> // * form title update</span>
+            <span class="code-wrap">
+              formTitle.textContent = el.textContent;</span
+            >
+            <br />
+            <span class="code-wrap"> // ? add active class to item</span>
+            <span class="code-wrap">
+              const options =
+              document.querySelectorAll("#countries-item");</span
+            >
+            <span class="code-wrap"> for (let option of options) {</span>
+            <span class="code-wrap">
+              if (option.innerHTML === el.innerHTML) {</span
+            >
+            <span class="code-wrap">
+              option.classList.add("selected-country");</span
+            >
+            <span class="code-wrap"> } else {</span>
+            <span class="code-wrap">
+              option.classList.remove("selected-country");</span
+            >
+            <span class="code-wrap"> }</span>
+            <span class="code-wrap"> }</span>
+            <span class="code-wrap">};</span>
+            <br />
+            <span class="code-wrap">// handel search input</span>
+            <span class="code-wrap"
+              >searchInput.addEventListener("keyup", (e) => {</span
+            >
+            <span class="code-wrap">
+              const searchedValue = e.target.value.toUpperCase();</span
+            >
+            <br />
+            <span class="code-wrap"> let zoneName = [];</span>
+            <span class="code-wrap"> let searchedHtml = "";</span>
+            <span class="code-wrap"> countriesList.filter((country) => {</span>
+            <span class="code-wrap"> return country.some((zone) => {</span>
+            <span class="code-wrap">
+              if (zone.name.toUpperCase().startsWith(searchedValue)) {</span
+            >
+            <span class="code-wrap"> zoneName.push(zone.name);</span>
+            <span class="code-wrap"> }</span>
+            <span class="code-wrap"> });</span>
+            <span class="code-wrap"> });</span>
+            <span class="code-wrap"> zoneName.forEach((item) => {</span>
+            <span class="code-wrap"> searchedHtml += `</span>
+            <span class="code-wrap">
+              < h5 value="${item}" class="countries-wrapper-list-item"
+              id="countries-item">${item}< /h5>
+            </span>
+            <span class="code-wrap"> `;</span>
+            <span class="code-wrap"> });</span>
+            <span class="code-wrap"> formSelect.innerHTML = searchedHtml;</span>
+            <span class="code-wrap">});</span>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
+
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="CountrySelect.js"></script>
     <script src="../../../js/codeFinder.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>

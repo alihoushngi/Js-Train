@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  `
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="یک برنامه مدیریت وظایف با React و TailwindCSS، با امکان افزودن، ویرایش، حذف و ذخیره‌سازی وظایف در Local Storage."
+      content="برنامه پیشرفته مدیریت وظایف با React، Redux Toolkit و TailwindCSS. با امکان ذخیره‌سازی پایدار با redux-persist، ویرایش و حذف وظایف."
     />
     <meta
       name="keywords"
-      content="React, TailwindCSS, برنامه مدیریت وظایف, To-Do List, Local Storage, علی هوشنگی, برنامه‌نویسی وب"
+      content="React, Redux Toolkit, TailwindCSS, مدیریت وظایف, To-Do List, redux-persist, علی هوشنگی, برنامه‌نویسی وب"
     />
     <meta name="author" content="علی هوشنگی" />
     <meta
       property="og:title"
-      content="برنامه مدیریت وظایف با React | علی هوشنگی"
+      content="برنامه مدیریت وظایف با Redux Toolkit | علی هوشنگی"
     />
     <meta
       property="og:description"
-      content="یک برنامه کاربردی برای مدیریت وظایف روزانه با استفاده از React و TailwindCSS. قابلیت ذخیره‌سازی در Local Storage و امکان ویرایش و حذف وظایف."
+      content="نسخه پیشرفته از TodoList با React و Redux Toolkit همراه با persist شدن وظایف در Local Storage. طراحی شده توسط علی هوشنگی."
     />
     <meta property="og:image" content="/assets/images/AliHoushangi.png" />
     <meta
       property="og:url"
-      content="https://alihoushangi.ir/projects/react-todo"
+      content="https://alihoushangi.ir/projects/react-redux-todo"
     />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="برنامه مدیریت وظایف با React | علی هوشنگی"
+      content="برنامه مدیریت وظایف با Redux Toolkit | علی هوشنگی"
     />
     <meta
       name="twitter:description"
-      content="یک برنامه مدیریت وظایف با استفاده از React و TailwindCSS، با قابلیت ذخیره‌سازی وظایف در Local Storage."
+      content="نسخه پیشرفته برنامه مدیریت وظایف با استفاده از React، Redux Toolkit و redux-persist."
     />
     <meta name="twitter:image" content="/assets/images/AliHoushangi.png" />
-    <link rel="canonical" href="https://alihoushangi.ir/projects/react-todo" />
+    <link
+      rel="canonical"
+      href="https://alihoushangi.ir/projects/react-redux-todo"
+    />
     <link rel="stylesheet" href="../../../style.css" />
     <link
       rel="stylesheet"
@@ -47,7 +48,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>برنامه مدیریت وظایف با React | علی هوشنگی</title>
+    <title>برنامه مدیریت وظایف با Redux Toolkit | علی هوشنگی</title>
+
     <style>
       .socialMedia {
         display: flex;
@@ -87,15 +89,20 @@
         ></a>
       </section>
     </nav>
-    <h1 class="title">لیست وظایف با ریکت</h1>
+
+    <h1 class="title">لیست وظایف با Redux Toolkit</h1>
+
     <section class="cl-wrapper">
       <div class="codes">
         <div class="train-wrapper">
           <div class="train-details">
-            <span class="train-number">۱</span>
-            <h2 class="train-question">لیست وظایف</h2>
+            <span class="train-number">۲</span>
+            <h2 class="train-question">لیست وظایف پیشرفته</h2>
           </div>
-          <a target="_blank" href="https://github.com/alihoushngi/React-Todo">
+          <a
+            target="_blank"
+            href="https://github.com/alihoushngi/React-Redux-Todo"
+          >
             <div class="githubIcon">
               <h3>مشاهده فایل پروژه در گیت هاب</h3>
               <i class="fab fa-github"></i>
@@ -104,62 +111,57 @@
         </div>
       </div>
     </section>
+
     <section class="explain">
       <div class="explain-project-data">
         <header>
           <p>
-            این برنامه با استفاده از React و TailwindCSS طراحی شده است تا
-            بتوانید به آسانی وظایف روزمره خود را مدیریت کنید.
+            در این نسخه پیشرفته از برنامه Todo List از Redux Toolkit و
+            redux-persist برای مدیریت حرفه‌ای وضعیت و ذخیره‌سازی پایدار داده‌ها
+            استفاده شده است.
           </p>
         </header>
+
         <section>
-          <h2>🎯 ویژگی‌ها:</h2>
+          <h2>🎯 ویژگی‌های جدید:</h2>
           <ul>
-            <li>افزودن وظایف جدید با یک کلیک</li>
-            <li>امکان ویرایش و حذف وظایف</li>
-            <li>نشانه‌گذاری وظایف انجام شده با تیک</li>
-            <li>
-              ذخیره‌سازی وظایف در Local Storage برای حفظ داده‌ها حتی پس از بستن
-              مرورگر
-            </li>
+            <li>مدیریت وضعیت مرکزی با Redux Toolkit</li>
+            <li>ذخیره‌سازی وظایف با redux-persist در Local Storage</li>
+            <li>ویرایش و حذف وظایف به‌صورت ماژولار</li>
+            <li>نشانه‌گذاری وظایف انجام شده</li>
           </ul>
         </section>
 
         <section>
           <h2>🛠️ تکنولوژی‌های استفاده شده:</h2>
           <ul>
-            <li>React: برای ساختار و مدیریت کامپوننت‌ها</li>
-            <li>TailwindCSS: برای طراحی ظاهری سریع و پاسخ‌گو</li>
-            <li>Local Storage: برای ذخیره‌سازی داده‌ها در مرورگر</li>
+            <li>React: برای ساخت کامپوننت‌های UI</li>
+            <li>Redux Toolkit: برای مدیریت وضعیت</li>
+            <li>redux-persist: برای ذخیره‌سازی داده‌ها در مرورگر</li>
+            <li>TailwindCSS: طراحی سبک و واکنش‌گرا</li>
           </ul>
         </section>
 
         <section>
-          <h2>🔍 جزئیات برنامه:</h2>
+          <h2>🔍 جزئیات ساختاری:</h2>
           <p>
-            این برنامه به گونه‌ای طراحی شده که هر بخش آن یک کامپوننت جداگانه
-            دارد. این ساختار ماژولار به شما امکان می‌دهد تا به راحتی بخش‌های
-            مختلف برنامه را ویرایش و سفارشی‌سازی کنید. با استفاده از Local
-            Storage، اطلاعات مربوط به وظایف شما ذخیره می‌شود و حتی بعد از بستن
-            مرورگر هم از بین نمی‌رود. با این قابلیت، مدیریت وظایف روزمره‌تان
-            ساده‌تر از همیشه خواهد بود.
+            کامپوننت‌ها به صورت جداگانه طراحی شده‌اند و وضعیت وظایف با استفاده
+            از Redux مدیریت می‌شود. با redux-persist، وظایف حتی پس از رفرش یا
+            بستن مرورگر نیز باقی می‌مانند. این ساختار توسعه‌یافته باعث می‌شود
+            برنامه مقیاس‌پذیر و قابل نگهداری باشد.
           </p>
         </section>
 
         <section>
           <h2>💻 راهنمای استفاده:</h2>
           <ol>
-            <li>برای افزودن متن خود را بنویسید و دکمه Enter را فشار دهید.</li>
-            <li>
-              برای ویرایش وظیفه، روی آیکون ویرایش کنار هر وظیفه کلیک کنید.
-            </li>
-            <li>برای حذف یک وظیفه، روی آیکون ضربدر کلیک کنید.</li>
-            <li>
-              برای علامت‌گذاری یک وظیفه به عنوان انجام شده، روی تیک کنار آن کلیک
-              کنید.
-            </li>
+            <li>برای افزودن وظیفه، متن را نوشته و Enter بزنید.</li>
+            <li>برای ویرایش، روی آیکون مداد کنار وظیفه کلیک کنید.</li>
+            <li>برای حذف، روی آیکون ضربدر کلیک کنید.</li>
+            <li>برای علامت‌گذاری به عنوان انجام شده، روی تیک کلیک کنید.</li>
           </ol>
         </section>
+
         <section>
           <div class="socialMedia">
             <div class="socialMediaWrapper">
@@ -192,11 +194,12 @@
           </div>
         </section>
       </div>
+
       <div class="explain-project-images">
-        <img src="./assets/1.png" alt="todo list" />
-        <img src="./assets/2.png" alt="todo list" />
-        <img src="./assets/3.png" alt="todo list" />
-        <img src="./assets/4.png" alt="todo list" />
+        <img src="./assets/1.png" alt="redux todo list" />
+        <img src="./assets/2.png" alt="redux todo list" />
+        <img src="./assets/3.png" alt="redux todo list" />
+        <img src="./assets/4.png" alt="redux todo list" />
       </div>
     </section>
 

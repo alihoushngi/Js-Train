@@ -1,95 +1,210 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="این صفحه به بررسی بخش‌پذیری اعداد با استفاده از جاوااسکریپت اختصاص دارد. در این صفحه، کاربر می‌تواند دو عدد را وارد کرده و بررسی کند که آیا عدد اول بر عدد دوم بخش‌پذیر است یا خیر.">
-    <meta name="keywords" content="جاوااسکریپت, بخش‌پذیری اعداد, بررسی بخش‌پذیری, تمرین جاوااسکریپت, کد جاوااسکریپت">
-    <meta name="author" content="علی هوشنگی">
-    <meta property="og:title" content="بخش پذیری اعداد در جاوااسکریپت">
-    <meta property="og:description"
-        content="این صفحه به بررسی بخش‌پذیری اعداد با استفاده از جاوااسکریپت اختصاص دارد. در این صفحه، کاربر می‌تواند دو عدد را وارد کرده و بررسی کند که آیا عدد اول بر عدد دوم بخش‌پذیر است یا خیر.">
-    <meta property="og:image" content="/assets/images/AliHoushangi.png">
-    <meta property="og:url" content="https://alihoushangi.ir/">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="تمرینات علی هوشنگی">
-    <meta property="og:locale" content="fa_IR">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="بخش پذیری اعداد در جاوااسکریپت">
-    <meta name="twitter:description"
-        content="این صفحه به بررسی بخش‌پذیری اعداد با استفاده از جاوااسکریپت اختصاص دارد. در این صفحه، کاربر می‌تواند دو عدد را وارد کرده و بررسی کند که آیا عدد اول بر عدد دوم بخش‌پذیر است یا خیر.">
-    <meta name="twitter:image" content="/assets/images/AliHoushangi.png">
-    <meta name="twitter:site" content="@alihoushangii">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="این صفحه به بررسی بخش‌پذیری اعداد با استفاده از جاوااسکریپت اختصاص دارد. در این صفحه، کاربر می‌تواند دو عدد را وارد کرده و بررسی کند که آیا عدد اول بر عدد دوم بخش‌پذیر است یا خیر."
+    />
+    <meta
+      name="keywords"
+      content="جاوااسکریپت, بخش‌پذیری اعداد, بررسی بخش‌پذیری, تمرین جاوااسکریپت, کد جاوااسکریپت"
+    />
+    <meta name="author" content="علی هوشنگی" />
+    <meta property="og:title" content="بخش پذیری اعداد در جاوااسکریپت" />
+    <meta
+      property="og:description"
+      content="این صفحه به بررسی بخش‌پذیری اعداد با استفاده از جاوااسکریپت اختصاص دارد. در این صفحه، کاربر می‌تواند دو عدد را وارد کرده و بررسی کند که آیا عدد اول بر عدد دوم بخش‌پذیر است یا خیر."
+    />
+    <meta property="og:image" content="/assets/images/AliHoushangi.png" />
+    <meta property="og:url" content="https://alihoushangi.ir/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="تمرینات علی هوشنگی" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="بخش پذیری اعداد در جاوااسکریپت" />
+    <meta
+      name="twitter:description"
+      content="این صفحه به بررسی بخش‌پذیری اعداد با استفاده از جاوااسکریپت اختصاص دارد. در این صفحه، کاربر می‌تواند دو عدد را وارد کرده و بررسی کند که آیا عدد اول بر عدد دوم بخش‌پذیر است یا خیر."
+    />
+    <meta name="twitter:image" content="/assets/images/AliHoushangi.png" />
+    <meta name="twitter:site" content="@alihoushangii" />
     <title>بخش پذیری اعداد در جاوااسکریپت</title>
-    <link rel="canonical" href="https://alihoushangi.ir/">
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link rel="canonical" href="https://alihoushangi.ir/" />
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
-<body class="cl-body">
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
+
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
     <h1 class="title">بخش پذیری اعداد در جاوااسکریپت</h1>
-    <section class="cl-wrapper">
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۳</span>
-                    <h2 class="train-question">بخش پذیر بودن یا نبودن اعداد را بنویسید</h2>
-                </div>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۳</span>
+              <h2 class="train-question">
+                بخش پذیر بودن یا نبودن اعداد را بنویسید
+              </h2>
             </div>
-            <div class="numberForm-wrapper">
-                <div class="numberForm-title">عدد ها را وارد کنید</div>
-                <form action="#" id="numberCheckerForm" class="numberForm">
-                    <div class="numberForm-input_wrapper">
-                        <label for="num1" class="numberForm-label">عدد اول :</label>
-                        <input type="number" name="num1" id="num1" class="numberForm-input">
-                    </div>
-                    <div class="numberForm-input_wrapper">
-                        <label for="num2" class="numberForm-label">عدد دوم :</label>
-                        <input type="number" name="num2" id="num2" class="numberForm-input">
-                    </div>
-                </form>
-                <button class="numberForm-button" id="number-button">بررسی</button>
-                <div class="numberForm-result" id="number-result"></div>
-            </div>
-            <div class="code-wrapper">
-                <span>// ! Printing words relative to the divisibility of numbers.</span>
-                <span>// ? get numbers , button and result section from document</span>
-                <span>const number2 = document.querySelector("#num2");</span>
-                <span>const number1 = document.querySelector("#num1");</span>
-                <span>const submitNumberButton = document.querySelector("#number-button");</span>
-                <span>const numberResult = document.querySelector("#number-result");</span>
-                <br>
-                <span>// ! Playability of numbers function</span>
-                <span>const playabilityNumbers = () => {</span>
-                <span>const res = parseInt(number1.value) % parseInt(number2.value);</span>
-                <span>if (res === 0) {</span>
-                <span>numberResult.innerHTML = `Your number is Divisible`;</span>
-                <span>} else {</span>
-                <span>numberResult.innerHTML = ` Your number is Indivisible `; </span>
-                <span> }</span>
-                <span>};</span>
-                <br>
-                <span>// todo add event for my button</span>
-                <span>submitNumberButton.addEventListener("click", sumNumbers);</span>
-                <span>// ! end</span>
-            </div>
+          </div>
+          <div class="numberForm-wrapper">
+            <div class="numberForm-title">عدد ها را وارد کنید</div>
+            <form action="#" id="numberCheckerForm" class="numberForm">
+              <div class="numberForm-input_wrapper">
+                <label for="num1" class="numberForm-label">عدد اول :</label>
+                <input
+                  type="number"
+                  name="num1"
+                  id="num1"
+                  class="numberForm-input"
+                />
+              </div>
+              <div class="numberForm-input_wrapper">
+                <label for="num2" class="numberForm-label">عدد دوم :</label>
+                <input
+                  type="number"
+                  name="num2"
+                  id="num2"
+                  class="numberForm-input"
+                />
+              </div>
+            </form>
+            <button class="numberForm-button" id="number-button">بررسی</button>
+            <div class="numberForm-result" id="number-result"></div>
+          </div>
+          <div class="code-wrapper">
+            <span
+              >// ! Printing words relative to the divisibility of
+              numbers.</span
+            >
+            <span
+              >// ? get numbers , button and result section from document</span
+            >
+            <span>const number2 = document.querySelector("#num2");</span>
+            <span>const number1 = document.querySelector("#num1");</span>
+            <span
+              >const submitNumberButton =
+              document.querySelector("#number-button");</span
+            >
+            <span
+              >const numberResult =
+              document.querySelector("#number-result");</span
+            >
+            <br />
+            <span>// ! Playability of numbers function</span>
+            <span>const playabilityNumbers = () => {</span>
+            <span
+              >const res = parseInt(number1.value) %
+              parseInt(number2.value);</span
+            >
+            <span>if (res === 0) {</span>
+            <span>numberResult.innerHTML = `Your number is Divisible`;</span>
+            <span>} else {</span>
+            <span
+              >numberResult.innerHTML = ` Your number is Indivisible `;
+            </span>
+            <span> }</span>
+            <span>};</span>
+            <br />
+            <span>// todo add event for my button</span>
+            <span
+              >submitNumberButton.addEventListener("click", sumNumbers);</span
+            >
+            <span>// ! end</span>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="../../../js/codeFinder.js"></script>
     <script src="divisibility.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,43 +1,117 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="مجموعه‌ای از تمرینات جاوا اسکریپت برای یادگیری و تقویت مهارت‌های برنامه‌نویسی وب. تمرینات شامل پروژه‌های کاربردی و چالش‌های عملی است.">
-    <meta name="keywords"
-        content="جاوا اسکریپت, تمرینات جاوا اسکریپت, برنامه‌نویسی وب, آموزش برنامه‌نویسی, پروژه‌های جاوا اسکریپت, علی هوشنگی">
-    <meta name="author" content="علی هوشنگی">
-    <meta property="og:title" content="تمرینات جاوا اسکریپت | علی هوشنگی">
-    <meta property="og:description"
-        content="مجموعه‌ای از تمرینات جاوا اسکریپت برای یادگیری و تقویت مهارت‌های برنامه‌نویسی وب. تمرینات شامل پروژه‌های کاربردی و چالش‌های عملی است.">
-    <meta property="og:url" content="/pages/jsTrain/js.html">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="تمرینات جاوا اسکریپت | علی هوشنگی">
-    <meta name="twitter:description"
-        content="مجموعه‌ای از تمرینات جاوا اسکریپت برای یادگیری و تقویت مهارت‌های برنامه‌نویسی وب. تمرینات شامل پروژه‌های کاربردی و چالش‌های عملی است.">
-    <link rel="canonical" href="/pages/jsTrain/js.html">
-    <link rel="stylesheet" href="../../style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="مجموعه‌ای از تمرینات جاوا اسکریپت برای یادگیری و تقویت مهارت‌های برنامه‌نویسی وب. تمرینات شامل پروژه‌های کاربردی و چالش‌های عملی است."
+    />
+    <meta
+      name="keywords"
+      content="جاوا اسکریپت, تمرینات جاوا اسکریپت, برنامه‌نویسی وب, آموزش برنامه‌نویسی, پروژه‌های جاوا اسکریپت, علی هوشنگی"
+    />
+    <meta name="author" content="علی هوشنگی" />
+    <meta property="og:title" content="تمرینات جاوا اسکریپت | علی هوشنگی" />
+    <meta
+      property="og:description"
+      content="مجموعه‌ای از تمرینات جاوا اسکریپت برای یادگیری و تقویت مهارت‌های برنامه‌نویسی وب. تمرینات شامل پروژه‌های کاربردی و چالش‌های عملی است."
+    />
+    <meta property="og:url" content="/pages/jsTrain/js.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="تمرینات جاوا اسکریپت | علی هوشنگی" />
+    <meta
+      name="twitter:description"
+      content="مجموعه‌ای از تمرینات جاوا اسکریپت برای یادگیری و تقویت مهارت‌های برنامه‌نویسی وب. تمرینات شامل پروژه‌های کاربردی و چالش‌های عملی است."
+    />
+    <link rel="canonical" href="/pages/jsTrain/js.html" />
+    <link rel="stylesheet" href="../../style.css" />
     <title>تمرینات جاوا اسکریپت | علی هوشنگی</title>
-</head>
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
-<body>
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
+
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body>
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+      </section>
     </nav>
     <main>
-        <h1 class="title">تمرینات جاوا اسکریپت</h1>
-        <span class="main-desc">علی هوشنگی</span>
-        <section class="project-cards-wrapper" id="project-list">
-        </section>
+      <h1 class="title">تمرینات جاوا اسکریپت</h1>
+      <span class="main-desc">علی هوشنگی</span>
+      <section class="project-cards-wrapper" id="project-list"></section>
     </main>
 
-
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
     <script src="js.js"></script>
-</body>
-
+  </body>
 </html>

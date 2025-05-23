@@ -1,53 +1,131 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>دیکشنری با جاوااسکریپت</title>
-</head>
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
 
-<body class="cl-body">
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
     <h1 class="title">دیکشنری با جاوااسکریپت</h1>
-    <section class="cl-wrapper">
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۲۰</span>
-                    <h2 class="train-question">دیکشنری</h2>
-                </div>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۲۰</span>
+              <h2 class="train-question">دیکشنری</h2>
             </div>
-            <section class="Dictionary">
-                <div class="Dictionary-box">
-                    <input id="searchInput" type="search" class="Dictionary-box-input"
-                        placeholder="به انگلیسی جستجو کنید ...">
-                    <button id="searchButton" class="Dictionary-box-button">جستجو</button>
-                </div>
-                <div id="response" class="Dictionary-response">
-
-                </div>
-            </section>
-
-            <div class="code-wrapper">
-
+          </div>
+          <section class="Dictionary">
+            <div class="Dictionary-box">
+              <input
+                id="searchInput"
+                type="search"
+                class="Dictionary-box-input"
+                placeholder="به انگلیسی جستجو کنید ..."
+              />
+              <button id="searchButton" class="Dictionary-box-button">
+                جستجو
+              </button>
             </div>
+            <div id="response" class="Dictionary-response"></div>
+          </section>
+
+          <div class="code-wrapper"></div>
         </div>
-    </section>
+      </section>
+    </main>
+
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="Dictionary.js"></script>
     <script src="../../../js/codeFinder.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>

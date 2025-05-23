@@ -1,69 +1,169 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="راهنمایی برای پیدا کردن بزرگترین و کوچکترین عدد در آرایه با استفاده از جاوا اسکریپت. نمونه کد و توضیحات کامل برای مرتب‌سازی آرایه و استخراج مقادیر مطلوب.">
-    <meta name="keywords"
-        content="جاوا اسکریپت, برنامه نویسی, پیدا کردن بزرگترین عدد, پیدا کردن کوچکترین عدد, مرتب‌سازی آرایه, کد نمونه">
-    <meta name="author" content="علی هوشنگی">
-    <meta property="og:title" content="پیدا کردن بزرگترین و کوچکترین عدد در جاوا اسکریپت">
-    <meta property="og:description"
-        content="یاد بگیرید چگونه با استفاده از جاوا اسکریپت بزرگترین و کوچکترین عدد را در آرایه پیدا کنید. شامل کد نمونه و توضیحات مفید.">
-    <meta property="og:image" content="/assets/images/AliHoushangi.png">
-    <meta property="og:url" content="https://alihoushangi.ir/pages/jsTrain/minAndMaxNumber.html">
-    <meta property="og:type" content="article">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="پیدا کردن بزرگترین و کوچکترین عدد در جاوا اسکریپت">
-    <meta name="twitter:description"
-        content="راهنمایی کامل برای پیدا کردن بزرگترین و کوچکترین عدد در جاوا اسکریپت با کد نمونه.">
-    <meta name="twitter:image" content="/assets/images/AliHoushangi.png">
-    <link rel="canonical" href="https://alihoushangi.ir/pages/jsTrain/minAndMaxNumber.html">
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="راهنمایی برای پیدا کردن بزرگترین و کوچکترین عدد در آرایه با استفاده از جاوا اسکریپت. نمونه کد و توضیحات کامل برای مرتب‌سازی آرایه و استخراج مقادیر مطلوب."
+    />
+    <meta
+      name="keywords"
+      content="جاوا اسکریپت, برنامه نویسی, پیدا کردن بزرگترین عدد, پیدا کردن کوچکترین عدد, مرتب‌سازی آرایه, کد نمونه"
+    />
+    <meta name="author" content="علی هوشنگی" />
+    <meta
+      property="og:title"
+      content="پیدا کردن بزرگترین و کوچکترین عدد در جاوا اسکریپت"
+    />
+    <meta
+      property="og:description"
+      content="یاد بگیرید چگونه با استفاده از جاوا اسکریپت بزرگترین و کوچکترین عدد را در آرایه پیدا کنید. شامل کد نمونه و توضیحات مفید."
+    />
+    <meta property="og:image" content="/assets/images/AliHoushangi.png" />
+    <meta
+      property="og:url"
+      content="https://alihoushangi.ir/pages/jsTrain/minAndMaxNumber.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="پیدا کردن بزرگترین و کوچکترین عدد در جاوا اسکریپت"
+    />
+    <meta
+      name="twitter:description"
+      content="راهنمایی کامل برای پیدا کردن بزرگترین و کوچکترین عدد در جاوا اسکریپت با کد نمونه."
+    />
+    <meta name="twitter:image" content="/assets/images/AliHoushangi.png" />
+    <link
+      rel="canonical"
+      href="https://alihoushangi.ir/pages/jsTrain/minAndMaxNumber.html"
+    />
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>پیدا کردن بزرگترین و کوچکترین عدد در جاوا اسکریپت</title>
-</head>
 
-<body class="cl-body">
+    <style>
+      main {
+        min-height: 85lvh;
+      }
+
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
+
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
     <h1 class="title">پیدا کردن بزرگترین و کوچکترین عدد در جاوا اسکریپت</h1>
-    <section class="cl-wrapper">
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۱</span>
-                    <h2 class="train-question">پیدا کردن بزرگترین و کوچکترین عدد</h2>
-                </div>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۱</span>
+              <h2 class="train-question">پیدا کردن بزرگترین و کوچکترین عدد</h2>
             </div>
-            <div class="code-wrapper">
-                <span>// ? ساخت آرایه</span>
-                <br>
-                <span>const numberArray = [1, 7, 4, 2, 3, 0, 5, 9, 6]; </span>
-                <br>
-                <span>// todo مرتب سازی آرایه</span>
-                <span>const sortedArray = numberArray.sort();</span>
-                <br>
-                <span>// * نشان دادن بزرگترین و کوچکترین عدد در کنسول</span>
-                <span>console.log(sortedArray[0], sortedArray [ sortedArray.length - 1 ] );</span>
-                <br>
-                <span>answer _____ 0 9</span>
-            </div>
+          </div>
+          <div class="code-wrapper">
+            <span>// ? ساخت آرایه</span>
+            <br />
+            <span>const numberArray = [1, 7, 4, 2, 3, 0, 5, 9, 6]; </span>
+            <br />
+            <span>// todo مرتب سازی آرایه</span>
+            <span>const sortedArray = numberArray.sort();</span>
+            <br />
+            <span>// * نشان دادن بزرگترین و کوچکترین عدد در کنسول</span>
+            <span
+              >console.log(sortedArray[0], sortedArray [ sortedArray.length - 1
+              ] );</span
+            >
+            <br />
+            <span>answer _____ 0 9</span>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="../../../js/codeFinder.js"></script>
     <script src="minAndMaxNumber.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,148 +1,331 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>سازنده گرادیانت با جاوااسکریپت</title>
-</head>
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
 
-<body class="cl-body">
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
     <h1 class="title">سازنده گرادیانت با جاوااسکریپت</h1>
-    <section class="cl-wrapper">
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۱۱</span>
-                    <h2 class="train-question">سازنده گرادیانت</h2>
-                </div>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۱۱</span>
+              <h2 class="train-question">سازنده گرادیانت</h2>
             </div>
-            <section class="colorGenerator">
-                <div class="colorGenerator-leftSide">
-                    <div class="colorGenerator-box">
-                        <label for="firstColor" id="firstColorLabel">رنگ اول</label>
-                        <input name="firstColor" id="firstColor" type="color" class="colorGenerator-box-input"
-                            value="#1f01c8">
-                        <label for="secondColor" id="secondColorLabel">رنگ دوم</label>
-                        <input name="secondColor" id="secondColor" type="color" class="colorGenerator-box-input"
-                            value="#edb603">
-                    </div>
-                    <div class="colorGenerator-directions">
-                        <img src="./assets/arrow.png" alt="arrow" class="colorGenerator-directions-arrow"
-                            data-rotate="to top">
-                        <img src="./assets/arrow.png" alt="arrow" class="colorGenerator-directions-arrow"
-                            data-rotate="to right top">
-                        <img src="./assets/arrow.png" alt="arrow" class="colorGenerator-directions-arrow"
-                            data-rotate="to right">
-                        <img src="./assets/arrow.png" alt="arrow" class="colorGenerator-directions-arrow"
-                            data-rotate="to right bottom ">
-                        <img src="./assets/arrow.png" alt="arrow" class="colorGenerator-directions-arrow"
-                            data-rotate="to bottom">
-                        <img src="./assets/arrow.png" alt="arrow" class="colorGenerator-directions-arrow"
-                            data-rotate="to left bottom">
-                        <img src="./assets/arrow.png" alt="arrow" class="colorGenerator-directions-arrow"
-                            data-rotate="to left">
-                        <img src="./assets/arrow.png" alt="arrow" class="colorGenerator-directions-arrow"
-                            data-rotate="to left top">
-                    </div>
-                    <button class="colorGenerator-generate" id="generateButton">ساخت گرادیانت</button>
-                </div>
-                <div class="colorGenerator-rightSide">
-                    <span class="colorGenerator-style" id="styleArea"></span>
-                    <button class="colorGenerator-copy" id="copyButton">کپی</button>
-                </div>
-            </section>
-            <div class="code-wrapper">
-                <span class="code-wrap">// ! get element from dom</span>
-                <span class="code-wrap">// inputs</span>
-                <span class="code-wrap">const firstInput = document.querySelector("#firstColor");</span>
-                <span class="code-wrap">const secondInput = document.querySelector("#secondColor");</span>
-                <span class="code-wrap">// labels</span>
-                <span class="code-wrap">const firstColorLabel = document.querySelector("#firstColorLabel");</span>
-                <span class="code-wrap">const secondColorLabel = document.querySelector("#secondColorLabel");</span>
-                <span class="code-wrap">// directions</span>
-                <span class="code-wrap">const directions = document.querySelectorAll(</span>
-                <span class="code-wrap"> ".colorGenerator-directions-arrow"</span>
-                <span class="code-wrap">);</span>
-                <span class="code-wrap">// buttons</span>
-                <span class="code-wrap">const generateButton = document.querySelector("#generateButton");</span>
-                <span class="code-wrap">const copyButton = document.querySelector("#copyButton");</span>
-                <span class="code-wrap">// style area</span>
-                <span class="code-wrap">const styleArea = document.querySelector("#styleArea");</span>
-                <br />
-                <span class="code-wrap">// ? functions</span>
-                <span class="code-wrap">let firstColor = null;</span>
-                <span class="code-wrap">let secondColor = null;</span>
-                <span class="code-wrap">let rotation = "to top";</span>
-                <br />
-                <span class="code-wrap">// * first input change handler</span>
-                <span class="code-wrap">firstInput.addEventListener("change", (e) => {</span>
-                <span class="code-wrap"> firstColor = e.target.value;</span>
-                <span class="code-wrap"> firstColorLabel.textContent = e.target.value;</span>
-                <span class="code-wrap"> firstColorLabel.style.color = `${e.target.value}`;</span>
-                <span class="code-wrap">});</span>
-                <br />
-                <span class="code-wrap">// * second input change handler</span>
-                <span class="code-wrap">secondInput.addEventListener("change", (e) => {</span>
-                <span class="code-wrap"> secondColor = e.target.value;</span>
-                <span class="code-wrap"> secondColorLabel.textContent = e.target.value;</span>
-                <span class="code-wrap"> secondColorLabel.style.color = `${e.target.value}`;</span>
-                <span class="code-wrap">});</span>
-                <br />
-                <span class="code-wrap">// * directions input change handler</span>
-                <span class="code-wrap">directions.forEach((item) => {</span>
-                <span class="code-wrap"> item.addEventListener("click", (direct) => {</span>
-                <span class="code-wrap"> rotation = direct.target.dataset.rotate;</span>
-                <span class="code-wrap"> });</span>
-                <span class="code-wrap">});</span>
-                <br />
-                <span class="code-wrap">// todo check the color and direction to style body</span>
-                <br />
-                <span class="code-wrap">generateButton.addEventListener("click", () => {</span>
-                <span class="code-wrap"> if (firstColor != null && secondColor != null) {</span>
-                <span class="code-wrap"> document.body.style = `background-image: linear-gradient(${rotation},
-                    ${firstColor} ,
-                    ${secondColor});`;</span>
-                <span class="code-wrap"> styleArea.textContent = `background-image: linear-gradient(${rotation},
-                    ${firstColor} ,
-                    ${secondColor});`;</span>
-                <span class="code-wrap"> generateButton.textContent = "Color Generated";</span>
-                <span class="code-wrap"> generateButton.style.backgroundColor = "green";</span>
-                <span class="code-wrap"> } else {</span>
-                <span class="code-wrap"> generateButton.textContent = "Select Colors";</span>
-                <span class="code-wrap"> generateButton.style.backgroundColor = "red";</span>
-                <span class="code-wrap"> }</span>
-                <span class="code-wrap">});</span>
-                <br />
-                <span class="code-wrap">// ? copy button click handler</span>
-                <span class="code-wrap">copyButton.addEventListener("click", () => {</span>
-                <span class="code-wrap"> if (styleArea.innerHTML != "") {</span>
-                <span class="code-wrap"> navigator.clipboard.writeText(styleArea.innerHTML);</span>
-                <span class="code-wrap"> copyButton.textContent = "Copied";</span>
-                <span class="code-wrap"> copyButton.style.backgroundColor = "green";</span>
-                <span class="code-wrap"> } else {</span>
-                <span class="code-wrap"> copyButton.textContent = "Generate Gradient";</span>
-                <span class="code-wrap"> copyButton.style.backgroundColor = "red";</span>
-                <span class="code-wrap"> }</span>
-                <span class="code-wrap">});</span>
+          </div>
+          <section class="colorGenerator">
+            <div class="colorGenerator-leftSide">
+              <div class="colorGenerator-box">
+                <label for="firstColor" id="firstColorLabel">رنگ اول</label>
+                <input
+                  name="firstColor"
+                  id="firstColor"
+                  type="color"
+                  class="colorGenerator-box-input"
+                  value="#1f01c8"
+                />
+                <label for="secondColor" id="secondColorLabel">رنگ دوم</label>
+                <input
+                  name="secondColor"
+                  id="secondColor"
+                  type="color"
+                  class="colorGenerator-box-input"
+                  value="#edb603"
+                />
+              </div>
+              <div class="colorGenerator-directions">
+                <img
+                  src="./assets/arrow.png"
+                  alt="arrow"
+                  class="colorGenerator-directions-arrow"
+                  data-rotate="to top"
+                />
+                <img
+                  src="./assets/arrow.png"
+                  alt="arrow"
+                  class="colorGenerator-directions-arrow"
+                  data-rotate="to right top"
+                />
+                <img
+                  src="./assets/arrow.png"
+                  alt="arrow"
+                  class="colorGenerator-directions-arrow"
+                  data-rotate="to right"
+                />
+                <img
+                  src="./assets/arrow.png"
+                  alt="arrow"
+                  class="colorGenerator-directions-arrow"
+                  data-rotate="to right bottom "
+                />
+                <img
+                  src="./assets/arrow.png"
+                  alt="arrow"
+                  class="colorGenerator-directions-arrow"
+                  data-rotate="to bottom"
+                />
+                <img
+                  src="./assets/arrow.png"
+                  alt="arrow"
+                  class="colorGenerator-directions-arrow"
+                  data-rotate="to left bottom"
+                />
+                <img
+                  src="./assets/arrow.png"
+                  alt="arrow"
+                  class="colorGenerator-directions-arrow"
+                  data-rotate="to left"
+                />
+                <img
+                  src="./assets/arrow.png"
+                  alt="arrow"
+                  class="colorGenerator-directions-arrow"
+                  data-rotate="to left top"
+                />
+              </div>
+              <button class="colorGenerator-generate" id="generateButton">
+                ساخت گرادیانت
+              </button>
             </div>
+            <div class="colorGenerator-rightSide">
+              <span class="colorGenerator-style" id="styleArea"></span>
+              <button class="colorGenerator-copy" id="copyButton">کپی</button>
+            </div>
+          </section>
+          <div class="code-wrapper">
+            <span class="code-wrap">// ! get element from dom</span>
+            <span class="code-wrap">// inputs</span>
+            <span class="code-wrap"
+              >const firstInput = document.querySelector("#firstColor");</span
+            >
+            <span class="code-wrap"
+              >const secondInput = document.querySelector("#secondColor");</span
+            >
+            <span class="code-wrap">// labels</span>
+            <span class="code-wrap"
+              >const firstColorLabel =
+              document.querySelector("#firstColorLabel");</span
+            >
+            <span class="code-wrap"
+              >const secondColorLabel =
+              document.querySelector("#secondColorLabel");</span
+            >
+            <span class="code-wrap">// directions</span>
+            <span class="code-wrap"
+              >const directions = document.querySelectorAll(</span
+            >
+            <span class="code-wrap"> ".colorGenerator-directions-arrow"</span>
+            <span class="code-wrap">);</span>
+            <span class="code-wrap">// buttons</span>
+            <span class="code-wrap"
+              >const generateButton =
+              document.querySelector("#generateButton");</span
+            >
+            <span class="code-wrap"
+              >const copyButton = document.querySelector("#copyButton");</span
+            >
+            <span class="code-wrap">// style area</span>
+            <span class="code-wrap"
+              >const styleArea = document.querySelector("#styleArea");</span
+            >
+            <br />
+            <span class="code-wrap">// ? functions</span>
+            <span class="code-wrap">let firstColor = null;</span>
+            <span class="code-wrap">let secondColor = null;</span>
+            <span class="code-wrap">let rotation = "to top";</span>
+            <br />
+            <span class="code-wrap">// * first input change handler</span>
+            <span class="code-wrap"
+              >firstInput.addEventListener("change", (e) => {</span
+            >
+            <span class="code-wrap"> firstColor = e.target.value;</span>
+            <span class="code-wrap">
+              firstColorLabel.textContent = e.target.value;</span
+            >
+            <span class="code-wrap">
+              firstColorLabel.style.color = `${e.target.value}`;</span
+            >
+            <span class="code-wrap">});</span>
+            <br />
+            <span class="code-wrap">// * second input change handler</span>
+            <span class="code-wrap"
+              >secondInput.addEventListener("change", (e) => {</span
+            >
+            <span class="code-wrap"> secondColor = e.target.value;</span>
+            <span class="code-wrap">
+              secondColorLabel.textContent = e.target.value;</span
+            >
+            <span class="code-wrap">
+              secondColorLabel.style.color = `${e.target.value}`;</span
+            >
+            <span class="code-wrap">});</span>
+            <br />
+            <span class="code-wrap">// * directions input change handler</span>
+            <span class="code-wrap">directions.forEach((item) => {</span>
+            <span class="code-wrap">
+              item.addEventListener("click", (direct) => {</span
+            >
+            <span class="code-wrap">
+              rotation = direct.target.dataset.rotate;</span
+            >
+            <span class="code-wrap"> });</span>
+            <span class="code-wrap">});</span>
+            <br />
+            <span class="code-wrap"
+              >// todo check the color and direction to style body</span
+            >
+            <br />
+            <span class="code-wrap"
+              >generateButton.addEventListener("click", () => {</span
+            >
+            <span class="code-wrap">
+              if (firstColor != null && secondColor != null) {</span
+            >
+            <span class="code-wrap">
+              document.body.style = `background-image:
+              linear-gradient(${rotation}, ${firstColor} ,
+              ${secondColor});`;</span
+            >
+            <span class="code-wrap">
+              styleArea.textContent = `background-image:
+              linear-gradient(${rotation}, ${firstColor} ,
+              ${secondColor});`;</span
+            >
+            <span class="code-wrap">
+              generateButton.textContent = "Color Generated";</span
+            >
+            <span class="code-wrap">
+              generateButton.style.backgroundColor = "green";</span
+            >
+            <span class="code-wrap"> } else {</span>
+            <span class="code-wrap">
+              generateButton.textContent = "Select Colors";</span
+            >
+            <span class="code-wrap">
+              generateButton.style.backgroundColor = "red";</span
+            >
+            <span class="code-wrap"> }</span>
+            <span class="code-wrap">});</span>
+            <br />
+            <span class="code-wrap">// ? copy button click handler</span>
+            <span class="code-wrap"
+              >copyButton.addEventListener("click", () => {</span
+            >
+            <span class="code-wrap"> if (styleArea.innerHTML != "") {</span>
+            <span class="code-wrap">
+              navigator.clipboard.writeText(styleArea.innerHTML);</span
+            >
+            <span class="code-wrap"> copyButton.textContent = "Copied";</span>
+            <span class="code-wrap">
+              copyButton.style.backgroundColor = "green";</span
+            >
+            <span class="code-wrap"> } else {</span>
+            <span class="code-wrap">
+              copyButton.textContent = "Generate Gradient";</span
+            >
+            <span class="code-wrap">
+              copyButton.style.backgroundColor = "red";</span
+            >
+            <span class="code-wrap"> }</span>
+            <span class="code-wrap">});</span>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
+
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="GradientGenerator.js"></script>
     <script src="../../../js/codeFinder.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>

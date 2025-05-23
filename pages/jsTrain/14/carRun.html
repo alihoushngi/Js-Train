@@ -1,85 +1,184 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>حرکت ماشین با جاوااسکریپت</title>
-</head>
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
 
-<body class="cl-body">
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
     <h1 class="title">حرکت ماشین با جاوااسکریپت</h1>
-    <section class="cl-wrapper">
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۱۴</span>
-                    <h2 class="train-question">حرکت ماشین</h2>
-                </div>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۱۴</span>
+              <h2 class="train-question">حرکت ماشین</h2>
             </div>
-            <section class="carRun">
-                <div class="carRun-Road"></div>
-                <div class="carRun-car-wrapper">
-                    <img src="./assets/car-light.png" alt="myCar" width="250" class="carRun-car-image">
-                </div>
-            </section>
-            <div class="carRun-Hint">
-                <span>Press Enter to start</span>
-                <span>Press Space to turn off or on light</span>
+          </div>
+          <section class="carRun">
+            <div class="carRun-Road"></div>
+            <div class="carRun-car-wrapper">
+              <img
+                src="./assets/car-light.png"
+                alt="myCar"
+                width="250"
+                class="carRun-car-image"
+              />
             </div>
-            <div class="code-wrapper">
-                <span class="code-wrap">// ? get elements from dom</span>
-                <span class="code-wrap">const $ = document;</span>
-                <span class="code-wrap">const road = $.querySelector(".carRun-Road");</span>
-                <span class="code-wrap">const carWrapper = $.querySelector(".carRun-car-wrapper");</span>
-                <span class="code-wrap">const car = $.querySelector(".carRun-car-image");</span>
-                <br />
-                <span class="code-wrap">// ! flag for start and end moving</span>
-                <span class="code-wrap">let move = false;</span>
-                <br />
-                <span class="code-wrap">// todo flag for turn on and off lights</span>
-                <span class="code-wrap">let light = false;</span>
-                <br />
-                <span class="code-wrap">document.addEventListener("keypress", (e) => {</span>
-                <span class="code-wrap"> // * control move</span>
-                <span class="code-wrap"> if (e.key == "Enter" && !move) {</span>
-                <span class="code-wrap"> move = true;</span>
-                <span class="code-wrap"> road.style.animation = "road 4s linear infinite";</span>
-                <span class="code-wrap"> carWrapper.style.animation = "car 1s linear infinite";</span>
-                <span class="code-wrap"> } else if (e.key == "Enter" && move) {</span>
-                <span class="code-wrap"> move = false;</span>
-                <span class="code-wrap"> road.style.animation = "unset";</span>
-                <span class="code-wrap"> carWrapper.style.animation = "unset";</span>
-                <span class="code-wrap"> }</span>
-                <span class="code-wrap"> // * control light</span>
-                <span class="code-wrap"> if (e.key == "l" && !light) {</span>
-                <span class="code-wrap"> light = true;</span>
-                <span class="code-wrap"> car.src = "./assets/car.png";</span>
-                <span class="code-wrap"> car.width = "155";</span>
-                <span class="code-wrap"> } else if (e.key == "l" && light) {</span>
-                <span class="code-wrap"> light = false;</span>
-                <span class="code-wrap"> car.src = "./assets/car-light.png";</span>
-                <span class="code-wrap"> car.width = "250";</span>
-                <span class="code-wrap"> }</span>
-                <span class="code-wrap">});</span>
-            </div>
+          </section>
+          <div class="carRun-Hint">
+            <span>Press Enter to start</span>
+            <span>Press Space to turn off or on light</span>
+          </div>
+          <div class="code-wrapper">
+            <span class="code-wrap">// ? get elements from dom</span>
+            <span class="code-wrap">const $ = document;</span>
+            <span class="code-wrap"
+              >const road = $.querySelector(".carRun-Road");</span
+            >
+            <span class="code-wrap"
+              >const carWrapper = $.querySelector(".carRun-car-wrapper");</span
+            >
+            <span class="code-wrap"
+              >const car = $.querySelector(".carRun-car-image");</span
+            >
+            <br />
+            <span class="code-wrap">// ! flag for start and end moving</span>
+            <span class="code-wrap">let move = false;</span>
+            <br />
+            <span class="code-wrap"
+              >// todo flag for turn on and off lights</span
+            >
+            <span class="code-wrap">let light = false;</span>
+            <br />
+            <span class="code-wrap"
+              >document.addEventListener("keypress", (e) => {</span
+            >
+            <span class="code-wrap"> // * control move</span>
+            <span class="code-wrap"> if (e.key == "Enter" && !move) {</span>
+            <span class="code-wrap"> move = true;</span>
+            <span class="code-wrap">
+              road.style.animation = "road 4s linear infinite";</span
+            >
+            <span class="code-wrap">
+              carWrapper.style.animation = "car 1s linear infinite";</span
+            >
+            <span class="code-wrap">
+              } else if (e.key == "Enter" && move) {</span
+            >
+            <span class="code-wrap"> move = false;</span>
+            <span class="code-wrap"> road.style.animation = "unset";</span>
+            <span class="code-wrap">
+              carWrapper.style.animation = "unset";</span
+            >
+            <span class="code-wrap"> }</span>
+            <span class="code-wrap"> // * control light</span>
+            <span class="code-wrap"> if (e.key == "l" && !light) {</span>
+            <span class="code-wrap"> light = true;</span>
+            <span class="code-wrap"> car.src = "./assets/car.png";</span>
+            <span class="code-wrap"> car.width = "155";</span>
+            <span class="code-wrap"> } else if (e.key == "l" && light) {</span>
+            <span class="code-wrap"> light = false;</span>
+            <span class="code-wrap"> car.src = "./assets/car-light.png";</span>
+            <span class="code-wrap"> car.width = "250";</span>
+            <span class="code-wrap"> }</span>
+            <span class="code-wrap">});</span>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
+
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="carRun.js"></script>
     <script src="../../../js/codeFinder.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>

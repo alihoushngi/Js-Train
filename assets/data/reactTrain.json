@@ -5,5 +5,12 @@
     "link": "/pages/React/TodoPage/Todo.html",
     "category": "React JS",
     "imageUrl": "../../assets/images/react.png"
+  },
+  {
+    "englandTitle": "Todo List with Redux and Redux-Toolkit",
+    "persianTitle": "لیست وظایف با ریداکس",
+    "link": "/pages/React/TodoWithReduxPage/TodoWithRedux.html",
+    "category": "React JS",
+    "imageUrl": "../../assets/images/react.png"
   }
 ]

@@ -1,123 +1,284 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- توضیحات صفحه برای سئو -->
-    <meta name="description"
-        content="آموزش نحوه ساخت منوی کناری با استفاده از جاوااسکریپت، HTML و CSS. این صفحه شامل کد منبع و توضیحات درباره نحوه پیاده‌سازی منوی کناری و نحوه عملکرد آن است.">
+    <meta
+      name="description"
+      content="آموزش نحوه ساخت منوی کناری با استفاده از جاوااسکریپت، HTML و CSS. این صفحه شامل کد منبع و توضیحات درباره نحوه پیاده‌سازی منوی کناری و نحوه عملکرد آن است."
+    />
 
     <!-- کلمات کلیدی برای جستجو -->
-    <meta name="keywords"
-        content="منو کناری, جاوااسکریپت, HTML, CSS, منوی جانبی, آموزش جاوااسکریپت, طراحی وب, رابط کاربری">
+    <meta
+      name="keywords"
+      content="منو کناری, جاوااسکریپت, HTML, CSS, منوی جانبی, آموزش جاوااسکریپت, طراحی وب, رابط کاربری"
+    />
 
     <!-- نویسنده صفحه -->
-    <meta name="author" content="علی هوشنگی">
+    <meta name="author" content="علی هوشنگی" />
 
     <!-- Open Graph meta tags برای بهبود نمایش در شبکه‌های اجتماعی -->
-    <meta property="og:title" content="منو کناری با جاوااسکریپت">
-    <meta property="og:description"
-        content="یاد بگیرید چگونه با استفاده از جاوااسکریپت، HTML و CSS یک منوی کناری بسازید که می‌تواند برای نمایش لینک‌های مختلف در وب‌سایت استفاده شود.">
-    <meta property="og:image" content="https://alihoushangi.ir/assets/images/corner-menu-preview.png">
-    <meta property="og:url" content="https://alihoushangi.ir/pages/jsTrain/corner-menu.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="تمرینات علی هوشنگی">
-    <meta property="og:locale" content="fa_IR">
+    <meta property="og:title" content="منو کناری با جاوااسکریپت" />
+    <meta
+      property="og:description"
+      content="یاد بگیرید چگونه با استفاده از جاوااسکریپت، HTML و CSS یک منوی کناری بسازید که می‌تواند برای نمایش لینک‌های مختلف در وب‌سایت استفاده شود."
+    />
+    <meta
+      property="og:image"
+      content="https://alihoushangi.ir/assets/images/corner-menu-preview.png"
+    />
+    <meta
+      property="og:url"
+      content="https://alihoushangi.ir/pages/jsTrain/corner-menu.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="تمرینات علی هوشنگی" />
+    <meta property="og:locale" content="fa_IR" />
 
     <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="منو کناری با جاوااسکریپت">
-    <meta name="twitter:description"
-        content="آموزش ساخت منوی کناری با جاوااسکریپت و CSS. شامل کد و توضیحات برای پیاده‌سازی منوی جانبی و نحوه عملکرد آن.">
-    <meta name="twitter:image" content="https://alihoushangi.ir/assets/images/corner-menu-preview.png">
-    <meta name="twitter:site" content="@alihoushangii">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="منو کناری با جاوااسکریپت" />
+    <meta
+      name="twitter:description"
+      content="آموزش ساخت منوی کناری با جاوااسکریپت و CSS. شامل کد و توضیحات برای پیاده‌سازی منوی جانبی و نحوه عملکرد آن."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alihoushangi.ir/assets/images/corner-menu-preview.png"
+    />
+    <meta name="twitter:site" content="@alihoushangii" />
 
     <!-- لینک canonical -->
-    <link rel="canonical" href="https://alihoushangi.ir/pages/jsTrain/corner-menu.html">
+    <link
+      rel="canonical"
+      href="https://alihoushangi.ir/pages/jsTrain/corner-menu.html"
+    />
 
     <!-- عنوان صفحه -->
     <title>منو کناری با جاوااسکریپت - آموزش طراحی منوی جانبی</title>
 
     <!-- استایل‌های CSS -->
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
 
-<body class="cl-body">
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
     <h1 class="title">منو کناری با جاوااسکریپت</h1>
-    <section class="cl-wrapper">
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۹</span>
-                    <h2 class="train-question">منو کناری</h2>
-                </div>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۹</span>
+              <h2 class="train-question">منو کناری</h2>
             </div>
-            <section class="corner-menu">
-                <a href="tel:09115447316" class="corner-menu-item" id="phone">
-                    <img src="./assets/phone.png" alt="phone" class="corner-menu-item-image">
-                </a>
-                <a href="mailto:blumy.info@gmail.com" class="corner-menu-item" id="email">
-                    <img src="./assets/email.png" alt="email" class="corner-menu-item-image">
-                </a>
-                <a href="https://wa.me/+989115447316" class="corner-menu-item" id="whatsapp">
-                    <img src="./assets/whatsapp.png" alt="whatsapp" class="corner-menu-item-image">
-                </a>
-                <a href="https://t.me/+989981560306" class="corner-menu-item" id="telegram">
-                    <img src="./assets/telegram.png" alt="telegram" class="corner-menu-item-image">
-                </a>
-                <a href="https://www.linkedin.com/in/alihoushangi/" class="corner-menu-item" id="linkedin">
-                    <img src="./assets/linkedin.png" alt="linkedin" class="corner-menu-item-image">
-                </a>
-                <a href="https://github.com/alihoushngi" class="corner-menu-item" id="github">
-                    <img src="./assets/github.png" alt="github" class="corner-menu-item-image">
-                </a>
-                <button class="corner-menu-button" id="toggleButton">
-                    <img src="./assets/plus.png" alt="menu button" class="corner-menu-button-image">
-                </button>
-            </section>
-            <div class="code-wrapper">
-                <span>// ? get element from dom</span>
-                <span>const toggleButton = document.querySelector("#toggleButton");</span>
-                <span>const menuItems = document.querySelectorAll(".corner-menu a");</span>
-                <br />
-                <span>// ! create state</span>
-                <span>let isOpen = false;</span>
-                <br />
-                <span>// todo toggle control</span>
-                <span>toggleButton.addEventListener("click", () => {</span>
-                <span>isOpen = !isOpen;</span>
-                <span>if (isOpen) {</span>
-                <span>toggleButton.classList.add("toggleActive");</span>
-                <span>menuItems[0].style.transform = "translate(12px , -50px)";</span>
-                <span>menuItems[1].style.transform = "translate(48px , -35px)";</span>
-                <span>menuItems[2].style.transform = "translate(62px , 2px)";</span>
-                <span>menuItems[3].style.transform = "translate(46px , 38px)";</span>
-                <span>menuItems[4].style.transform = "translate(9px , 50px)";</span>
-                <span>menuItems[5].style.transform = "translate(-27px , 33px)";</span>
-                <span>} else {</span>
-                <span>toggleButton.classList.remove("toggleActive");</span>
-                <span>menuItems.forEach((item) => (item.style.transform = "translate(0 , 0)"));</span>
-                <span>}</span>
-                <span>}); </span>
-            </div>
+          </div>
+          <section class="corner-menu">
+            <a href="tel:09115447316" class="corner-menu-item" id="phone">
+              <img
+                src="./assets/phone.png"
+                alt="phone"
+                class="corner-menu-item-image"
+              />
+            </a>
+            <a
+              href="mailto:blumy.info@gmail.com"
+              class="corner-menu-item"
+              id="email"
+            >
+              <img
+                src="./assets/email.png"
+                alt="email"
+                class="corner-menu-item-image"
+              />
+            </a>
+            <a
+              href="https://wa.me/+989115447316"
+              class="corner-menu-item"
+              id="whatsapp"
+            >
+              <img
+                src="./assets/whatsapp.png"
+                alt="whatsapp"
+                class="corner-menu-item-image"
+              />
+            </a>
+            <a
+              href="https://t.me/+989981560306"
+              class="corner-menu-item"
+              id="telegram"
+            >
+              <img
+                src="./assets/telegram.png"
+                alt="telegram"
+                class="corner-menu-item-image"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/alihoushangi/"
+              class="corner-menu-item"
+              id="linkedin"
+            >
+              <img
+                src="./assets/linkedin.png"
+                alt="linkedin"
+                class="corner-menu-item-image"
+              />
+            </a>
+            <a
+              href="https://github.com/alihoushngi"
+              class="corner-menu-item"
+              id="github"
+            >
+              <img
+                src="./assets/github.png"
+                alt="github"
+                class="corner-menu-item-image"
+              />
+            </a>
+            <button class="corner-menu-button" id="toggleButton">
+              <img
+                src="./assets/plus.png"
+                alt="menu button"
+                class="corner-menu-button-image"
+              />
+            </button>
+          </section>
+          <div class="code-wrapper">
+            <span>// ? get element from dom</span>
+            <span
+              >const toggleButton =
+              document.querySelector("#toggleButton");</span
+            >
+            <span
+              >const menuItems = document.querySelectorAll(".corner-menu
+              a");</span
+            >
+            <br />
+            <span>// ! create state</span>
+            <span>let isOpen = false;</span>
+            <br />
+            <span>// todo toggle control</span>
+            <span>toggleButton.addEventListener("click", () => {</span>
+            <span>isOpen = !isOpen;</span>
+            <span>if (isOpen) {</span>
+            <span>toggleButton.classList.add("toggleActive");</span>
+            <span
+              >menuItems[0].style.transform = "translate(12px , -50px)";</span
+            >
+            <span
+              >menuItems[1].style.transform = "translate(48px , -35px)";</span
+            >
+            <span>menuItems[2].style.transform = "translate(62px , 2px)";</span>
+            <span
+              >menuItems[3].style.transform = "translate(46px , 38px)";</span
+            >
+            <span>menuItems[4].style.transform = "translate(9px , 50px)";</span>
+            <span
+              >menuItems[5].style.transform = "translate(-27px , 33px)";</span
+            >
+            <span>} else {</span>
+            <span>toggleButton.classList.remove("toggleActive");</span>
+            <span
+              >menuItems.forEach((item) => (item.style.transform = "translate(0
+              , 0)"));</span
+            >
+            <span>}</span>
+            <span>}); </span>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
+
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="cornerToggle.js"></script>
     <script src="../../../js/codeFinder.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,124 +1,245 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="در این صفحه، نحوه بررسی و تغییر موقعیت چشم باب اسفنجی با استفاده از جاوااسکریپت و تمرین روی فرم‌های ورودی را یاد خواهید گرفت.">
-    <meta name="keywords" content="جاوااسکریپت, بررسی موقعیت, فرم ورودی, باب اسفنجی, تمرین جاوااسکریپت">
-    <meta name="author" content="علی هوشنگی">
-    <meta property="og:title" content="بررسی محل حرف در ورودی فرم با جاوااسکریپت">
-    <meta property="og:description"
-        content="در این صفحه، نحوه بررسی و تغییر موقعیت چشم باب اسفنجی با استفاده از جاوااسکریپت و تمرین روی فرم‌های ورودی را یاد خواهید گرفت.">
-    <meta property="og:image" content="/assets/images/AliHoushangi.png">
-    <meta property="og:url" content="https://alihoushangi.ir/pages/jsTrain/bobEye.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="تمرینات علی هوشنگی">
-    <meta property="og:locale" content="fa_IR">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="بررسی محل حرف در ورودی فرم با جاوااسکریپت">
-    <meta name="twitter:description"
-        content="در این صفحه، نحوه بررسی و تغییر موقعیت چشم باب اسفنجی با استفاده از جاوااسکریپت و تمرین روی فرم‌های ورودی را یاد خواهید گرفت.">
-    <meta name="twitter:image" content="/assets/images/AliHoushangi.png">
-    <meta name="twitter:site" content="@alihoushangii">
-    <link rel="canonical" href="https://alihoushangi.ir/pages/jsTrain/bobEye.html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="در این صفحه، نحوه بررسی و تغییر موقعیت چشم باب اسفنجی با استفاده از جاوااسکریپت و تمرین روی فرم‌های ورودی را یاد خواهید گرفت."
+    />
+    <meta
+      name="keywords"
+      content="جاوااسکریپت, بررسی موقعیت, فرم ورودی, باب اسفنجی, تمرین جاوااسکریپت"
+    />
+    <meta name="author" content="علی هوشنگی" />
+    <meta
+      property="og:title"
+      content="بررسی محل حرف در ورودی فرم با جاوااسکریپت"
+    />
+    <meta
+      property="og:description"
+      content="در این صفحه، نحوه بررسی و تغییر موقعیت چشم باب اسفنجی با استفاده از جاوااسکریپت و تمرین روی فرم‌های ورودی را یاد خواهید گرفت."
+    />
+    <meta property="og:image" content="/assets/images/AliHoushangi.png" />
+    <meta
+      property="og:url"
+      content="https://alihoushangi.ir/pages/jsTrain/bobEye.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="تمرینات علی هوشنگی" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="بررسی محل حرف در ورودی فرم با جاوااسکریپت"
+    />
+    <meta
+      name="twitter:description"
+      content="در این صفحه، نحوه بررسی و تغییر موقعیت چشم باب اسفنجی با استفاده از جاوااسکریپت و تمرین روی فرم‌های ورودی را یاد خواهید گرفت."
+    />
+    <meta name="twitter:image" content="/assets/images/AliHoushangi.png" />
+    <meta name="twitter:site" content="@alihoushangii" />
+    <link
+      rel="canonical"
+      href="https://alihoushangi.ir/pages/jsTrain/bobEye.html"
+    />
     <title>بررسی محل حرف در ورودی فرم با جاوااسکریپت</title>
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
 
-<body class="cl-body">
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
     <h1 class="title">بررسی محل حرف در ورودی فرم با جاوااسکریپت</h1>
-    <section class="cl-wrapper">
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۶</span>
-                    <h2 class="train-question">چشم باب اسفنجی</h2>
-                </div>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۶</span>
+              <h2 class="train-question">چشم باب اسفنجی</h2>
             </div>
-            <div class="bob">
-                <div class="bob-face">
-                    <img src="./assets/bobno.png" alt="bob face" id="face" class="bob-face-image">
-                    <img src="./assets/eye.png" alt="bob eye" id="eye1" class="bob-face-eye bob-face-eye-first">
-                    <img src="./assets/eye.png" alt="bob eye" id="eye2" class="bob-face-eye bob-face-eye-second">
-                </div>
-                <!-- form -->
-                <form action="#" class="bob-form">
-                    <label for="userName" class="bob-form-label">نام کاربری</label>
-                    <input type="text" id="userName" name="userName" class="bob-form-input">
-                    <label for="password" class="bob-form-label">رمز عبور</label>
-                    <input type="password" id="password" name="password" class="bob-form-input">
-                    <button type="submit" class="bob-form-button">تایید</button>
-                </form>
-                <!-- form -->
+          </div>
+          <div class="bob">
+            <div class="bob-face">
+              <img
+                src="./assets/bobno.png"
+                alt="bob face"
+                id="face"
+                class="bob-face-image"
+              />
+              <img
+                src="./assets/eye.png"
+                alt="bob eye"
+                id="eye1"
+                class="bob-face-eye bob-face-eye-first"
+              />
+              <img
+                src="./assets/eye.png"
+                alt="bob eye"
+                id="eye2"
+                class="bob-face-eye bob-face-eye-second"
+              />
             </div>
+            <!-- form -->
+            <form action="#" class="bob-form">
+              <label for="userName" class="bob-form-label">نام کاربری</label>
+              <input
+                type="text"
+                id="userName"
+                name="userName"
+                class="bob-form-input"
+              />
+              <label for="password" class="bob-form-label">رمز عبور</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="bob-form-input"
+              />
+              <button type="submit" class="bob-form-button">تایید</button>
+            </form>
+            <!-- form -->
+          </div>
 
-            <div class="code-wrapper">
-                <span>// ! get eyes from dom</span>
-                <span>const firstEye = document.querySelector("#eye1");</span>
-                <span>const secondEye = document.querySelector("#eye2");</span>
-                <br />
-                <span>// ? get inputs from form</span>
-                <span>const userName = document.querySelector("#userName");</span>
-                <span>const password = document.querySelector("#password");</span>
-                <br />
-                <span>// * username focus and blur</span>
-                <span>userName.addEventListener("focus", () => {</span>
-                <span>firstEye.style.paddingTop = "1rem";</span>
-                <span>secondEye.style.paddingTop = "1rem";</span>
-                <span>firstEye.style.left = "100px";</span>
-                <span>secondEye.style.left = "180px";</span>
-                <span>});</span>
-                <br />
-                <span>userName.addEventListener("blur", () => {</span>
-                <span>firstEye.style.paddingTop = "0";</span>
-                <span>secondEye.style.paddingTop = "0";</span>
-                <span>firstEye.style.left = "75px";</span>
-                <span>secondEye.style.left = "170px";</span>
-                <span>});</span>
-                <br />
-                <span>// * password focus and blur</span>
-                <span>password.addEventListener("focus", () => {</span>
-                <span>firstEye.style.top = "75px";</span>
-                <span>secondEye.style.top = "75px";</span>
-                <span>});</span>
-                <br />
-                <span>password.addEventListener("blur", () => {</span>
-                <span>firstEye.style.top = "95px";</span>
-                <span>secondEye.style.top = "95px";</span>
-                <span>});</span>
-                <br />
-                <span>// ? event listener for when input have value</span>
-                <span>userName.addEventListener("input", (e) => {</span>
-                <span>const inputBox = e.target.value;</span>
-                <span>let firstEyePosition = 100;</span>
-                <span>let secondEyePosition = 180;</span>
-                <span>for (let i = 0; i < inputBox.length; i++) {</span>
-                        <span>firstEyePosition -= 1;</span>
-                        <span>secondEyePosition -= 1;</span>
-                        <span>firstEye.style.left = `${firstEyePosition}px`;</span>
-                        <span>secondEye.style.left = `${secondEyePosition}px`;</span>
-                        <span>}</span>
-                        <span>});</span>
-            </div>
+          <div class="code-wrapper">
+            <span>// ! get eyes from dom</span>
+            <span>const firstEye = document.querySelector("#eye1");</span>
+            <span>const secondEye = document.querySelector("#eye2");</span>
+            <br />
+            <span>// ? get inputs from form</span>
+            <span>const userName = document.querySelector("#userName");</span>
+            <span>const password = document.querySelector("#password");</span>
+            <br />
+            <span>// * username focus and blur</span>
+            <span>userName.addEventListener("focus", () => {</span>
+            <span>firstEye.style.paddingTop = "1rem";</span>
+            <span>secondEye.style.paddingTop = "1rem";</span>
+            <span>firstEye.style.left = "100px";</span>
+            <span>secondEye.style.left = "180px";</span>
+            <span>});</span>
+            <br />
+            <span>userName.addEventListener("blur", () => {</span>
+            <span>firstEye.style.paddingTop = "0";</span>
+            <span>secondEye.style.paddingTop = "0";</span>
+            <span>firstEye.style.left = "75px";</span>
+            <span>secondEye.style.left = "170px";</span>
+            <span>});</span>
+            <br />
+            <span>// * password focus and blur</span>
+            <span>password.addEventListener("focus", () => {</span>
+            <span>firstEye.style.top = "75px";</span>
+            <span>secondEye.style.top = "75px";</span>
+            <span>});</span>
+            <br />
+            <span>password.addEventListener("blur", () => {</span>
+            <span>firstEye.style.top = "95px";</span>
+            <span>secondEye.style.top = "95px";</span>
+            <span>});</span>
+            <br />
+            <span>// ? event listener for when input have value</span>
+            <span>userName.addEventListener("input", (e) => {</span>
+            <span>const inputBox = e.target.value;</span>
+            <span>let firstEyePosition = 100;</span>
+            <span>let secondEyePosition = 180;</span>
+            <span>for (let i = 0; i < inputBox.length; i++) {</span>
+            <span>firstEyePosition -= 1;</span>
+            <span>secondEyePosition -= 1;</span>
+            <span>firstEye.style.left = `${firstEyePosition}px`;</span>
+            <span>secondEye.style.left = `${secondEyePosition}px`;</span>
+            <span>}</span>
+            <span>});</span>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="../../../js/codeFinder.js"></script>
     <script src="bobEye.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>

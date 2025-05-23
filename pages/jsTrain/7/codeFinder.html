@@ -1,151 +1,342 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="در این صفحه، نحوه پیدا کردن و برجسته‌سازی حالت‌های مختلف کد با استفاده از جاوااسکریپت را بررسی می‌کنیم.">
-    <meta name="keywords" content="جاوااسکریپت, پیدا کردن کد, برجسته‌سازی کد, تمرین جاوااسکریپت">
-    <meta name="author" content="علی هوشنگی">
-    <meta property="og:title" content="پیدا کردن حالت کد نویسی با جاوااسکریپت">
-    <meta property="og:description"
-        content="در این صفحه، نحوه پیدا کردن و برجسته‌سازی حالت‌های مختلف کد با استفاده از جاوااسکریپت را بررسی می‌کنیم.">
-    <meta property="og:image" content="/assets/images/AliHoushangi.png">
-    <meta property="og:url" content="https://alihoushangi.ir/pages/jsTrain/codeHighlight.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="تمرینات علی هوشنگی">
-    <meta property="og:locale" content="fa_IR">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="پیدا کردن حالت کد نویسی با جاوااسکریپت">
-    <meta name="twitter:description"
-        content="در این صفحه، نحوه پیدا کردن و برجسته‌سازی حالت‌های مختلف کد با استفاده از جاوااسکریپت را بررسی می‌کنیم.">
-    <meta name="twitter:image" content="/assets/images/AliHoushangi.png">
-    <meta name="twitter:site" content="@alihoushangii">
-    <link rel="canonical" href="https://alihoushangi.ir/pages/jsTrain/codeHighlight.html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="در این صفحه، نحوه پیدا کردن و برجسته‌سازی حالت‌های مختلف کد با استفاده از جاوااسکریپت را بررسی می‌کنیم."
+    />
+    <meta
+      name="keywords"
+      content="جاوااسکریپت, پیدا کردن کد, برجسته‌سازی کد, تمرین جاوااسکریپت"
+    />
+    <meta name="author" content="علی هوشنگی" />
+    <meta
+      property="og:title"
+      content="پیدا کردن حالت کد نویسی با جاوااسکریپت"
+    />
+    <meta
+      property="og:description"
+      content="در این صفحه، نحوه پیدا کردن و برجسته‌سازی حالت‌های مختلف کد با استفاده از جاوااسکریپت را بررسی می‌کنیم."
+    />
+    <meta property="og:image" content="/assets/images/AliHoushangi.png" />
+    <meta
+      property="og:url"
+      content="https://alihoushangi.ir/pages/jsTrain/codeHighlight.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="تمرینات علی هوشنگی" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="پیدا کردن حالت کد نویسی با جاوااسکریپت"
+    />
+    <meta
+      name="twitter:description"
+      content="در این صفحه، نحوه پیدا کردن و برجسته‌سازی حالت‌های مختلف کد با استفاده از جاوااسکریپت را بررسی می‌کنیم."
+    />
+    <meta name="twitter:image" content="/assets/images/AliHoushangi.png" />
+    <meta name="twitter:site" content="@alihoushangii" />
+    <link
+      rel="canonical"
+      href="https://alihoushangi.ir/pages/jsTrain/codeHighlight.html"
+    />
     <title>پیدا کردن حالت کد نویسی با جاوااسکریپت</title>
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
 
-<body class="cl-body">
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
     <h1 class="title">پیدا کردن حالت کد نویسی با جاوااسکریپت</h1>
-    <section class="cl-wrapper">
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۷</span>
-                    <h2 class="train-question">پیدا کننده حالت کدنویسی</h2>
-                </div>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۷</span>
+              <h2 class="train-question">پیدا کننده حالت کدنویسی</h2>
             </div>
-            <div class="code-wrapper">
-                <span>// * find the code wrappers</span>
-                <span>// ! get code wrapper section from any component or html file</span>
-                <span>const codeWrappers = document.querySelectorAll(".code-wrapper");</span>
-                <br />
-                <span>// ? create array of codes for analyze</span>
-                <span>const data = Array.from(codeWrappers);</span>
-                <br />
-                <span>// todo regex's for search and find some words</span>
-                <span>const variableRegex = /\b(const|var|let|if|else|null|=>)\b/g;</span>
-                <span>const bracketRegex = /(\[\]|\(\))/g;</span>
-                <span>const numberRegex = /\d+/g;</span>
-                <br />
-                <span>// ! map on data</span>
-                <span>data.forEach((data) => {</span>
-                <span style="padding-left: 10px;">const items = Array.from(data.children);</span>
-                <span style="padding-left: 10px;">// conditional for any attribute to set up color</span>
-                <span style="padding-left: 20px;">items.forEach((tags) => {</span>
-                <span style="padding-left: 30px;">if (tags.innerHTML.includes("//")) {</span>
-                <span style="padding-left: 40px;">tags.classList.add("code-comment");</span>
-                <span style="padding-left: 30px;">}</span>
-                <span style="padding-left: 30px;">if (tags.innerHTML.includes("// *")) {</span>
-                <span style="padding-left: 40px;">tags.classList.add("code-comment-star");</span>
-                <span style="padding-left: 30px;">}</span>
-                <span style="padding-left: 30px;">if (tags.innerHTML.includes("// !")) {</span>
-                <span style="padding-left: 40px;">tags.classList.add("code-comment-red");</span>
-                <span style="padding-left: 30px;">}</span>
-                <span style="padding-left: 30px;">if (tags.innerHTML.includes("// ?")) {</span>
-                <span style="padding-left: 40px;">tags.classList.add("code-comment-blue");</span>
-                <span style="padding-left: 30px;">}</span>
-                <span style="padding-left: 30px;">if (tags.innerHTML.includes("// todo")) {</span>
-                <span style="padding-left: 40px;">tags.classList.add("code-comment-yellow");</span>
-                <span style="padding-left: 30px;">}</span>
-                <span style="padding-left: 30px;">if (</span>
-                <span style="padding-left: 40px;">tags.innerHTML.includes("const") ||</span>
-                <span style="padding-left: 40px;">tags.innerHTML.includes("var") ||</span>
-                <span style="padding-left: 40px;">tags.innerHTML.includes("let") ||</span>
-                <span style="padding-left: 40px;">tags.innerHTML.includes("if") ||</span>
-                <span style="padding-left: 40px;">tags.innerHTML.includes("else") ||</span>
-                <span style="padding-left: 40px;">tags.innerHTML.includes("null") ||</span>
-                <span style="padding-left: 40px;">tags.innerHTML.includes("=>")</span>
-                <span style="padding-left: 30px;">) {</span>
-                <span style="padding-left: 40px;">const variables = tags.innerHTML.replace(</span>
-                <span style="padding-left: 50px;">variableRegex,</span>
-                <span style="padding-left: 50px;">"< span class='code-variable'>$&< /span>"</span>
-                <span style="padding-left: 40px;">);</span>
-                <span style="padding-left: 50px;">tags.innerHTML = variables;</span>
-                <span style="padding-left: 40px;">}</span>
-                <span style="padding-left: 40px;">if (</span>
-                <span style="padding-left: 50px;">tags.innerHTML.includes("[") ||</span>
-                <span style="padding-left: 50px;">tags.innerHTML.includes("]") ||</span>
-                <span style="padding-left: 50px;">tags.innerHTML.includes("(") ||</span>
-                <span style="padding-left: 50px;">tags.innerHTML.includes(")")</span>
-                <span style="padding-left: 40px;">) {</span>
-                <span style="padding-left: 40px;">if (tags.innerHTML.includes("[")) {</span>
-                <span style="padding-left: 50px;">const leftBrackets = tags.innerHTML.replace(</span>
-                <span style="padding-left: 60px;">/\[/g,</span>
-                <span style="padding-left: 60px;">"< span class='code-arrayBracket'>[< /span>"</span>
-                <span style="padding-left: 50px;">);</span>
-                <span style="padding-left: 50px;">tags.innerHTML = leftBrackets;</span>
-                <span style="padding-left: 40px;">}</span>
-                <span style="padding-left: 40px;">if (tags.innerHTML.includes("]")) {</span>
-                <span style="padding-left: 50px;">const rightBrackets = tags.innerHTML.replace(</span>
-                <span style="padding-left: 60px;">/\]/g,</span>
-                <span style="padding-left: 60px;">"< span class='code-arrayBracket'>]< /span>"</span>
-                <span style="padding-left: 50px;">);</span>
-                <span style="padding-left: 50px;">tags.innerHTML = rightBrackets;</span>
-                <span style="padding-left: 40px;">}</span>
-                <span style="padding-left: 40px;">if (tags.innerHTML.includes("(")) {</span>
-                <span style="padding-left: 50px;"> const leftParentheses = tags.innerHTML.replace(</span>
-                <span style="padding-left: 60px;">/\(/g,</span>
-                <span style="padding-left: 60px;">"< span class='code-parentheses'>(< /span>"</span>
-                <span style="padding-left: 50px;">);</span>
-                <span style="padding-left: 50px;">tags.innerHTML = leftParentheses;</span>
-                <span style="padding-left: 40px;">}</span>
-                <span style="padding-left: 40px;">if (tags.innerHTML.includes(")")) {</span>
-                <span style="padding-left: 50px;">const rightParentheses = tags.innerHTML.replace(</span>
-                <span style="padding-left: 60px;">/\)/g,</span>
-                <span style="padding-left: 60px;">"< span class='code-parentheses'>)< /span>"</span>
-                <span style="padding-left: 50px;">);</span>
-                <span style="padding-left: 50px;">tags.innerHTML = rightParentheses;</span>
-                <span style="padding-left: 50px;">}</span>
-                <span style="padding-left: 40px;">}</span>
-                <span style="padding-left: 40px;">if (numberRegex.test(tags.innerHTML)) {</span>
-                <span style="padding-left: 50px;">const numbers = tags.innerHTML.replace(</span>
-                <span style="padding-left: 60px;">numberRegex,</span>
-                <span style="padding-left: 60px;">" < span class='code-number'>$&< /span> "</span>
-                <span style="padding-left: 50px;">);</span>
-                <span style="padding-left: 50px;">tags.innerHTML = numbers;</span>
-                <span style="padding-left: 40px;">}</span>
-                <span style="padding-left: 10px;">});</span>
-                <span>});</span>
-            </div>
+          </div>
+          <div class="code-wrapper">
+            <span>// * find the code wrappers</span>
+            <span
+              >// ! get code wrapper section from any component or html
+              file</span
+            >
+            <span
+              >const codeWrappers =
+              document.querySelectorAll(".code-wrapper");</span
+            >
+            <br />
+            <span>// ? create array of codes for analyze</span>
+            <span>const data = Array.from(codeWrappers);</span>
+            <br />
+            <span>// todo regex's for search and find some words</span>
+            <span
+              >const variableRegex =
+              /\b(const|var|let|if|else|null|=>)\b/g;</span
+            >
+            <span>const bracketRegex = /(\[\]|\(\))/g;</span>
+            <span>const numberRegex = /\d+/g;</span>
+            <br />
+            <span>// ! map on data</span>
+            <span>data.forEach((data) => {</span>
+            <span style="padding-left: 10px"
+              >const items = Array.from(data.children);</span
+            >
+            <span style="padding-left: 10px"
+              >// conditional for any attribute to set up color</span
+            >
+            <span style="padding-left: 20px">items.forEach((tags) => {</span>
+            <span style="padding-left: 30px"
+              >if (tags.innerHTML.includes("//")) {</span
+            >
+            <span style="padding-left: 40px"
+              >tags.classList.add("code-comment");</span
+            >
+            <span style="padding-left: 30px">}</span>
+            <span style="padding-left: 30px"
+              >if (tags.innerHTML.includes("// *")) {</span
+            >
+            <span style="padding-left: 40px"
+              >tags.classList.add("code-comment-star");</span
+            >
+            <span style="padding-left: 30px">}</span>
+            <span style="padding-left: 30px"
+              >if (tags.innerHTML.includes("// !")) {</span
+            >
+            <span style="padding-left: 40px"
+              >tags.classList.add("code-comment-red");</span
+            >
+            <span style="padding-left: 30px">}</span>
+            <span style="padding-left: 30px"
+              >if (tags.innerHTML.includes("// ?")) {</span
+            >
+            <span style="padding-left: 40px"
+              >tags.classList.add("code-comment-blue");</span
+            >
+            <span style="padding-left: 30px">}</span>
+            <span style="padding-left: 30px"
+              >if (tags.innerHTML.includes("// todo")) {</span
+            >
+            <span style="padding-left: 40px"
+              >tags.classList.add("code-comment-yellow");</span
+            >
+            <span style="padding-left: 30px">}</span>
+            <span style="padding-left: 30px">if (</span>
+            <span style="padding-left: 40px"
+              >tags.innerHTML.includes("const") ||</span
+            >
+            <span style="padding-left: 40px"
+              >tags.innerHTML.includes("var") ||</span
+            >
+            <span style="padding-left: 40px"
+              >tags.innerHTML.includes("let") ||</span
+            >
+            <span style="padding-left: 40px"
+              >tags.innerHTML.includes("if") ||</span
+            >
+            <span style="padding-left: 40px"
+              >tags.innerHTML.includes("else") ||</span
+            >
+            <span style="padding-left: 40px"
+              >tags.innerHTML.includes("null") ||</span
+            >
+            <span style="padding-left: 40px"
+              >tags.innerHTML.includes("=>")</span
+            >
+            <span style="padding-left: 30px">) {</span>
+            <span style="padding-left: 40px"
+              >const variables = tags.innerHTML.replace(</span
+            >
+            <span style="padding-left: 50px">variableRegex,</span>
+            <span style="padding-left: 50px"
+              >"< span class='code-variable'>$&< /span>"</span
+            >
+            <span style="padding-left: 40px">);</span>
+            <span style="padding-left: 50px">tags.innerHTML = variables;</span>
+            <span style="padding-left: 40px">}</span>
+            <span style="padding-left: 40px">if (</span>
+            <span style="padding-left: 50px"
+              >tags.innerHTML.includes("[") ||</span
+            >
+            <span style="padding-left: 50px"
+              >tags.innerHTML.includes("]") ||</span
+            >
+            <span style="padding-left: 50px"
+              >tags.innerHTML.includes("(") ||</span
+            >
+            <span style="padding-left: 50px">tags.innerHTML.includes(")")</span>
+            <span style="padding-left: 40px">) {</span>
+            <span style="padding-left: 40px"
+              >if (tags.innerHTML.includes("[")) {</span
+            >
+            <span style="padding-left: 50px"
+              >const leftBrackets = tags.innerHTML.replace(</span
+            >
+            <span style="padding-left: 60px">/\[/g,</span>
+            <span style="padding-left: 60px"
+              >"< span class='code-arrayBracket'>[< /span>"</span
+            >
+            <span style="padding-left: 50px">);</span>
+            <span style="padding-left: 50px"
+              >tags.innerHTML = leftBrackets;</span
+            >
+            <span style="padding-left: 40px">}</span>
+            <span style="padding-left: 40px"
+              >if (tags.innerHTML.includes("]")) {</span
+            >
+            <span style="padding-left: 50px"
+              >const rightBrackets = tags.innerHTML.replace(</span
+            >
+            <span style="padding-left: 60px">/\]/g,</span>
+            <span style="padding-left: 60px"
+              >"< span class='code-arrayBracket'>]< /span>"</span
+            >
+            <span style="padding-left: 50px">);</span>
+            <span style="padding-left: 50px"
+              >tags.innerHTML = rightBrackets;</span
+            >
+            <span style="padding-left: 40px">}</span>
+            <span style="padding-left: 40px"
+              >if (tags.innerHTML.includes("(")) {</span
+            >
+            <span style="padding-left: 50px">
+              const leftParentheses = tags.innerHTML.replace(</span
+            >
+            <span style="padding-left: 60px">/\(/g,</span>
+            <span style="padding-left: 60px"
+              >"< span class='code-parentheses'>(< /span>"</span
+            >
+            <span style="padding-left: 50px">);</span>
+            <span style="padding-left: 50px"
+              >tags.innerHTML = leftParentheses;</span
+            >
+            <span style="padding-left: 40px">}</span>
+            <span style="padding-left: 40px"
+              >if (tags.innerHTML.includes(")")) {</span
+            >
+            <span style="padding-left: 50px"
+              >const rightParentheses = tags.innerHTML.replace(</span
+            >
+            <span style="padding-left: 60px">/\)/g,</span>
+            <span style="padding-left: 60px"
+              >"< span class='code-parentheses'>)< /span>"</span
+            >
+            <span style="padding-left: 50px">);</span>
+            <span style="padding-left: 50px"
+              >tags.innerHTML = rightParentheses;</span
+            >
+            <span style="padding-left: 50px">}</span>
+            <span style="padding-left: 40px">}</span>
+            <span style="padding-left: 40px"
+              >if (numberRegex.test(tags.innerHTML)) {</span
+            >
+            <span style="padding-left: 50px"
+              >const numbers = tags.innerHTML.replace(</span
+            >
+            <span style="padding-left: 60px">numberRegex,</span>
+            <span style="padding-left: 60px"
+              >" < span class='code-number'>$&< /span> "</span
+            >
+            <span style="padding-left: 50px">);</span>
+            <span style="padding-left: 50px">tags.innerHTML = numbers;</span>
+            <span style="padding-left: 40px">}</span>
+            <span style="padding-left: 10px">});</span>
+            <span>});</span>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="../../../js/codeFinder.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>

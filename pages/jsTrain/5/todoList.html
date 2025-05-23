@@ -1,186 +1,400 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="در این صفحه، شما می‌توانید لیست برنامه‌های روزانه خود را با استفاده از جاوااسکریپت مدیریت کنید. فرم ورودی برای اضافه کردن برنامه‌ها به لیست و نمایش آن‌ها به همراه قابلیت حذف از لیست موجود است.">
-    <meta name="keywords" content="لیست برنامه‌های روزانه, جاوااسکریپت, مدیریت لیست, تمرین جاوااسکریپت, کد جاوااسکریپت">
-    <meta name="author" content="علی هوشنگی">
-    <meta property="og:title" content="لیست برنامه های روزانه در جاوا اسکریپت">
-    <meta property="og:description"
-        content="در این صفحه، شما می‌توانید لیست برنامه‌های روزانه خود را با استفاده از جاوااسکریپت مدیریت کنید. فرم ورودی برای اضافه کردن برنامه‌ها به لیست و نمایش آن‌ها به همراه قابلیت حذف از لیست موجود است.">
-    <meta property="og:image" content="/assets/images/AliHoushangi.png">
-    <meta property="og:url" content="https://alihoushangi.ir/pages/jsTrain/todoList.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="تمرینات علی هوشنگی">
-    <meta property="og:locale" content="fa_IR">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="لیست برنامه های روزانه در جاوا اسکریپت">
-    <meta name="twitter:description"
-        content="در این صفحه، شما می‌توانید لیست برنامه‌های روزانه خود را با استفاده از جاوااسکریپت مدیریت کنید. فرم ورودی برای اضافه کردن برنامه‌ها به لیست و نمایش آن‌ها به همراه قابلیت حذف از لیست موجود است.">
-    <meta name="twitter:image" content="/assets/images/AliHoushangi.png">
-    <meta name="twitter:site" content="@alihoushangii">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="در این صفحه، شما می‌توانید لیست برنامه‌های روزانه خود را با استفاده از جاوااسکریپت مدیریت کنید. فرم ورودی برای اضافه کردن برنامه‌ها به لیست و نمایش آن‌ها به همراه قابلیت حذف از لیست موجود است."
+    />
+    <meta
+      name="keywords"
+      content="لیست برنامه‌های روزانه, جاوااسکریپت, مدیریت لیست, تمرین جاوااسکریپت, کد جاوااسکریپت"
+    />
+    <meta name="author" content="علی هوشنگی" />
+    <meta
+      property="og:title"
+      content="لیست برنامه های روزانه در جاوا اسکریپت"
+    />
+    <meta
+      property="og:description"
+      content="در این صفحه، شما می‌توانید لیست برنامه‌های روزانه خود را با استفاده از جاوااسکریپت مدیریت کنید. فرم ورودی برای اضافه کردن برنامه‌ها به لیست و نمایش آن‌ها به همراه قابلیت حذف از لیست موجود است."
+    />
+    <meta property="og:image" content="/assets/images/AliHoushangi.png" />
+    <meta
+      property="og:url"
+      content="https://alihoushangi.ir/pages/jsTrain/todoList.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="تمرینات علی هوشنگی" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="لیست برنامه های روزانه در جاوا اسکریپت"
+    />
+    <meta
+      name="twitter:description"
+      content="در این صفحه، شما می‌توانید لیست برنامه‌های روزانه خود را با استفاده از جاوااسکریپت مدیریت کنید. فرم ورودی برای اضافه کردن برنامه‌ها به لیست و نمایش آن‌ها به همراه قابلیت حذف از لیست موجود است."
+    />
+    <meta name="twitter:image" content="/assets/images/AliHoushangi.png" />
+    <meta name="twitter:site" content="@alihoushangii" />
     <title>لیست برنامه های روزانه در جاوا اسکریپت</title>
-    <link rel="canonical" href="https://alihoushangi.ir/pages/jsTrain/todoList.html">
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="canonical"
+      href="https://alihoushangi.ir/pages/jsTrain/todoList.html"
+    />
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
-<body class="cl-body">
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
+
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
     <h1 class="title">لیست برنامه های روزانه در جاوا اسکریپت</h1>
-    <section class="cl-wrapper">
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۵</span>
-                    <h2 class="train-question">لیست برنامه های روزانه</h2>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۵</span>
+              <h2 class="train-question">لیست برنامه های روزانه</h2>
+            </div>
+          </div>
+          <div class="todo">
+            <h3 class="todo_title">لیست برنامه های روزانه من</h3>
+            <div class="todo_wrapper">
+              <form action="#" id="todoForm" class="todo_form">
+                <label for="todoTask" class="todo_form-label"
+                  >برنامه های خود را وارد کنید :</label
+                >
+                <textarea
+                  name="todoTask"
+                  id="todoTask"
+                  cols="30"
+                  rows="10"
+                  placeholder="do something ..."
+                  class="todo_form-textarea"
+                ></textarea>
+                <button id="submit-task" class="todo_form-button" type="submit">
+                  تایید
+                </button>
+              </form>
+              <div class="todo_form-result">
+                <h4 class="todo_form-result--title">برنامه ها</h4>
+                <div class="todo_form-result--data">
+                  <ul id="todoResult" class="todo_form-result--list"></ul>
                 </div>
+              </div>
             </div>
-            <div class="todo">
-                <h3 class="todo_title"> لیست برنامه های روزانه من</h3>
-                <div class="todo_wrapper">
-                    <form action="#" id="todoForm" class="todo_form">
-                        <label for="todoTask" class="todo_form-label">برنامه های خود را وارد کنید :</label>
-                        <textarea name="todoTask" id="todoTask" cols="30" rows="10" placeholder="do something ..."
-                            class="todo_form-textarea"></textarea>
-                        <button id="submit-task" class="todo_form-button" type="submit">تایید</button>
-                    </form>
-                    <div class="todo_form-result">
-                        <h4 class="todo_form-result--title">برنامه ها</h4>
-                        <div class="todo_form-result--data">
-                            <ul id="todoResult" class="todo_form-result--list"></ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="code-wrapper">
-                <span class="code-wrap">// todo get elements from dom</span>
-                <span class="code-wrap">const submitButton = document.querySelector(<span
-                        class="code-strings">"#submit-task"</span>);</span>
-                <span class="code-wrap">const note = document.querySelector(<span
-                        class="code-strings">"#todoForm"</span>);</span>
-                <span class="code-wrap">const inputValue = document.querySelector(<span
-                        class="code-strings">"#todoTask"</span>);</span>
-                <span class="code-wrap">const result = document.querySelector(<span
-                        class="code-strings">"#todoResult"</span>);</span>
-                <br>
-                <span class="code-wrap">// * add data to local storage</span>
-                <span class="code-wrap">const addToLocalStorage = (item) => {</span>
-                <span class="code-wrap">const notes = getNotesFromLocalStorage();</span>
-                <span class="code-wrap">notes.push(item);</span>
-                <span class="code-wrap">// * data must be added to local storage as string</span>
-                <span class="code-wrap">localStorage.setItem(<span class="code-strings">"notes"</span>,
-                    JSON.stringify(notes));</span>
-                <span class="code-wrap">};</span>
-                <br>
-                <span class="code-wrap">// ? handel data in form and append to result</span>
-                <span class="code-wrap">const formHandler = (e) => {</span>
-                <span class="code-wrap">e.preventDefault();</span>
-                <span class="code-wrap">const data = inputValue.value;</span>
-                <span class="code-wrap">const item = document.createElement(<span
-                        class="code-strings">"li"</span>);</span>
-                <span class="code-wrap">item.classList.add(<span
-                        class="code-strings">"todo_form-result--item"</span>);</span>
-                <span class="code-wrap">const removeButton = document.createElement(<span
-                        class="code-strings">"a"</span>);</span>
-                <span class="code-wrap">removeButton.classList.add(<span
-                        class="code-strings">"todo_form-result--rmvButton"</span>);</span>
-                <span class="code-wrap">removeButton.setAttribute(<span class="code-strings">"id",
-                        "removeButton"</span>);</span>
-                <span class="code-wrap">// ! append data get from user to my item</span>
-                <span class="code-wrap">item.appendChild(document.createTextNode(data));</span>
-                <span class="code-wrap">item.appendChild(removeButton);</span>
-                <span class="code-wrap">result.appendChild(item);</span>
-                <br>
-                <span class="code-wrap">// ! call add to local storage function to save data</span>
-                <span class="code-wrap">addToLocalStorage(data);</span>
-                <span class="code-wrap">inputValue.value = null;</span>
-                <span class="code-wrap">};</span>
-                <br>
-                <span class="code-wrap">//function for remove from local storage</span>
-                <span class="code-wrap">const removeFromLocalStorage = (nodeContent) => {</span>
-                <span class="code-wrap">// ? delete from local storage</span>
-                <span class="code-wrap">const noteFromLocalStorage = getNotesFromLocalStorage();</span>
-                <span class="code-wrap">noteFromLocalStorage.forEach((note, index) => {</span>
-                <span class="code-wrap">if (note === nodeContent) {</span>
-                <span class="code-wrap">console.log(index);</span>
-                <span class="code-wrap">noteFromLocalStorage.splice(index, 1);</span>
-                <span class="code-wrap">}</span>
-                <span class="code-wrap">});</span>
-                <span class="code-wrap">localStorage.setItem(<span class="code-strings">"notes"</span>,
-                    JSON.stringify(noteFromLocalStorage));</span>
-                <span class="code-wrap">};</span>
-                <br>
-                <span class="code-wrap">// ? remove button handler function for delete items</span>
-                <span class="code-wrap">const removeButtonHandler = (e) => {</span>
-                <span class="code-wrap">if (e.target.id === <span class="code-wrap">"removeButton"</span>) {</span>
-                <span class="code-wrap">e.target.parentElement.remove();</span>
-                <span class="code-wrap">}</span>
-                <span class="code-wrap">removeFromLocalStorage(e.target.parentElement.textContent);</span>
-                <span class="code-wrap">};</span>
-                <br>
-                <span class="code-wrap">// todo function for fetch data from local storage onload page</span>
-                <span class="code-wrap">const getNotesFromLocalStorage = () => {</span>
-                <span class="code-wrap">let notes;</span>
-                <span class="code-wrap">const localStorageData = localStorage.getItem(<span
-                        class="code-strings">"notes"</span>);</span>
-                <span class="code-wrap">if (localStorageData === null) {</span>
-                <span class="code-wrap">notes = [];</span>
-                <span class="code-wrap">} else {</span>
-                <span class="code-wrap">// ? data must be came back to us as array to we can map on</span>
-                <span class="code-wrap">notes = JSON.parse(localStorageData);</span>
-                <span class="code-wrap">}</span>
-                <span class="code-wrap">return notes;</span>
-                <span class="code-wrap">};</span>
-                <br>
-                <span class="code-wrap">// ! get data from local storage and print</span>
-                <span class="code-wrap">const localStorageDataLoaded = () => {</span>
-                <br>
-                <span class="code-wrap">notes.forEach((element) => {</span>
-                <span class="code-wrap">const item = document.createElement(<span
-                        class="code-strings">"li"</span>);</span>
-                <span class="code-wrap">item.classList.add(<span
-                        class="code-strings">"todo_form-result--item"</span>);</span>
-                <span class="code-wrap">const removeButton = document.createElement(<span
-                        class="code-strings">"a"</span>);</span>
-                <span class="code-wrap">removeButton.classList.add(<span
-                        class="code-strings">"todo_form-result--rmvButton"</span>);</span>
-                <span class="code-wrap">removeButton.setAttribute(<span class="code-strings">"id",
-                        "removeButton"</span>);</span>
-                <span class="code-wrap">// ! append data get from user to my item</span>
-                <span class="code-wrap">item.appendChild(document.createTextNode(data));</span>
-                <span class="code-wrap">item.appendChild(removeButton);</span>
-                <span class="code-wrap">result.appendChild(item);</span>
-                <span class="code-wrap">});</span>
-                <span class="code-wrap">};</span>
-                <span class="code-wrap">// * event listeners</span>
-                <span class="code-wrap">const eventListeners = () => {</span>
-                <span class="code-wrap">// * handel form submit event</span>
-                <span class="code-wrap">note.addEventListener("submit", formHandler);</span>
-                <span class="code-wrap">// * handel remove button event</span>
-                <span class="code-wrap">result.addEventListener("click", removeButtonHandler);</span>
-                <span class="code-wrap">// * get data from local storage when page onload</span>
-                <span class="code-wrap">document.addEventListener("DOMContentLoaded", localStorageDataLoaded);</span>
-                <span class="code-wrap">};</span>
-                <span class="code-wrap">eventListeners();</span>
-            </div>
+          </div>
+          <div class="code-wrapper">
+            <span class="code-wrap">// todo get elements from dom</span>
+            <span class="code-wrap"
+              >const submitButton = document.querySelector(<span
+                class="code-strings"
+                >"#submit-task"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >const note = document.querySelector(<span class="code-strings"
+                >"#todoForm"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >const inputValue = document.querySelector(<span
+                class="code-strings"
+                >"#todoTask"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >const result = document.querySelector(<span class="code-strings"
+                >"#todoResult"</span
+              >);</span
+            >
+            <br />
+            <span class="code-wrap">// * add data to local storage</span>
+            <span class="code-wrap">const addToLocalStorage = (item) => {</span>
+            <span class="code-wrap"
+              >const notes = getNotesFromLocalStorage();</span
+            >
+            <span class="code-wrap">notes.push(item);</span>
+            <span class="code-wrap"
+              >// * data must be added to local storage as string</span
+            >
+            <span class="code-wrap"
+              >localStorage.setItem(<span class="code-strings">"notes"</span>,
+              JSON.stringify(notes));</span
+            >
+            <span class="code-wrap">};</span>
+            <br />
+            <span class="code-wrap"
+              >// ? handel data in form and append to result</span
+            >
+            <span class="code-wrap">const formHandler = (e) => {</span>
+            <span class="code-wrap">e.preventDefault();</span>
+            <span class="code-wrap">const data = inputValue.value;</span>
+            <span class="code-wrap"
+              >const item = document.createElement(<span class="code-strings"
+                >"li"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >item.classList.add(<span class="code-strings"
+                >"todo_form-result--item"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >const removeButton = document.createElement(<span
+                class="code-strings"
+                >"a"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >removeButton.classList.add(<span class="code-strings"
+                >"todo_form-result--rmvButton"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >removeButton.setAttribute(<span class="code-strings"
+                >"id", "removeButton"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >// ! append data get from user to my item</span
+            >
+            <span class="code-wrap"
+              >item.appendChild(document.createTextNode(data));</span
+            >
+            <span class="code-wrap">item.appendChild(removeButton);</span>
+            <span class="code-wrap">result.appendChild(item);</span>
+            <br />
+            <span class="code-wrap"
+              >// ! call add to local storage function to save data</span
+            >
+            <span class="code-wrap">addToLocalStorage(data);</span>
+            <span class="code-wrap">inputValue.value = null;</span>
+            <span class="code-wrap">};</span>
+            <br />
+            <span class="code-wrap"
+              >//function for remove from local storage</span
+            >
+            <span class="code-wrap"
+              >const removeFromLocalStorage = (nodeContent) => {</span
+            >
+            <span class="code-wrap">// ? delete from local storage</span>
+            <span class="code-wrap"
+              >const noteFromLocalStorage = getNotesFromLocalStorage();</span
+            >
+            <span class="code-wrap"
+              >noteFromLocalStorage.forEach((note, index) => {</span
+            >
+            <span class="code-wrap">if (note === nodeContent) {</span>
+            <span class="code-wrap">console.log(index);</span>
+            <span class="code-wrap"
+              >noteFromLocalStorage.splice(index, 1);</span
+            >
+            <span class="code-wrap">}</span>
+            <span class="code-wrap">});</span>
+            <span class="code-wrap"
+              >localStorage.setItem(<span class="code-strings">"notes"</span>,
+              JSON.stringify(noteFromLocalStorage));</span
+            >
+            <span class="code-wrap">};</span>
+            <br />
+            <span class="code-wrap"
+              >// ? remove button handler function for delete items</span
+            >
+            <span class="code-wrap">const removeButtonHandler = (e) => {</span>
+            <span class="code-wrap"
+              >if (e.target.id ===
+              <span class="code-wrap">"removeButton"</span>) {</span
+            >
+            <span class="code-wrap">e.target.parentElement.remove();</span>
+            <span class="code-wrap">}</span>
+            <span class="code-wrap"
+              >removeFromLocalStorage(e.target.parentElement.textContent);</span
+            >
+            <span class="code-wrap">};</span>
+            <br />
+            <span class="code-wrap"
+              >// todo function for fetch data from local storage onload
+              page</span
+            >
+            <span class="code-wrap"
+              >const getNotesFromLocalStorage = () => {</span
+            >
+            <span class="code-wrap">let notes;</span>
+            <span class="code-wrap"
+              >const localStorageData = localStorage.getItem(<span
+                class="code-strings"
+                >"notes"</span
+              >);</span
+            >
+            <span class="code-wrap">if (localStorageData === null) {</span>
+            <span class="code-wrap">notes = [];</span>
+            <span class="code-wrap">} else {</span>
+            <span class="code-wrap"
+              >// ? data must be came back to us as array to we can map on</span
+            >
+            <span class="code-wrap">notes = JSON.parse(localStorageData);</span>
+            <span class="code-wrap">}</span>
+            <span class="code-wrap">return notes;</span>
+            <span class="code-wrap">};</span>
+            <br />
+            <span class="code-wrap"
+              >// ! get data from local storage and print</span
+            >
+            <span class="code-wrap"
+              >const localStorageDataLoaded = () => {</span
+            >
+            <br />
+            <span class="code-wrap">notes.forEach((element) => {</span>
+            <span class="code-wrap"
+              >const item = document.createElement(<span class="code-strings"
+                >"li"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >item.classList.add(<span class="code-strings"
+                >"todo_form-result--item"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >const removeButton = document.createElement(<span
+                class="code-strings"
+                >"a"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >removeButton.classList.add(<span class="code-strings"
+                >"todo_form-result--rmvButton"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >removeButton.setAttribute(<span class="code-strings"
+                >"id", "removeButton"</span
+              >);</span
+            >
+            <span class="code-wrap"
+              >// ! append data get from user to my item</span
+            >
+            <span class="code-wrap"
+              >item.appendChild(document.createTextNode(data));</span
+            >
+            <span class="code-wrap">item.appendChild(removeButton);</span>
+            <span class="code-wrap">result.appendChild(item);</span>
+            <span class="code-wrap">});</span>
+            <span class="code-wrap">};</span>
+            <span class="code-wrap">// * event listeners</span>
+            <span class="code-wrap">const eventListeners = () => {</span>
+            <span class="code-wrap">// * handel form submit event</span>
+            <span class="code-wrap"
+              >note.addEventListener("submit", formHandler);</span
+            >
+            <span class="code-wrap">// * handel remove button event</span>
+            <span class="code-wrap"
+              >result.addEventListener("click", removeButtonHandler);</span
+            >
+            <span class="code-wrap"
+              >// * get data from local storage when page onload</span
+            >
+            <span class="code-wrap"
+              >document.addEventListener("DOMContentLoaded",
+              localStorageDataLoaded);</span
+            >
+            <span class="code-wrap">};</span>
+            <span class="code-wrap">eventListeners();</span>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="../../../js/codeFinder.js"></script>
     <script src="todoList.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,152 +1,271 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>برچسب ساز با جاوااسکریپت</title>
-</head>
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
 
-<body class="cl-body">
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
     <h1 class="title">برچسب ساز با جاوااسکریپت</h1>
-    <section class="cl-wrapper">
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۱۳</span>
-                    <h2 class="train-question">برچسب ساز</h2>
-                </div>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۱۳</span>
+              <h2 class="train-question">برچسب ساز</h2>
             </div>
-            <section class="tagGenerator">
-                <h2 class="tagGenerator-title">برچسب خود را بنویسید و دکمه Enter را بزنید</h2>
-                <ul class="tagGenerator-list" id="tagGeneratorList">
-
-                    <input type="text" spellcheck="false" class="tagGenerator-list-input" id="tagGeneratorInput">
-                </ul>
-                <div class="tagGenerator-footer">
-                    <div>
-                        شما میتوانید
-                        <span class="tagGenerator-footer-counter" id="tagGeneratorCounter">10</span> برچسب بنویسید
-                    </div>
-                    <button class="tagGenerator-footer-remover" id="TagGeneratorRemover">پاک کردن همه</button>
-                </div>
-            </section>
-
-            <div class="code-wrapper">
-                <span>// ? Get elements from the DOM</span>
-                <span>const $ = document;</span>
-                <span>const list = $.querySelector("#tagGeneratorList");</span>
-                <span>const input = $.querySelector("#tagGeneratorInput");</span>
-                <span>const counter = $.querySelector("#tagGeneratorCounter");</span>
-                <span>const remover = $.querySelector("#TagGeneratorRemover");</span>
-                <br />
-                <span>let tags = ["Ali", "Mohammad"];</span>
-                <span>// ! period of create tags</span>
-                <span>let maxTags = 10;</span>
-                <span>const tagCounter = () => {</span>
-                <span> input.focus();</span>
-                <span> counter.innerHTML = maxTags - tags.length;</span>
-                <span>};</span>
-                <br />
-                <span>// remove all li</span>
-                <span>const removeAllLis = () => {</span>
-                <span> list.querySelectorAll("li").forEach((tag) => tag.remove());</span>
-                <span>};</span>
-                <br />
-                <span>// * tag remover function</span>
-                <span>const tagRemover = (e, tagElem) => {</span>
-                <span> // ? we have to access or parent element get in e to can be delete</span>
-                <span> e.parentElement.remove();</span>
-                <br />
-                <span> // ? we have to access to tag element index to remove from array</span>
-                <span> myTag = tags.indexOf(tagElem);</span>
-                <span> tags.splice(myTag, 1);</span>
-                <br />
-                <span> // ? at end for update or numbers of tag in dom , call tag counter function</span>
-                <span> tagCounter();</span>
-                <span>};</span>
-                <br />
-                <span>// ? show tags function</span>
-                <span>const showTags = () => {</span>
-                <span> // * for no repeat show my tags in input , we delete all li</span>
-                <span> removeAllLis();</span>
-                <br />
-                <span> // * create new li to create new tag</span>
-                <span> let newLi = "";</span>
-                <br />
-                <span> // * for added or tag at end of tags we have , reverse it and added new tag</span>
-                <span> [...tags].reverse().forEach((tag) => {</span>
-                <span> newLi += `< li class="tagGenerator-list-item">${tag} < i class="tagGenerator-list-item-trash"
-                            onclick="tagRemover(this , '${tag}')">
-                            < /i>
-                                < /li>`;</span>
-                <span> });</span>
-                <br />
-                <span> // * add to list</span>
-                <span> list.insertAdjacentHTML("afterbegin", newLi);</span>
-                <br />
-                <span> // * update or tag counter number</span>
-                <span> tagCounter();</span>
-                <span>};</span>
-                <br />
-                <span>// todo added input text to array</span>
-                <span>const addTag = (e) => {</span>
-                <span> // ! check when enter key on keyboard do something</span>
-                <span> if (e.key == "Enter") {</span>
-                <span> let tagTitle = e.target.value;</span>
-                <br />
-                <span> // ! change or any inputs word to lowerCase</span>
-                <span> let normalizedName = tagTitle.toLowerCase();</span>
-                <span> // ! check if name not in array with any formation</span>
-                <span> let nameExists = tags.some((tag) => tag.toLowerCase() === normalizedName);</span>
-                <br />
-                <span> // ! have 10 period tag in our array and now we check it</span>
-                <span> if (tags.length < 10 && !nameExists) {</span>
-                        <span> // ! user cant enter empty</span>
-                        <span> if (tagTitle.length > 0) {</span>
-                        <span> // ! check if user use , and write more than one word without press enter , split and get
-                            array and push</span>
-                        <span> tagTitle.split(",").forEach((tag) => {</span>
-                        <span> tags.push(tag);</span>
-                        <span> });</span>
-                        <span> }</span>
-                        <span> }</span>
-                        <br />
-                        <span> // ! do empty input</span>
-                        <span> e.target.value = "";</span>
-                        <span> showTags();</span>
-                        <span> }</span>
-                        <span>};</span>
-                        <span>input.addEventListener("keypress", addTag);</span>
-                        <br />
-                        <span>showTags();</span>
-                        <span>tagCounter();</span>
-                        <br />
-                        <span>// todo function for remove all item</span>
-                        <span>remover.addEventListener("click", () => {</span>
-                        <span> tags.length = 0;</span>
-                        <span> removeAllLis();</span>
-                        <span> tagCounter();</span>
-                        <span>});</span>
-
+          </div>
+          <section class="tagGenerator">
+            <h2 class="tagGenerator-title">
+              برچسب خود را بنویسید و دکمه Enter را بزنید
+            </h2>
+            <ul class="tagGenerator-list" id="tagGeneratorList">
+              <input
+                type="text"
+                spellcheck="false"
+                class="tagGenerator-list-input"
+                id="tagGeneratorInput"
+              />
+            </ul>
+            <div class="tagGenerator-footer">
+              <div>
+                شما میتوانید
+                <span
+                  class="tagGenerator-footer-counter"
+                  id="tagGeneratorCounter"
+                  >10</span
+                >
+                برچسب بنویسید
+              </div>
+              <button
+                class="tagGenerator-footer-remover"
+                id="TagGeneratorRemover"
+              >
+                پاک کردن همه
+              </button>
             </div>
+          </section>
+
+          <div class="code-wrapper">
+            <span>// ? Get elements from the DOM</span>
+            <span>const $ = document;</span>
+            <span>const list = $.querySelector("#tagGeneratorList");</span>
+            <span>const input = $.querySelector("#tagGeneratorInput");</span>
+            <span
+              >const counter = $.querySelector("#tagGeneratorCounter");</span
+            >
+            <span
+              >const remover = $.querySelector("#TagGeneratorRemover");</span
+            >
+            <br />
+            <span>let tags = ["Ali", "Mohammad"];</span>
+            <span>// ! period of create tags</span>
+            <span>let maxTags = 10;</span>
+            <span>const tagCounter = () => {</span>
+            <span> input.focus();</span>
+            <span> counter.innerHTML = maxTags - tags.length;</span>
+            <span>};</span>
+            <br />
+            <span>// remove all li</span>
+            <span>const removeAllLis = () => {</span>
+            <span>
+              list.querySelectorAll("li").forEach((tag) => tag.remove());</span
+            >
+            <span>};</span>
+            <br />
+            <span>// * tag remover function</span>
+            <span>const tagRemover = (e, tagElem) => {</span>
+            <span>
+              // ? we have to access or parent element get in e to can be
+              delete</span
+            >
+            <span> e.parentElement.remove();</span>
+            <br />
+            <span>
+              // ? we have to access to tag element index to remove from
+              array</span
+            >
+            <span> myTag = tags.indexOf(tagElem);</span>
+            <span> tags.splice(myTag, 1);</span>
+            <br />
+            <span>
+              // ? at end for update or numbers of tag in dom , call tag counter
+              function</span
+            >
+            <span> tagCounter();</span>
+            <span>};</span>
+            <br />
+            <span>// ? show tags function</span>
+            <span>const showTags = () => {</span>
+            <span>
+              // * for no repeat show my tags in input , we delete all li</span
+            >
+            <span> removeAllLis();</span>
+            <br />
+            <span> // * create new li to create new tag</span>
+            <span> let newLi = "";</span>
+            <br />
+            <span>
+              // * for added or tag at end of tags we have , reverse it and
+              added new tag</span
+            >
+            <span> [...tags].reverse().forEach((tag) => {</span>
+            <span>
+              newLi += `< li class="tagGenerator-list-item">${tag} < i
+              class="tagGenerator-list-item-trash" onclick="tagRemover(this ,
+              '${tag}')"> < /i> < /li>`;</span
+            >
+            <span> });</span>
+            <br />
+            <span> // * add to list</span>
+            <span> list.insertAdjacentHTML("afterbegin", newLi);</span>
+            <br />
+            <span> // * update or tag counter number</span>
+            <span> tagCounter();</span>
+            <span>};</span>
+            <br />
+            <span>// todo added input text to array</span>
+            <span>const addTag = (e) => {</span>
+            <span> // ! check when enter key on keyboard do something</span>
+            <span> if (e.key == "Enter") {</span>
+            <span> let tagTitle = e.target.value;</span>
+            <br />
+            <span> // ! change or any inputs word to lowerCase</span>
+            <span> let normalizedName = tagTitle.toLowerCase();</span>
+            <span> // ! check if name not in array with any formation</span>
+            <span>
+              let nameExists = tags.some((tag) => tag.toLowerCase() ===
+              normalizedName);</span
+            >
+            <br />
+            <span>
+              // ! have 10 period tag in our array and now we check it</span
+            >
+            <span> if (tags.length < 10 && !nameExists) {</span>
+            <span> // ! user cant enter empty</span>
+            <span> if (tagTitle.length > 0) {</span>
+            <span>
+              // ! check if user use , and write more than one word without
+              press enter , split and get array and push</span
+            >
+            <span> tagTitle.split(",").forEach((tag) => {</span>
+            <span> tags.push(tag);</span>
+            <span> });</span>
+            <span> }</span>
+            <span> }</span>
+            <br />
+            <span> // ! do empty input</span>
+            <span> e.target.value = "";</span>
+            <span> showTags();</span>
+            <span> }</span>
+            <span>};</span>
+            <span>input.addEventListener("keypress", addTag);</span>
+            <br />
+            <span>showTags();</span>
+            <span>tagCounter();</span>
+            <br />
+            <span>// todo function for remove all item</span>
+            <span>remover.addEventListener("click", () => {</span>
+            <span> tags.length = 0;</span>
+            <span> removeAllLis();</span>
+            <span> tagCounter();</span>
+            <span>});</span>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
+
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="tagGenerator.js"></script>
     <script src="../../../js/codeFinder.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>

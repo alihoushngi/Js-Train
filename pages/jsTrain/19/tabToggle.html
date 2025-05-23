@@ -1,89 +1,181 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>تب محتوا با جاوااسکریپت</title>
-</head>
+    <style>
+      main {
+        min-height: 85lvh;
+      }
 
+      .myFooter {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(45, 45, 45);
+        padding: 10px 0;
+      }
 
-<body class="cl-body">
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socialMediaWrapper {
+        font-size: 20px;
+        width: fit-content;
+      }
+
+      .socialMediaLink {
+        color: white;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+
+      .socialMediaLink:hover {
+        color: black;
+        background-color: white;
+        padding: 1px 20px;
+      }
+    </style>
+  </head>
+
+  <body class="cl-body">
     <nav>
-        <section class="navbar-category-wrapper">
-            <ul class="navbar-category-list" id="nav-list"></ul>
-            <a href="/pages/jsTrain/js.html" class="navbar-category-back"><i class="fa-solid fa-arrow-left"></i></a>
-        </section>
+      <section class="navbar-category-wrapper">
+        <ul class="navbar-category-list" id="nav-list"></ul>
+        <a href="/pages/jsTrain/js.html" class="navbar-category-back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </section>
     </nav>
     <h1 class="title">تب محتوا با جاوااسکریپت</h1>
-    <section class="cl-wrapper">
+    <main style="width: 100%">
+      <section class="cl-wrapper">
         <div class="codes">
-            <div class="train-wrapper">
-                <div class="train-details">
-                    <span class="train-number">۱۹</span>
-                    <h2 class="train-question">تب محتوا</h2>
-                </div>
+          <div class="train-wrapper">
+            <div class="train-details">
+              <span class="train-number">۱۹</span>
+              <h2 class="train-question">تب محتوا</h2>
             </div>
-            <section class="TabToggle">
-                <div class="TabToggle-tabs">
-                    <h4 class="TabToggle-tabs-item active" data-id="learning">آموزش</h4>
-                    <h4 class="TabToggle-tabs-item" data-id="training">تمرین</h4>
-                    <h4 class="TabToggle-tabs-item" data-id="project">پروژه</h4>
-                </div>
-                <div class="TabToggle-contents">
-                    <p class="TabToggle-contents-item active" id="learning">تو شروع برنامه نویسی وب سایت مهم ترین چیز
-                        دیدن
-                        آموزش های کامل
-                        مناسب و بروزرسانی شده است. شما باید خودتان را با جدیدترین متد های طراحی سایت دنیا وقف دهید .
-                        انتخاب راهنمایی مناسب و کاربلد برای آموزش برنامه نویسی خیلی مهم است زیرا میتواند دد مناسبی در
-                        این زمینه برای شما بسازد. آموزش نباید بعد از شروع کار دراین حوزه متوقف بشود زیرا همیشه تکلونوژی
-                        های جدید وارد میشوند و تکلونوژی های قدیمی هم بروزرسانی میشوند.</p>
-                    <p class="TabToggle-contents-item" id="training">بعد از اتمام آموزش ها شما باید تمرین های مفید و
-                        زیادی انجام بدهید و بتوانید مهارت های خودتان را آزمایش کنید و بسنجید و همچنین بتوانید ایراد های
-                        خود را در انجام یک تمرین پیدا کنید. البته به این موضوع باید دقت کنید که تمرین برنامه نویسی وب
-                        باید همراه آموزش دیدن باشد، فراموش نکنید آموزش دیدن بدون تمرین کردن هیچ فایده ای ندارد چون مطالب
-                        فقط با تمرین کردن به یاد شما میماند و ذهن شما را فعال میکند.</p>
-                    <p class="TabToggle-contents-item" id="project">بعد از انجام تمرین هایی که معمولا در آموزش برای شما
-                        در نظر گرفته میشود شما باید خودتان را درگیر پروژه های واقعی برنامه نویسی وب بکنید. در این پروژه
-                        ها شما درگیر چالش هایی میشوید که باید خودتان با جستجو کردن و پیدا کردن راه حل ها مناسب چالش هارا
-                        حل کنید ، پروژه ها شما را در مسیر حرفه ای شدن قرار میدهد ، به شما کمک میکند خودتان را بسنجید و
-                        در صورت وجود کمبود در دانش به دنبال یادگیری آن بروید.</p>
-                </div>
-            </section>
-
-            <div class="code-wrapper">
-                <span>// ! get elements from dom</span>
-                <span>const $ = document;</span>
-                <span>const tabs = $.querySelectorAll(".TabToggle-tabs-item");</span>
-                <span>const tabsContent = $.querySelectorAll(".TabToggle-contents-item");</span>
-                <br />
-                <span>// ? find active tab</span>
-                <span>tabs.forEach((tab) => {</span>
-                <span> tab.addEventListener("click", () => {</span>
-                <span> tabs.forEach((item) => {</span>
-                <span> item.classList.remove("active");</span>
-                <span> });</span>
-                <span> tabsContent.forEach((content) => {</span>
-                <span> content.classList.remove("active");</span>
-                <span> if (content.id === tab.dataset.id) {</span>
-                <span> tab.classList.add("active");</span>
-                <span> content.classList.add("active");</span>
-                <span> }</span>
-                <span> });</span>
-                <span> });</span>
-                <span>});</span>
-
+          </div>
+          <section class="TabToggle">
+            <div class="TabToggle-tabs">
+              <h4 class="TabToggle-tabs-item active" data-id="learning">
+                آموزش
+              </h4>
+              <h4 class="TabToggle-tabs-item" data-id="training">تمرین</h4>
+              <h4 class="TabToggle-tabs-item" data-id="project">پروژه</h4>
             </div>
+            <div class="TabToggle-contents">
+              <p class="TabToggle-contents-item active" id="learning">
+                تو شروع برنامه نویسی وب سایت مهم ترین چیز دیدن آموزش های کامل
+                مناسب و بروزرسانی شده است. شما باید خودتان را با جدیدترین متد
+                های طراحی سایت دنیا وقف دهید . انتخاب راهنمایی مناسب و کاربلد
+                برای آموزش برنامه نویسی خیلی مهم است زیرا میتواند دد مناسبی در
+                این زمینه برای شما بسازد. آموزش نباید بعد از شروع کار دراین حوزه
+                متوقف بشود زیرا همیشه تکلونوژی های جدید وارد میشوند و تکلونوژی
+                های قدیمی هم بروزرسانی میشوند.
+              </p>
+              <p class="TabToggle-contents-item" id="training">
+                بعد از اتمام آموزش ها شما باید تمرین های مفید و زیادی انجام
+                بدهید و بتوانید مهارت های خودتان را آزمایش کنید و بسنجید و
+                همچنین بتوانید ایراد های خود را در انجام یک تمرین پیدا کنید.
+                البته به این موضوع باید دقت کنید که تمرین برنامه نویسی وب باید
+                همراه آموزش دیدن باشد، فراموش نکنید آموزش دیدن بدون تمرین کردن
+                هیچ فایده ای ندارد چون مطالب فقط با تمرین کردن به یاد شما میماند
+                و ذهن شما را فعال میکند.
+              </p>
+              <p class="TabToggle-contents-item" id="project">
+                بعد از انجام تمرین هایی که معمولا در آموزش برای شما در نظر گرفته
+                میشود شما باید خودتان را درگیر پروژه های واقعی برنامه نویسی وب
+                بکنید. در این پروژه ها شما درگیر چالش هایی میشوید که باید خودتان
+                با جستجو کردن و پیدا کردن راه حل ها مناسب چالش هارا حل کنید ،
+                پروژه ها شما را در مسیر حرفه ای شدن قرار میدهد ، به شما کمک
+                میکند خودتان را بسنجید و در صورت وجود کمبود در دانش به دنبال
+                یادگیری آن بروید.
+              </p>
+            </div>
+          </section>
+
+          <div class="code-wrapper">
+            <span>// ! get elements from dom</span>
+            <span>const $ = document;</span>
+            <span
+              >const tabs = $.querySelectorAll(".TabToggle-tabs-item");</span
+            >
+            <span
+              >const tabsContent =
+              $.querySelectorAll(".TabToggle-contents-item");</span
+            >
+            <br />
+            <span>// ? find active tab</span>
+            <span>tabs.forEach((tab) => {</span>
+            <span> tab.addEventListener("click", () => {</span>
+            <span> tabs.forEach((item) => {</span>
+            <span> item.classList.remove("active");</span>
+            <span> });</span>
+            <span> tabsContent.forEach((content) => {</span>
+            <span> content.classList.remove("active");</span>
+            <span> if (content.id === tab.dataset.id) {</span>
+            <span> tab.classList.add("active");</span>
+            <span> content.classList.add("active");</span>
+            <span> }</span>
+            <span> });</span>
+            <span> });</span>
+            <span>});</span>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
+
+    <footer class="myFooter">
+      <div class="socialMedia">
+        <div class="socialMediaWrapper">
+          📬
+          <a
+            class="socialMediaLink"
+            href="mailto:aliihooshangi@gmail.com"
+            target="_blank"
+            >ایمیل</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          💼
+          <a
+            class="socialMediaLink"
+            href="https://www.linkedin.com/in/alihoushangi/"
+            target="_blank"
+            >لینکدین</a
+          >
+        </div>
+        <div class="socialMediaWrapper">
+          🐙
+          <a
+            class="socialMediaLink"
+            href="https://github.com/alihoushngi"
+            target="_blank"
+            >گیت‌هاب</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script src="tabToggle.js"></script>
     <script src="../../../js/codeFinder.js"></script>
     <script src="../../jsTrain/insideNav.js"></script>
-</body>
-
+  </body>
 </html>
